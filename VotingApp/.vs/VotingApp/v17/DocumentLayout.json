@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|c:\\users\\wasan\\onedrive\\documents\\github\\back-end\\votingapp\\votingapp\\components\\pages\\admin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|solutionrelative:votingapp\\components\\pages\\admin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|c:\\users\\wasan\\onedrive\\documents\\github\\back-end\\votingapp\\votingapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|solutionrelative:votingapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|c:\\users\\wasan\\onedrive\\documents\\github\\back-end\\votingapp\\votingapp\\components\\pages\\voting.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|solutionrelative:votingapp\\components\\pages\\voting.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|c:\\users\\wasan\\onedrive\\documents\\github\\back-end\\votingapp\\votingapp\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|solutionrelative:votingapp\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{26341fe2-71dd-46fd-bb1b-2e51a92a0d64}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Voting.razor",
+              "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Components\\Pages\\Voting.razor",
+              "RelativeDocumentMoniker": "VotingApp\\Components\\Pages\\Voting.razor",
+              "ToolTip": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Components\\Pages\\Voting.razor",
+              "RelativeToolTip": "VotingApp\\Components\\Pages\\Voting.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-06T15:20:16.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Components\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "VotingApp\\Components\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Components\\Pages\\Login.razor",
+              "RelativeToolTip": "VotingApp\\Components\\Pages\\Login.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-06T15:19:55.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Admin.razor",
+              "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Components\\Pages\\Admin.razor",
+              "RelativeDocumentMoniker": "VotingApp\\Components\\Pages\\Admin.razor",
+              "ToolTip": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Components\\Pages\\Admin.razor",
+              "RelativeToolTip": "VotingApp\\Components\\Pages\\Admin.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-06T15:18:42.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "VotingApp\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Components\\Pages\\Home.razor*",
+              "RelativeToolTip": "VotingApp\\Components\\Pages\\Home.razor*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-06T15:15:42.264Z",
+              "EditorCaption": ""
             }
           ]
         }
