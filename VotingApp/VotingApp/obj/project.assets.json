@@ -8,27 +8,28 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\wasan\\.nuget\\packages\\": {}
+    "C:\\Users\\LegoM\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\VotingApp.csproj",
+      "projectUniqueName": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
       "projectName": "VotingApp",
-      "projectPath": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\VotingApp.csproj",
-      "packagesPath": "C:\\Users\\wasan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\obj\\",
+      "projectPath": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
+      "packagesPath": "C:\\Users\\LegoM\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\wasan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LegoM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\MicroFocus.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Cobol\\NuGetPackages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -41,11 +42,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -70,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
