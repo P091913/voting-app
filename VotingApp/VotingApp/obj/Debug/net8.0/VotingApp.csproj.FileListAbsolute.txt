@@ -58,4 +58,3 @@ C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\Vo
 C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.pdb
 C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.genruntimeconfig.cache
 C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\ref\VotingApp.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\scopedcss\Components\Pages\Voting.razor.rz.scp.css
