@@ -38,10 +38,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Owner/Documents/IHCC/Summer 2024/Field Projects/voting-app/VotingApp/VotingApp/Components/Pages/Voting.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWb3RpbmcucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Owner/Documents/IHCC/Summer 2024/Field Projects/voting-app/VotingApp/VotingApp/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -57,3 +53,7 @@ build_metadata.AdditionalFiles.CssScope = b-2b775ujwmz
 [C:/Users/Owner/Documents/IHCC/Summer 2024/Field Projects/voting-app/VotingApp/VotingApp/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-ys9wvh32yh
+
+[C:/Users/Owner/Documents/IHCC/Summer 2024/Field Projects/voting-app/VotingApp/VotingApp/Components/Pages/Voting.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWb3RpbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-zahcwjnxd9
