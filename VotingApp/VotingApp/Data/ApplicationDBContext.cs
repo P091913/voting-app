@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using VotingApp.Models;
 
 namespace VotingApp.Data
 {
@@ -9,6 +10,10 @@ namespace VotingApp.Data
         {
         }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<Business> Businesses { get; set; }
+        public DbSet<BusinessLogin> BusinessLogins { get; set; }
+        public DbSet<General> Voters { get; set; }
+        public DbSet<Teams> Teams { get; set; }
     }
 }

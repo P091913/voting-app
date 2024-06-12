@@ -5,12 +5,22 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddScoped<AdminService>();
+builder.Services.AddScoped<BusinessService>();
+builder.Services.AddScoped<BusinessLoginService>();
+builder.Services.AddScoped<GeneralService>();
+builder.Services.AddScoped<TeamsService>();
 
 var app = builder.Build();
 
@@ -27,7 +37,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+// added UseRouting
+app.UseRouting();
+//added MapBlazorHub and MapFallBackToPage
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+// app.MapRazorComponents<App>()
+    // .AddInteractiveServerRenderMode();
 
 app.Run();
