@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\VotingApp.csproj": {}
+    "C:\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\VotingApp.csproj": {
+    "C:\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\VotingApp.csproj",
+        "projectUniqueName": "C:\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
         "projectName": "VotingApp",
-        "projectPath": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\VotingApp.csproj",
-        "packagesPath": "C:\\Users\\wasan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\obj\\",
+        "projectPath": "C:\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
+        "packagesPath": "C:\\Users\\Eli\\.nuget\\packages\\",
+        "outputPath": "C:\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\wasan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,6 +45,18 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
