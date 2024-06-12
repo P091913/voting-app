@@ -1,10 +1,24 @@
 using VotingApp.Components;
+using Blazorise;
+using Blazorise.Bootstrap5;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services
+    .AddBlazorise(options =>
+    {
+        options.Immediate = true;
+    })
+    .AddBootstrap5Providers();
+
+builder.Services.AddScoped<BlazorBootstrap.ModalService>();
+
+
 
 var app = builder.Build();
 

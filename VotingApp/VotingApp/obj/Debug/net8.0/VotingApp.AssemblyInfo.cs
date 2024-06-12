@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VotingApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29f093a39c18f4365cf4b7a627621df7c9c39624")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dd4edc901913b63926de0caf5dd59852f2cd4dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("VotingApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VotingApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
