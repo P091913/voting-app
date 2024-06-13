@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {}
+    "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {
+    "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
+        "projectUniqueName": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
         "projectName": "VotingApp",
-        "projectPath": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
-        "packagesPath": "C:\\Users\\LegoM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\obj\\",
+        "projectPath": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
+        "packagesPath": "C:\\Users\\Noted\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LegoM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Noted\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\MicroFocus.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -22,7 +22,7 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Cobol\\NuGetPackages": {},
+          "C:\\Program Files (x86)\\Micro Focus\\Visual COBOL\\NuGetPackages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },

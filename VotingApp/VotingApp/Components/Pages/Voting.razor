@@ -1,6 +1,9 @@
-@page "/Voting"
-
+@page "/voting"
 <h3>Voting</h3>
+
+@code {
+    
+}
 
 <html lang="en">
 <head>
@@ -8,59 +11,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="Extra/css/voting_styles.css" rel="stylesheet">
     <title>Voting</title>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
 </head>
 <body>
 <div id="forms_container">
     <div class="form_container">
-        <h4>IHCC Teams</h4>
+        <img src="IndianHillsLogo.png" alt="IHCCLogo">
+        <h4 class="text-center">IHCC Teams</h4>
         <form>
-            <div class="inputs">
-                <div class="input_container">
-                    <input type="radio" id="hillsteam1" class="team_select form-check-input" name="vote" value="Hills Team 1">
-                    <label for="hillsteam1">Hills Team 1</label><br>
-                </div>
-                <div class="input_container">
-                    <input type="radio" id="hillsteam2" class="team_select form-check-input" name="vote" value="Hills Team 2">
-                    <label for="hillsteam2">Hills Team 2</label><br>
-                </div>
-                <div class="input_container">
-                    <input type="radio" id="hillsteam3" class="team_select form-check-input" name="vote" value="Hills Team 3">
-                    <label for="hillsteam3">Hills Team 3</label><br>
-                </div>
-                <div class="input_container">
-                    <input type="radio" id="hillsteam4" class="team_select form-check-input" name="vote" value="Hills Team 4">
-                    <label for="hillsteam4">Hills Team 4</label><br>
-                </div>
-            </div>
+            <div class="inputs btn-group-toggle" data-toggle="buttons">
+                <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam1" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="hillsTeam1">Hills Team 1</label>
 
+                <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam2" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="hillsTeam2">Hills Team 2</label>
+
+                <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam3" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="hillsTeam3">Hills Team 3</label>
+
+                <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam4" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="hillsTeam4">Hills Team 4</label>
+            </div>
             <input type="submit" class="btn btn-primary" value="Cast Hills Vote">
         </form>
     </div>
-    
-    
+
     <div class="form_container">
+        <img src="HSLogo.png" alt="HSLogo">
         <h4>High School Teams</h4>
         <form>
-            <div class="inputs">
-                <div class="input_container">
-                    <input type="radio" id="hsteam1" class="team_select form-check-input" name="vote" value="HS Team 1">
-                    <label for="hsteam1">HS Team 1</label><br>
-                </div>
-                <div class="input_container">
-                    <input type="radio" id="hsteam2" class="team_select form-check-input" name="vote" value="HS Team 2">
-                    <label for="hsteam2">HS Team 2</label><br>
-                </div>
-                <div class="input_container">
-                    <input type="radio" id="hsteam3" class="team_select form-check-input" name="vote" value="HS Team 3">
-                    <label for="hsteam3">HS Team 3</label><br>
-                </div>
-                <div class="input_container">
-                    <input type="radio" id="hsteam4" class="team_select form-check-input" name="vote" value="HS Team 4">
-                    <label for="hsteam4">HS Team 4</label><br>
-                </div>
+            <div class="inputs btn-group-toggle" data-toggle="buttons">
+                <input type="radio" class="btn-check" name="HSTeams" id="HSTeam1" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="HSTeam1">High School Team 1</label>
+
+                <input type="radio" class="btn-check" name="HSTeams" id="HSTeam2" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="HSTeam2">High School Team 2</label>
+
+                <input type="radio" class="btn-check" name="HSTeams" id="HSTeam3" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="HSTeam3">High School Team 3</label>
+
+                <input type="radio" class="btn-check" name="HSTeams" id="HSTeam4" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="HSTeam4">High School Team 4</label>
             </div>
-            
             <input type="submit" class="btn btn-primary" value="Cast HS Vote">
         </form>
     </div>
