@@ -1,0 +1,31 @@
+.form_container {
+    margin: 6.5px auto;
+    padding: 15px;
+    border: 2px solid black;
+    width: 45%;
+}
+
+form {
+    text-align: center;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.input_container {
+    text-align: center;
+}
+
+#forms_container {
+    display: grid;
+}
+
+input[type=submit] {
+    width: 150px;
+}
+
+body {
+    text-align: center;
+}

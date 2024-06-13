@@ -28,33 +28,36 @@ C:\Users\wasan\OneDrive\Documents\GitHub\back-end\VotingApp\VotingApp\obj\Debug\
 C:\Users\wasan\OneDrive\Documents\GitHub\back-end\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.pdb
 C:\Users\wasan\OneDrive\Documents\GitHub\back-end\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.genruntimeconfig.cache
 C:\Users\wasan\OneDrive\Documents\GitHub\back-end\VotingApp\VotingApp\obj\Debug\net8.0\ref\VotingApp.dll
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\appsettings.json
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\VotingApp.staticwebassets.runtime.json
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\VotingApp.exe
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\VotingApp.deps.json
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\VotingApp.runtimeconfig.json
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\VotingApp.dll
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\VotingApp.pdb
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.AssemblyInfoInputs.cache
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.AssemblyInfo.cs
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.csproj.CoreCompileInputs.cache
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.sourcelink.json
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets\msbuild.VotingApp.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets\msbuild.build.VotingApp.props
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.VotingApp.props
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.VotingApp.props
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\scopedcss\bundle\VotingApp.styles.css
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\scopedcss\projectbundle\VotingApp.bundle.scp.css
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.dll
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\refint\VotingApp.dll
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.pdb
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.genruntimeconfig.cache
-C:\Users\LegoM\OneDrive\Documents\GitHub\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\ref\VotingApp.dll
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\appsettings.json
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\VotingApp.staticwebassets.runtime.json
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\VotingApp.exe
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\VotingApp.deps.json
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\VotingApp.runtimeconfig.json
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\VotingApp.dll
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\VotingApp.pdb
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.AssemblyInfoInputs.cache
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.AssemblyInfo.cs
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.sourcelink.json
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets\msbuild.VotingApp.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets\msbuild.build.VotingApp.props
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.VotingApp.props
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.VotingApp.props
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\scopedcss\bundle\VotingApp.styles.css
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\scopedcss\projectbundle\VotingApp.bundle.scp.css
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.dll
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\refint\VotingApp.dll
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.pdb
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.genruntimeconfig.cache
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\ref\VotingApp.dll
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\BlazorBootstrap.dll
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.csproj.AssemblyReference.cache
+C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.csproj.Up2Date
