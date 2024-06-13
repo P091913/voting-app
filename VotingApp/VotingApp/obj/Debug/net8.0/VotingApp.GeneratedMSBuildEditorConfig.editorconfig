@@ -26,20 +26,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LegoM/OneDrive/Documents/GitHub/voting-app/VotingApp/VotingApp/Components/Pages/AdminLogin.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbkxvZ2luLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/LegoM/OneDrive/Documents/GitHub/voting-app/VotingApp/VotingApp/Components/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/LegoM/OneDrive/Documents/GitHub/voting-app/VotingApp/VotingApp/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/LegoM/OneDrive/Documents/GitHub/voting-app/VotingApp/VotingApp/Components/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/LegoM/OneDrive/Documents/GitHub/voting-app/VotingApp/VotingApp/Components/Pages/Login.razor]
@@ -48,10 +36,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/LegoM/OneDrive/Documents/GitHub/voting-app/VotingApp/VotingApp/Components/Pages/Voting.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWb3RpbmcucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/LegoM/OneDrive/Documents/GitHub/voting-app/VotingApp/VotingApp/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/LegoM/OneDrive/Documents/GitHub/voting-app/VotingApp/VotingApp/Components/Routes.razor]
