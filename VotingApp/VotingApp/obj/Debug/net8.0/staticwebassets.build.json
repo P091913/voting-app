@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EwGLWau7guMtTvtwbK6WaQE2A/LCHVJONb9lrx8d9mE=",
+  "Hash": "zg6c9jLF2mDV2VEV5P/OpipdjwNn7jfn50mZCgiSiJg=",
   "Source": "VotingApp",
   "BasePath": "_content/VotingApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "VotingApp\\wwwroot",
       "Source": "VotingApp",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
       "BasePath": "_content/VotingApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\VotingApp.styles.css",
+      "Identity": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\VotingApp.styles.css",
       "SourceId": "VotingApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/VotingApp",
       "RelativePath": "VotingApp.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\VotingApp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\VotingApp.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\VotingApp.bundle.scp.css",
+      "Identity": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\VotingApp.bundle.scp.css",
       "SourceId": "VotingApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/VotingApp",
       "RelativePath": "VotingApp.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\VotingApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\VotingApp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\app.css",
       "SourceId": "VotingApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
       "BasePath": "_content/VotingApp",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "VotingApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
       "BasePath": "_content/VotingApp",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "VotingApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
       "BasePath": "_content/VotingApp",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\Extra\\css\\voting_styles.css",
+      "Identity": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\Extra\\css\\voting_styles.css",
       "SourceId": "VotingApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
       "BasePath": "_content/VotingApp",
       "RelativePath": "Extra/css/voting_styles.css",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\Extra\\css\\voting_styles.css"
     },
     {
-      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\favicon.png",
       "SourceId": "VotingApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
       "BasePath": "_content/VotingApp",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
