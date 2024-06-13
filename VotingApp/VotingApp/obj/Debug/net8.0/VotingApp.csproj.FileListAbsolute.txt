@@ -61,16 +61,3 @@ C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\Vo
 C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\BlazorBootstrap.dll
 C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.csproj.AssemblyReference.cache
 C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\obj\Debug\net8.0\VotingApp.csproj.Up2Date
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Blazorise.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Blazorise.Bootstrap.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Blazorise.Licensing.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Microsoft.JSInterop.dll
-C:\Users\Owner\Documents\IHCC\Summer 2024\Field Projects\voting-app\VotingApp\VotingApp\bin\Debug\net8.0\Blazorise.Bootstrap5.dll

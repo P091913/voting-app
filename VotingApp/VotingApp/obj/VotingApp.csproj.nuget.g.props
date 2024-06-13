@@ -14,9 +14,6 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)blazorise\1.5.3\buildTransitive\Blazorise.props" Condition="Exists('$(NuGetPackageRoot)blazorise\1.5.3\buildTransitive\Blazorise.props')" />
-    <Import Project="$(NuGetPackageRoot)blazorise.bootstrap5\1.5.3\buildTransitive\Blazorise.Bootstrap5.props" Condition="Exists('$(NuGetPackageRoot)blazorise.bootstrap5\1.5.3\buildTransitive\Blazorise.Bootstrap5.props')" />
-    <Import Project="$(NuGetPackageRoot)blazorise.bootstrap\1.5.3\buildTransitive\Blazorise.Bootstrap.props" Condition="Exists('$(NuGetPackageRoot)blazorise.bootstrap\1.5.3\buildTransitive\Blazorise.Bootstrap.props')" />
     <Import Project="$(NuGetPackageRoot)blazor.bootstrap\2.2.0\buildTransitive\Blazor.Bootstrap.props" Condition="Exists('$(NuGetPackageRoot)blazor.bootstrap\2.2.0\buildTransitive\Blazor.Bootstrap.props')" />
   </ImportGroup>
 </Project>

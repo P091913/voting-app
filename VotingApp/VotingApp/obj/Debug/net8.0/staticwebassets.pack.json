@@ -13,14 +13,6 @@
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
-    },
-    {
-      "Id": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
-    },
-    {
       "Id": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
