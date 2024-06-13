@@ -1,6 +1,57 @@
-﻿@page "/admin"
-<h3>Admin</h3>
+@page "/Admin"
+<PageTitle>Byte Jam Admin</PageTitle>
 
+@if (ShowLogin)
+{
+    <div>
+        <h1>Byte Jam Admin Login</h1>
+        <form>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="password">Password:</label><br>
+            <input type="text" id="password" name="password">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+}
+
+@if (ShowPage)
+{
+    <div>
+        <h1>Admin</h1>
+        <div>
+            <h4 class="teamName">College Teams</h4>
+            <table class="votesTable">
+                <tr>
+                    <th class="teamHead">Team Name</th>
+                    <th class="voteHead">Votes Received</th>
+                </tr>
+            </table>
+        </div>
+        
+        <div>
+            <h4>Bytes</h4>
+            <table class="votesTable">
+                <tr>
+                    <th class="teamHead">Team Name</th>
+                    <th class="voteHead">Votes Received</th>
+                </tr>
+            </table>
+        </div>
+        
+        <div>
+            <h4>Bits</h4>
+            <table class="votesTable">
+                <tr>
+                    <th class="teamHead">Team Name</th>
+                    <th class="voteHead">Votes Received</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+}
 @code {
-
+    bool ShowLogin { get; set; } = true;
+    bool ShowPage { get; set; } = true;
+    
 }
