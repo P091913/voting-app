@@ -23,7 +23,7 @@ form {
     grid-gap: 5px;
 }
 
-input[type=submit] {
+.form_container button {
     width: 150px;
     margin-top: 30px
 }
