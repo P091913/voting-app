@@ -4067,19 +4067,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eli\\.nuget\\packages\\": {}
+    "C:\\Users\\wasan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
+      "projectUniqueName": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\VotingApp.csproj",
       "projectName": "VotingApp",
-      "projectPath": "C:\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
-      "packagesPath": "C:\\Users\\Eli\\.nuget\\packages\\",
-      "outputPath": "C:\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\",
+      "projectPath": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\VotingApp.csproj",
+      "packagesPath": "C:\\Users\\wasan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Eli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wasan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

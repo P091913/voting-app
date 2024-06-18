@@ -6,6 +6,7 @@ namespace VotingApp.Models
     [Keyless]
     public class Teams
     {     
+        public int Id { get; set; }
         public string TeamName { get; set; }
         public string CompeteLevel { get; set; }
         public int MemberCount { get; set; }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace VotingApp.Models
 {
@@ -8,5 +9,6 @@ namespace VotingApp.Models
         public string BusinessName { get; set; }
         public int NumberOfPeople { get; set; }
         public int NumCurrentLogins { get; set; }
+        public BusinessLogin BusinessLogin { get; set; }
     }
 }
