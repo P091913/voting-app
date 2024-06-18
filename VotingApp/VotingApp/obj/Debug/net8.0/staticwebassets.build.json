@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0XfA21y3jHGJpTNTObZWBEIvCBMY09lXCDPGCw9Ahlk=",
+  "Hash": "5SHgvXtXS2Mz9/SSEnEaf1e4u+eSiAjP9mDFqwbykBM=",
   "Source": "VotingApp",
   "BasePath": "_content/VotingApp",
   "Mode": "Default",
@@ -262,6 +262,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\HSLogo.png",
+      "SourceId": "VotingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "BasePath": "_content/VotingApp",
+      "RelativePath": "HSLogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\HSLogo.png"
+    },
+    {
+      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\IndianHillsLogo.png",
+      "SourceId": "VotingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "BasePath": "_content/VotingApp",
+      "RelativePath": "IndianHillsLogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\IndianHillsLogo.png"
     }
   ]
 }

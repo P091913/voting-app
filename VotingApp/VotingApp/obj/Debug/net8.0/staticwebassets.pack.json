@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\Extra\\css\\voting_styles.css"
     },
     {
+      "Id": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\HSLogo.png",
+      "PackagePath": "staticwebassets\\HSLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\IndianHillsLogo.png",
+      "PackagePath": "staticwebassets\\IndianHillsLogo.png"
+    },
+    {
       "Id": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
