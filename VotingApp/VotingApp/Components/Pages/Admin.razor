@@ -1,4 +1,5 @@
 @page "/Admin"
+@rendermode InteractiveAuto
 <PageTitle>Byte Jam Admin</PageTitle>
 
 @if (ShowLogin)
@@ -9,8 +10,8 @@
             <label for="email">Email:</label><br>
             <input type="text" id="email" name="email"><br>
             <label for="password">Password:</label><br>
-            <input type="text" id="password" name="password">
-            <input type="submit" value="Submit">
+            <input type="text" id="password" name="password"><br/>
+            <input type="submit" value="Login">
         </form>
     </div>
 }
@@ -19,6 +20,19 @@
 {
     <div>
         <h1>Admin</h1>
+        <h3>Add Team</h3>
+        <form>
+            <label for="teamLevel">Team Level:</label>
+            <input type="radio" id="teamLevel" name="TeamLevel" value="College"/>
+            <label>College</label>
+            <input type="radio" id="teamLevel" name="TeamLevel" value="Bytes"/>
+            <label>Bytes</label>
+            <input type="radio" id="teamLevel" name="TeamLevel" value="Bits"/>
+            <label>Bits</label><br/>
+            <label for="TeamName">Team Name:</label>
+            <input type="text" id="TeamName" name="TeamName"><br>
+            <input type="submit" value="Submit">
+        </form>
         <div>
             <h4 class="teamName">College Teams</h4>
             <table class="votesTable">
@@ -50,8 +64,17 @@
         </div>
     </div>
 }
+
 @code {
-    bool ShowLogin { get; set; } = true;
-    bool ShowPage { get; set; } = true;
-    
+   private bool ShowLogin { get; set; } = true;
+   private bool ShowPage { get; set; } = true;
+
+   private int CollegeTeams { get; set; } = 0;
+   private int BytesTeams { get; set; } = 0;
+   private int BitsTeams { get; set; } = 0;
+
+   private void SimpleTest()
+   {
+       
+   }
 }

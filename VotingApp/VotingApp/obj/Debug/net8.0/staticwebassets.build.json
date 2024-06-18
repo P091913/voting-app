@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0XfA21y3jHGJpTNTObZWBEIvCBMY09lXCDPGCw9Ahlk=",
+  "Hash": "IIlyjfAsz6wW72ru8oPEHu/Mx8FNxcy4htz9T9aZD60=",
   "Source": "VotingApp",
   "BasePath": "_content/VotingApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "VotingApp\\wwwroot",
       "Source": "VotingApp",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
       "BasePath": "_content/VotingApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\Blazor.Bootstrap.bundle.scp.css",
+      "Identity": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\Blazor.Bootstrap.bundle.scp.css",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "Blazor.Bootstrap.bundle.scp.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\Blazor.Bootstrap.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\Blazor.Bootstrap.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.css",
+      "Identity": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.css",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.css"
+      "OriginalItemSpec": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.js",
+      "Identity": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.js",
       "AssetKind": "All",
@@ -71,13 +71,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.js"
+      "OriginalItemSpec": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.pdf.js",
+      "Identity": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.pdf.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.pdf.js",
       "AssetKind": "All",
@@ -90,13 +90,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.pdf.js"
+      "OriginalItemSpec": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.pdf.js"
     },
     {
-      "Identity": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.sortable-list.js",
+      "Identity": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.sortable-list.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.sortable-list.js",
       "AssetKind": "All",
@@ -109,13 +109,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.sortable-list.js"
+      "OriginalItemSpec": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\blazor.bootstrap.sortable-list.js"
     },
     {
-      "Identity": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\icon\\128X128.png",
+      "Identity": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\icon\\128X128.png",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "icon/128X128.png",
       "AssetKind": "All",
@@ -128,13 +128,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\icon\\128X128.png"
+      "OriginalItemSpec": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\icon\\128X128.png"
     },
     {
-      "Identity": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\pdfjs-4.0.379.min.mjs",
+      "Identity": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\pdfjs-4.0.379.min.mjs",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "pdfjs-4.0.379.min.mjs",
       "AssetKind": "All",
@@ -147,13 +147,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\pdfjs-4.0.379.min.mjs"
+      "OriginalItemSpec": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\pdfjs-4.0.379.min.mjs"
     },
     {
-      "Identity": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\pdfjs-4.0.379.worker.min.mjs",
+      "Identity": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\pdfjs-4.0.379.worker.min.mjs",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "pdfjs-4.0.379.worker.min.mjs",
       "AssetKind": "All",
@@ -166,13 +166,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Owner\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\pdfjs-4.0.379.worker.min.mjs"
+      "OriginalItemSpec": "C:\\Users\\LegoM\\.nuget\\packages\\blazor.bootstrap\\2.2.0\\staticwebassets\\pdfjs-4.0.379.worker.min.mjs"
     },
     {
-      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\VotingApp.styles.css",
+      "Identity": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\VotingApp.styles.css",
       "SourceId": "VotingApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/VotingApp",
       "RelativePath": "VotingApp.styles.css",
       "AssetKind": "All",
@@ -185,13 +185,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\VotingApp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\VotingApp.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\VotingApp.bundle.scp.css",
+      "Identity": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\VotingApp.bundle.scp.css",
       "SourceId": "VotingApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/VotingApp",
       "RelativePath": "VotingApp.bundle.scp.css",
       "AssetKind": "All",
@@ -204,13 +204,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\VotingApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\VotingApp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\app.css",
       "SourceId": "VotingApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
       "BasePath": "_content/VotingApp",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\Extra\\css\\voting_styles.css",
+      "Identity": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\Extra\\css\\voting_styles.css",
       "SourceId": "VotingApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
       "BasePath": "_content/VotingApp",
       "RelativePath": "Extra/css/voting_styles.css",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\Extra\\css\\voting_styles.css"
     },
     {
-      "Identity": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\favicon.png",
       "SourceId": "VotingApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
       "BasePath": "_content/VotingApp",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
