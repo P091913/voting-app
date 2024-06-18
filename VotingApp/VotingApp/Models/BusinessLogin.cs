@@ -1,12 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace VotingApp.Models
 {
+    [Keyless]
     public class BusinessLogin
     {
+
         public string Username { get; set; }
         public string Password { get; set; }
-        public General General { get; set; }
-        public Business Business { get; set; }
     }
 }

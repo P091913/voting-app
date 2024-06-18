@@ -37,12 +37,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-// added UseRouting
 app.UseRouting();
-//added MapBlazorHub and MapFallBackToPage
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
-// app.MapRazorComponents<App>()
-    // .AddInteractiveServerRenderMode();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
 
 app.Run();

@@ -10,7 +10,5 @@ namespace VotingApp.Models
         public bool VotedForCollege { get; set; }
         public bool VotedForBytes { get; set; }
         public bool VotedForBits { get; set; }
-        public ICollection<Admin> Admins { get; set; }
-        public ICollection<BusinessLogin> Blogs { get; set; }
-    }
+       }
 }
