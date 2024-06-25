@@ -36,17 +36,18 @@
         <div class="teamSection">
             <h3>Add Team</h3>
             <EditForm Model="_team" OnValidSubmit="HandleValidTeam">
-                <div class="mb-3">
-                    <label for="teamLevel" class="form-label">Car Selection:</label>
-                    <div>
-                        <InputSelect id="teamLevel" @bind-Value="_team.TeamLevel">
-                            <option value="">Select Team Level...</option>
-                            <option value="College">College</option>
-                            <option value="Bytes">Bytes</option>
-                            <option value="Bits">Bits</option>
-                        </InputSelect>
+                    <div class="mb-3">
+                        <label>Team Level:</label>
+                        <div>
+                            <InputRadioGroup @bind-Value="_team.TeamLevel">
+                                <div>
+                                    <InputRadio id="College" Value="@("College")" /> <label for="College">College</label>
+                                    <InputRadio id="Bytes" Value="@("Bytes")" /> <label for="Bytes">Bytes</label>
+                                    <InputRadio id="Bits" Value="@("Bits")" /> <label for="Bits">Bits</label>
+                                </div>
+                            </InputRadioGroup>
+                        </div>
                     </div>
-                </div>
                 <div class="mb-3">
                     <label for="teamName">Team Name:</label>
                     <InputText id="teamName" class="form-control" @bind-Value="_team.TeamName" />
