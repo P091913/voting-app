@@ -1,18 +1,31 @@
 @page "/Admin"
-@rendermode InteractiveAuto
+@using System.Text
+@using VotingApp.Components.Models
+@rendermode InteractiveServer
+
+
 <PageTitle>Byte Jam Admin</PageTitle>
 
 @if (ShowLogin)
 {
     <div>
         <h1>Byte Jam Admin Login</h1>
-        <form>
-            <label for="email">Email:</label><br>
-            <input type="text" id="email" name="email"><br>
-            <label for="password">Password:</label><br>
-            <input type="text" id="password" name="password"><br/>
-            <input type="submit" value="Login">
-        </form>
+        <EditForm Model="_admin" OnValidSubmit="HandleValidLogin">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-3">
+                <label for="email" form="form-label">Email:</label>
+                <InputText type="email" id="email" class="form-control" @bind-Value="_admin.AdminEmail" />
+            </div>
+
+            <div class="mb-3">
+                <label for="password" form="form-label">Password:</label>
+                <InputText type="password" id="password" class="form-control" @bind-Value="_admin.AdminPass" />
+            </div>
+            
+            <button type="submit" class="btn btn-primary mb-3">Login</button>
+        </EditForm>
     </div>
 }
 
@@ -20,61 +33,142 @@
 {
     <div>
         <h1>Admin</h1>
-        <h3>Add Team</h3>
-        <form>
-            <label for="teamLevel">Team Level:</label>
-            <input type="radio" id="teamLevel" name="TeamLevel" value="College"/>
-            <label>College</label>
-            <input type="radio" id="teamLevel" name="TeamLevel" value="Bytes"/>
-            <label>Bytes</label>
-            <input type="radio" id="teamLevel" name="TeamLevel" value="Bits"/>
-            <label>Bits</label><br/>
-            <label for="TeamName">Team Name:</label>
-            <input type="text" id="TeamName" name="TeamName"><br>
-            <input type="submit" value="Submit">
-        </form>
-        <div>
-            <h4 class="teamName">College Teams</h4>
-            <table class="votesTable">
-                <tr>
-                    <th class="teamHead">Team Name</th>
-                    <th class="voteHead">Votes Received</th>
-                </tr>
-            </table>
+        <div class="teamSection">
+            <h3>Add Team</h3>
+            <EditForm Model="_team" OnValidSubmit="HandleValidTeam">
+                <div class="mb-3">
+                    <label for="teamLevel" class="form-label">Car Selection:</label>
+                    <div>
+                        <InputSelect id="teamLevel" @bind-Value="_team.TeamLevel">
+                            <option value="">Select Team Level...</option>
+                            <option value="College">College</option>
+                            <option value="Bytes">Bytes</option>
+                            <option value="Bits">Bits</option>
+                        </InputSelect>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="teamName">Team Name:</label>
+                    <InputText id="teamName" class="form-control" @bind-Value="_team.TeamName" />
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Create Team</button>
+            </EditForm>
+            
+            <div>
+                <h4 class="teamName">College Teams</h4>
+                @DisplayTables
+
+            </div>
+
+            <div>
+                <h4>Bytes</h4>
+                <table class="votesTable">
+                    <tr>
+                        <th class="teamHead">Team Name</th>
+                        <th class="voteHead">Votes Received</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <h4>Bits</h4>
+                <table class="votesTable">
+                    <tr>
+                        <th class="teamHead">Team Name</th>
+                        <th class="voteHead">Votes Received</th>
+                    </tr>
+                </table>
+            </div>
         </div>
-        
-        <div>
-            <h4>Bytes</h4>
-            <table class="votesTable">
-                <tr>
-                    <th class="teamHead">Team Name</th>
-                    <th class="voteHead">Votes Received</th>
-                </tr>
-            </table>
-        </div>
-        
-        <div>
-            <h4>Bits</h4>
-            <table class="votesTable">
-                <tr>
-                    <th class="teamHead">Team Name</th>
-                    <th class="voteHead">Votes Received</th>
-                </tr>
-            </table>
-        </div>
+    </div>
+    
+    <div class="businessSection">
+        <h3>Register Business</h3>
+        <EditForm Model="_business" OnValidSubmit="HandleValidBusiness">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-3">
+                <label for="businessName" class="form-label">Business Name:</label>
+                <InputText id="businessName" class="form-control" @bind-Value="_business.BusinessName" />
+            </div>
+
+            <div class="mb-3">
+                <label for="numPeople" class="form-label">Number of People:</label>
+                <InputText id="numPeople" class="form-control" @bind-Value="_business.NumPeople" />
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-3">Register</button>
+        </EditForm>
     </div>
 }
 
 @code {
-   private bool ShowLogin { get; set; } = true;
-   private bool ShowPage { get; set; } = true;
+    private readonly AdminInfo _admin = new AdminInfo();
+    private readonly TeamInfo _team = new TeamInfo();
+    private readonly BusinessInfo _business = new BusinessInfo();
+    
+    private bool ShowLogin { get; set; } = true;
+    private bool ShowPage { get; set; } = true;
 
-   private int CollegeTeams { get; set; } = 0;
-   private int BytesTeams { get; set; } = 0;
-   private int BitsTeams { get; set; } = 0;
+    private int CollegeTeams { get; set; } = 0;
+    private int BytesTeams { get; set; } = 0;
+    private int BitsTeams { get; set; } = 0;
+    
+    private bool _isLoggedIn = false;
 
-   private void SimpleTest()
-   {
-       
-   }
+    private void HandleValidLogin()
+    {
+        if (_isLoggedIn)
+        {
+            ShowLogin = false;
+            ShowPage = true;
+        }
+
+        _isLoggedIn = true;
+    }
+    
+    private void HandleValidTeam()
+    {
+        
+    }
+
+    private void HandleValidBusiness()
+    {
+        
+    }
+    
+    private static readonly RenderFragment DisplayTables = builder =>
+    {
+        builder.OpenElement(0, "table");
+        builder.AddContent(1, "Team Name");
+        builder.AddContent(2, "Votes Received");
+        builder.CloseElement();
+    };
+
+    private string BuildTableMarkup(List<string> columns, List<List<string>> rows)
+    {
+        var html = new StringBuilder();
+        html.Append("<table class='table'>");
+        html.Append("<thead><tr>");
+        foreach (var column in columns)
+        {
+            html.Append($"<th>{column}</th>");
+        }
+        html.Append("</tr></thead>");
+        html.Append("<tbody>");
+        foreach (var row in rows)
+        {
+            html.Append("<tr>");
+            foreach (var cell in row)
+            {
+                html.Append($"<td>{cell}</td>");
+            }
+            html.Append("</tr>");
+        }
+        html.Append("</tbody>");
+        html.Append("</table>");
+        return html.ToString();
+    }
+
 }

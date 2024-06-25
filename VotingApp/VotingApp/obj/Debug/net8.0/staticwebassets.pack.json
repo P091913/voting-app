@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\VotingApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\Extra\\css\\admin.css",
+      "PackagePath": "staticwebassets\\Extra\\css\\admin.css"
+    },
+    {
       "Id": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\Extra\\css\\voting_styles.css",
       "PackagePath": "staticwebassets\\Extra\\css\\voting_styles.css"
     },

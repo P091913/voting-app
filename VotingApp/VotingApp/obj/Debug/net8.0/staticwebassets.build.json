@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IIlyjfAsz6wW72ru8oPEHu/Mx8FNxcy4htz9T9aZD60=",
+  "Hash": "ptVXybCAOFgR0u5ZWsM9Zmn5CKoKSDqkhyNXa2LIe/Y=",
   "Source": "VotingApp",
   "BasePath": "_content/VotingApp",
   "Mode": "Default",
@@ -224,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\Extra\\css\\admin.css",
+      "SourceId": "VotingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\",
+      "BasePath": "_content/VotingApp",
+      "RelativePath": "Extra/css/admin.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Extra\\css\\admin.css"
     },
     {
       "Identity": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\Extra\\css\\voting_styles.css",
