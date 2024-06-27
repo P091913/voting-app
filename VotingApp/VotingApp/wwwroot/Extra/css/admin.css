@@ -1,0 +1,8 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+}
+.teamSection, .businessSection{
+    flex: 1;
+    padding: 20px;
+}

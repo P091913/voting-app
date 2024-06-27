@@ -3,7 +3,6 @@
 @using VotingApp.Components.Models
 @rendermode InteractiveServer
 
-
 <PageTitle>Byte Jam Admin</PageTitle>
 
 @if (ShowLogin)
@@ -31,7 +30,7 @@
 
 @if (ShowPage)
 {
-    <div>
+    <div class="mainContainer">
         <h1>Admin</h1>
         <div class="teamSection">
             <h3>Add Team</h3>
@@ -58,7 +57,6 @@
             <div>
                 <h4 class="teamName">College Teams</h4>
                 @DisplayTables
-
             </div>
 
             <div>
