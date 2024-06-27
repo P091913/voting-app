@@ -1,6 +1,60 @@
-﻿@page "/Voting"
+@page "/voting"
 <h3>Voting</h3>
 
 @code {
-
+    
 }
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Extra/css/voting_styles.css" rel="stylesheet">
+    <title>Voting</title>
+</head>
+<body>
+<div id="forms_container">
+    <div class="form_container">
+        <img src="IndianHillsLogo.png" alt="IHCCLogo">
+        <h4 class="text-center">IHCC Teams</h4>
+        <form>
+            <div class="inputs btn-group-toggle" data-toggle="buttons">
+                <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam1" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="hillsTeam1">Hills Team 1</label>
+
+                <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam2" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="hillsTeam2">Hills Team 2</label>
+
+                <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam3" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="hillsTeam3">Hills Team 3</label>
+
+                <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam4" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="hillsTeam4">Hills Team 4</label>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Cast Hills Vote">
+        </form>
+    </div>
+
+    <div class="form_container">
+        <img src="HSLogo.png" alt="HSLogo">
+        <h4>High School Teams</h4>
+        <form>
+            <div class="inputs btn-group-toggle" data-toggle="buttons">
+                <input type="radio" class="btn-check" name="HSTeams" id="HSTeam1" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="HSTeam1">High School Team 1</label>
+
+                <input type="radio" class="btn-check" name="HSTeams" id="HSTeam2" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="HSTeam2">High School Team 2</label>
+
+                <input type="radio" class="btn-check" name="HSTeams" id="HSTeam3" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="HSTeam3">High School Team 3</label>
+
+                <input type="radio" class="btn-check" name="HSTeams" id="HSTeam4" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="HSTeam4">High School Team 4</label>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Cast HS Vote">
+        </form>
+    </div>
+</div>
+</body>
+</html>
