@@ -1,3 +1,13 @@
+.nav img {
+    width: 23px;
+    margin-right: 10px;
+}
+
+.nav .nav-item .active{
+    background-color: #1b6ec2 !important;
+    color: #ffffff !important;
+}
+
 .form_container {
     margin: 6.5px auto;
     padding: 15px;
@@ -36,13 +46,13 @@ img {
     width: 64px;
 }
 
-@media (min-width: 880px) {
+@media (min-width: 930px) {
     #forms_container {
         display: flex;
         flex-direction: row;
     }
     .form_container {
-        width: 45%;
+        width: 620px;
     }
 }
 

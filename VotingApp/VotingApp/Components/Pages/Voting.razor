@@ -14,94 +14,108 @@
     <title>Voting</title>
 </head>
 <body>
-<nav class="nav nav-tabs text-center" data-toggle="buttons">
-    <input type="radio" class="btn-check nav-item" name="form-nav" id="hillsTeams" autocomplete="off">
-    <label class="btn btn-outline-dark" for="hillsTeams">IHCC Teams</label>
+
+<ul class="nav nav-tabs justify-content-center" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button type="button" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#ihccTeams">
+            <img src="IndianHillsLogo.png" alt="IHCCLogo">IHCC Teams
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button type="button" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#bitsTeams">
+            <img src="HSLogo.png" alt="HSLogo">Bits Teams
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button type="button" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#bytesTeams">
+            <img src="HSLogo.png" alt="HSLogo">Bytes Teams
+        </button>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade show active" id="ihccTeams" role="tabpanel">
+        <div class="form_container" runat="server" id="theDiv">
+            <img src="IndianHillsLogo.png" alt="IHCCLogo">
+            <h4 class="text-center">IHCC Teams</h4>
+            <form>
+                <div class="inputs btn-group-toggle" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam1" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="hillsTeam1">Hills Team 1</label>
     
-    <input type="radio" class="btn-check nav-item" name="form-nav" id="byteTeams" autocomplete="off">
-    <label class="btn btn-outline-dark" for="byteTeams">Byte Teams</label>
+                    <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam2" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="hillsTeam2">Hills Team 2</label>
     
-    <input type="radio" class="btn-check nav-item" name="form-nav" id="bitsTeams" autocomplete="off">
-    <label class="btn btn-outline-dark" for="bitsTeams">Bits Teams</label>
-</nav>
-<div class="form_container">
-    <img src="IndianHillsLogo.png" alt="IHCCLogo">
-    <h4 class="text-center">IHCC Teams</h4>
-    <form>
-        <div class="inputs btn-group-toggle" data-toggle="buttons">
-            <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam1" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="hillsTeam1">Hills Team 1</label>
-
-            <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam2" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="hillsTeam2">Hills Team 2</label>
-
-            <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam3" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="hillsTeam3">Hills Team 3</label>
-
-            <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam4" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="hillsTeam4">Hills Team 4</label>
-                
-            <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam5" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="hillsTeam5">Hills Team 5</label>
-                
-            <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam6" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="hillsTeam6">Hills Team 6</label>
-                
-                
-            <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam7" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="hillsTeam7">Hills Team 7</label>
-                
-            <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam8" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="hillsTeam8">Hills Team 8</label>
-                
+                    <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam3" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="hillsTeam3">Hills Team 3</label>
+    
+                    <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam4" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="hillsTeam4">Hills Team 4</label>
+    
+                    <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam5" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="hillsTeam5">Hills Team 5</label>
+    
+                    <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam6" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="hillsTeam6">Hills Team 6</label>
+    
+    
+                    <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam7" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="hillsTeam7">Hills Team 7</label>
+    
+                    <input type="radio" class="btn-check" name="hillsTeams" id="hillsTeam8" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="hillsTeam8">Hills Team 8</label>
+    
+                </div>
+                <Button Color="ButtonColor.Primary" @onclick="ShowCollegeModal">Cast Hills Vote</Button>
+            </form>
         </div>
-            
-        <Button Color="ButtonColor.Primary" @onclick="ShowCollegeModal">Cast Hills Vote</Button>
-    </form>
-</div>
-
-<div class="form_container">
-    <img src="HSLogo.png" alt="HSLogo">
-    <h4>Bits Teams</h4>
-    <form>
-        <div class="inputs btn-group-toggle" data-toggle="buttons">
-            <input type="radio" class="btn-check" name="BitsTeams" id="BitsTeam1" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="BitsTeam1">Bits Team 1</label>
-                
-            <input type="radio" class="btn-check" name="BitsTeams" id="BitsTeam2" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="BitsTeam2">Bits Team 2</label>
-                
-            <input type="radio" class="btn-check" name="BitsTeams" id="BitsTeam3" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="BitsTeam3">Bits Team 3</label>
-                
-            <input type="radio" class="btn-check" name="BitsTeams" id="BitsTeam4" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="BitsTeam4">Bits Team 4</label>
+    </div>
+    <div class="tab-pane fade" id="bitsTeams" role="tabpanel">
+        <div class="form_container">
+            <img src="HSLogo.png" alt="HSLogo">
+            <h4>Bits Teams</h4>
+            <form>
+                <div class="inputs btn-group-toggle" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="BitsTeams" id="BitsTeam1" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="BitsTeam1">Bits Team 1</label>
+        
+                    <input type="radio" class="btn-check" name="BitsTeams" id="BitsTeam2" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="BitsTeam2">Bits Team 2</label>
+        
+                    <input type="radio" class="btn-check" name="BitsTeams" id="BitsTeam3" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="BitsTeam3">Bits Team 3</label>
+        
+                    <input type="radio" class="btn-check" name="BitsTeams" id="BitsTeam4" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="BitsTeam4">Bits Team 4</label>
+                </div>
+        
+                <Button Color="ButtonColor.Primary" @onclick="ShowBitsModal">Cast Bits Vote</Button>
+            </form>
         </div>
-            
-        <Button Color="ButtonColor.Primary" @onclick="ShowBitsModal">Cast Bits Vote</Button>
-    </form>
-</div>
-
-<div class="form_container">
-    <img src="HSLogo.png" alt="HSLogo">
-    <h4>Bytes Teams</h4>
-    <form>
-        <div class="inputs btn-group-toggle" data-toggle="buttons">
-            <input type="radio" class="btn-check" name="BytesTeams" id="BytesTeam1" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="BytesTeam1">Bytes Team 1</label>
-                
-            <input type="radio" class="btn-check" name="BytesTeams" id="BytesTeam2" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="BytesTeam2">Bytes Team 2</label>
-                
-            <input type="radio" class="btn-check" name="BytesTeams" id="BytesTeam3" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="BytesTeam3">Bytes Team 3</label>
-                
-            <input type="radio" class="btn-check" name="BytesTeams" id="BytesTeam4" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="BytesTeam4">Bytes Team 4</label>
+    </div>
+    <div class="tab-pane fade" id="bytesTeams" role="tabpanel">
+        <div class="form_container">
+            <img src="HSLogo.png" alt="HSLogo">
+            <h4>Bytes Teams</h4>
+            <form>
+                <div class="inputs btn-group-toggle" data-toggle="buttons">
+                    <input type="radio" class="btn-check" name="BytesTeams" id="BytesTeam1" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="BytesTeam1">Bytes Team 1</label>
+        
+                    <input type="radio" class="btn-check" name="BytesTeams" id="BytesTeam2" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="BytesTeam2">Bytes Team 2</label>
+        
+                    <input type="radio" class="btn-check" name="BytesTeams" id="BytesTeam3" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="BytesTeam3">Bytes Team 3</label>
+        
+                    <input type="radio" class="btn-check" name="BytesTeams" id="BytesTeam4" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="BytesTeam4">Bytes Team 4</label>
+                </div>
+        
+                <Button Color="ButtonColor.Primary" @onclick="ShowBytesModal">Cast Bytes Vote</Button>
+            </form>
         </div>
-            
-        <Button Color="ButtonColor.Primary" @onclick="ShowBytesModal">Cast Bits Vote</Button>
-    </form>
+    </div>
 </div>
 
 <College_Modal @ref="collegeModal"></College_Modal>
