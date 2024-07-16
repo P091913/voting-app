@@ -4,6 +4,7 @@
 @rendermode InteractiveServer
 
 <PageTitle>Byte Jam Admin</PageTitle>
+<link href="Extra/css/admin.css" rel="stylesheet">
 
 @if (ShowLogin)
 {
@@ -30,23 +31,23 @@
 
 @if (ShowPage)
 {
+    <h1>Admin</h1>
     <div class="mainContainer">
-        <h1>Admin</h1>
         <div class="teamSection">
             <h3>Add Team</h3>
             <EditForm Model="_team" OnValidSubmit="HandleValidTeam">
-                    <div class="mb-3">
-                        <label>Team Level:</label>
-                        <div>
-                            <InputRadioGroup @bind-Value="_team.TeamLevel">
-                                <div>
-                                    <InputRadio id="College" Value="@("College")" /> <label for="College">College</label>
-                                    <InputRadio id="Bytes" Value="@("Bytes")" /> <label for="Bytes">Bytes</label>
-                                    <InputRadio id="Bits" Value="@("Bits")" /> <label for="Bits">Bits</label>
-                                </div>
-                            </InputRadioGroup>
-                        </div>
+                <div class="mb-3">
+                    <label>Team Level:</label>
+                    <div>
+                        <InputRadioGroup @bind-Value="_team.TeamLevel">
+                            <div>
+                                <InputRadio id="College" Value="@("College")" /> <label for="College">College</label>
+                                <InputRadio id="Bytes" Value="@("Bytes")" /> <label for="Bytes">Bytes</label>
+                                <InputRadio id="Bits" Value="@("Bits")" /> <label for="Bits">Bits</label>
+                            </div>
+                        </InputRadioGroup>
                     </div>
+                </div>
                 <div class="mb-3">
                     <label for="teamName">Team Name:</label>
                     <InputText id="teamName" class="form-control" @bind-Value="_team.TeamName" />
@@ -79,30 +80,64 @@
                 </table>
             </div>
         </div>
-    </div>
-    
-    <div class="businessSection">
-        <h3>Register Business</h3>
-        <EditForm Model="_business" OnValidSubmit="HandleValidBusiness">
-            <DataAnnotationsValidator />
-            <ValidationSummary />
 
+        <div class="businessSection">
+            <h3>Register Business</h3>
+            <EditForm Model="_business" OnValidSubmit="HandleValidBusiness">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="mb-3">
+                    <label for="businessName" class="form-label">Business Name:</label>
+                    <InputText id="businessName" class="form-control" @bind-Value="_business.BusinessName" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="numPeople" class="form-label">Number of People Attending:</label>
+                    <InputNumber id="numPeople" class="form-control" @bind-Value="_business.NumPeople" />
+                </div>
+
+                <button type="submit" class="btn btn-primary mb-3">Register</button>
+            </EditForm>
+            
             <div class="mb-3">
-                <label for="businessName" class="form-label">Business Name:</label>
-                <InputText id="businessName" class="form-control" @bind-Value="_business.BusinessName" />
+                <h4>Businesses</h4>
+                <table class="businessTable">
+                    <tr>
+                        <th>Business</th>
+                        <th>Attendees</th>
+                        <th>Password(s)</th>
+                    </tr>
+                </table>
             </div>
 
-            <div class="mb-3">
-                <label for="numPeople" class="form-label">Number of People:</label>
-                <InputText id="numPeople" class="form-control" @bind-Value="_business.NumPeople" />
-            </div>
+            <button type="button" @onclick="@RenderComponent">
+                Trigger rendering
+            </button>
 
-            <button type="submit" class="btn btn-primary mb-3">Register</button>
-        </EditForm>
+            @DynamicFragment
+        </div>
     </div>
 }
 
 @code {
+    private string dynamicContent = "This is a long text...";
+    private RenderFragment DynamicFragment;
+ 
+    private RenderFragment CreateComponent() => builder =>
+    {
+        dynamicContent = dynamicContent.Replace("long", "long long");
+ 
+        builder.OpenElement(1, "p");
+        builder.AddContent(2, dynamicContent);
+        builder.CloseElement();
+    };
+ 
+    private void RenderComponent()
+    {
+        DynamicFragment = CreateComponent();
+    }
+    
     private readonly AdminInfo _admin = new AdminInfo();
     private readonly TeamInfo _team = new TeamInfo();
     private readonly BusinessInfo _business = new BusinessInfo();
@@ -170,4 +205,5 @@
         return html.ToString();
     }
 
+    // Presentation, 
 }

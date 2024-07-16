@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {}
+    "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {
+    "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
+        "projectUniqueName": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
         "projectName": "VotingApp",
-        "projectPath": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
-        "packagesPath": "C:\\Users\\Noted\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\",
+        "projectPath": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
+        "packagesPath": "C:\\Users\\LegoM\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Noted\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LegoM\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\MicroFocus.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -66,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

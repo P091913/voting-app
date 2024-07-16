@@ -3,5 +3,6 @@
 public class BusinessInfo
 {
     public string BusinessName { get; set; }
-    public string NumPeople { get; set; }
+    public int NumPeople { get; set; }
+    
 }
