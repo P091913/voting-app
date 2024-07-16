@@ -8,7 +8,6 @@ namespace VotingApp.Models
         public int BusinessId { get; set; }
         public string BusinessName { get; set; }
         public int NumberOfPeople { get; set; }
-        public int NumCurrentLogins { get; set; }
         public BusinessLogin BusinessLogin { get; set; }
     }
 }

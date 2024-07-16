@@ -40,6 +40,16 @@ namespace VotingApp.Data
             .HasOne(a => a.Admin)
             .WithOne(b => b.General)
             .HasForeignKey<Admin>(b => b.Voter_id);
+
+            modelBuilder.Entity<StaffCoach>()
+            .HasOne(a => a.General)
+            .WithOne(b => b.StaffCoach)
+            .HasForeignKey<General>(b => b.Voter_Id);
+
+            modelBuilder.Entity<Teams>()
+            .HasOne(a => a.TeamData)
+            .WithOne(b => b.Teams)
+            .HasForeignKey<TeamData>(b => b.Team_id);
         }
 
         
