@@ -57,7 +57,15 @@
             
             <div>
                 <h4 class="teamName">College Teams</h4>
-                <p>Implement Dynamic Rendering</p>
+                <table class="votesTable">
+                    <tr>
+                        <th class="teamHead">Team Name</th>
+                        <th class="voteHead">Votes Received</th>
+                        <th class="voteHead">Votes Averages</th>
+                        <th> Remove Team</th>
+                    </tr>
+                    @_dynamicFragment
+                </table>
             </div>
 
             <div>
@@ -66,7 +74,10 @@
                     <tr>
                         <th class="teamHead">Team Name</th>
                         <th class="voteHead">Votes Received</th>
+                        <th class="voteHead">Votes Averages</th>
+                        <th> Remove Team</th>
                     </tr>
+                    @_dynamicFragment
                 </table>
             </div>
 
@@ -76,7 +87,10 @@
                     <tr>
                         <th class="teamHead">Team Name</th>
                         <th class="voteHead">Votes Received</th>
+                        <th class="voteHead">Votes Averages</th>
+                        <th> Remove Team</th>
                     </tr>
+                    @_dynamicFragment
                 </table>
             </div>
         </div>
@@ -114,28 +128,60 @@
             <button type="button" @onclick="@RenderComponent">
                 Trigger rendering
             </button>
-
-            @DynamicFragment
+            
         </div>
     </div>
 }
 
 @code {
-    private string dynamicContent = "This is a long text...";
-    private RenderFragment DynamicFragment;
- 
-    private RenderFragment CreateComponent() => builder =>
+    // Start of Test Data & Code
+    private TeamInfo Team1 = new TeamInfo();
+    private TeamInfo Team2 = new TeamInfo();
+    private TeamInfo Team3 = new TeamInfo();
+    
+    // End of Test Data & Code
+    private RenderFragment _dynamicFragment = null!;
+    
+    private RenderFragment DisplayTeamTables() => builder =>
     {
-        dynamicContent = dynamicContent.Replace("long", "long long");
- 
-        builder.OpenElement(1, "p");
-        builder.AddContent(2, dynamicContent);
+        
+        builder.OpenElement(1, "tr");
+        
+            builder.OpenElement(2, "td");
+                builder.AddContent(3, "Team Name");
+            builder.CloseElement();
+            
+            builder.OpenElement(4, "td");
+                builder.AddContent(5, "Votes Summary");
+            builder.CloseElement();
+            
+            builder.OpenElement(6, "td");
+                builder.OpenElement(7,"button");
+                    builder.AddContent(8, "Show Votes Averages");
+                builder.CloseElement();
+            builder.CloseElement();
+            
+            builder.OpenElement(9, "td");
+                builder.OpenElement(10,"button");
+                    builder.AddContent(11, "Remove");
+                builder.CloseElement();
+            builder.CloseElement();
+            
         builder.CloseElement();
+        
     };
- 
+    
     private void RenderComponent()
     {
-        DynamicFragment = CreateComponent();
+        _dynamicFragment = DisplayTeamTables();
+    }
+
+    private void OnPageLoad()
+    {
+        if (_isLoggedIn && ShowPage)
+        {
+            RenderComponent();
+        }
     }
     
     private readonly AdminInfo _admin = new AdminInfo();
@@ -158,7 +204,7 @@
             ShowLogin = false;
             ShowPage = true;
         }
-
+        
         _isLoggedIn = true;
     }
     
@@ -171,39 +217,4 @@
     {
         
     }
-    
-    private static readonly RenderFragment DisplayTables = builder =>
-    {
-        builder.OpenElement(0, "table");
-        builder.AddContent(1, "Team Name");
-        builder.AddContent(2, "Votes Received");
-        builder.CloseElement();
-    };
-
-    private string BuildTableMarkup(List<string> columns, List<List<string>> rows)
-    {
-        var html = new StringBuilder();
-        html.Append("<table class='table'>");
-        html.Append("<thead><tr>");
-        foreach (var column in columns)
-        {
-            html.Append($"<th>{column}</th>");
-        }
-        html.Append("</tr></thead>");
-        html.Append("<tbody>");
-        foreach (var row in rows)
-        {
-            html.Append("<tr>");
-            foreach (var cell in row)
-            {
-                html.Append($"<td>{cell}</td>");
-            }
-            html.Append("</tr>");
-        }
-        html.Append("</tbody>");
-        html.Append("</table>");
-        return html.ToString();
-    }
-
-    // Presentation, 
 }
