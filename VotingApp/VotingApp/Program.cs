@@ -1,3 +1,4 @@
+// using BlazorBootstrap;
 using Microsoft.EntityFrameworkCore;
 using VotingApp.Components;
 using VotingApp.Data;
@@ -9,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("VotingDatabase")));
 
+
+builder.Services.AddBlazorBootstrap();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

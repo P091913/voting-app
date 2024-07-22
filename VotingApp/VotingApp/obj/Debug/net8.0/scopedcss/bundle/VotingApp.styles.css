@@ -1,3 +1,5 @@
+@import '_content/Blazor.Bootstrap/Blazor.Bootstrap.bundle.scp.css';
+
 /* _content/VotingApp/Components/Layout/MainLayout.razor.rz.scp.css */
 .page[b-2b775ujwmz] {
     position: relative;

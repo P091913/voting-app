@@ -1,0 +1,47 @@
+.form_container {
+    margin: 6.5px auto;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 90%;
+}
+
+form {
+    align-content: center;
+    text-align: center;
+}
+
+#forms_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+}
+
+input[type=submit] {
+    width: 150px;
+    margin-top: 30px
+}
+
+body {
+    text-align: center;
+}
+
+img {
+    width: 64px;
+}
+
+@media (min-width: 880px) {
+    #forms_container {
+        display: flex;
+        flex-direction: row;
+    }
+    .form_container {
+        width: 45%;
+    }
+}

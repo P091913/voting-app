@@ -1,23 +1,31 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\VotingApp.bundle.scp.css",
+      "Id": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\VotingApp.bundle.scp.css",
       "PackagePath": "staticwebassets\\VotingApp.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\wwwroot\\app.css",
+      "Id": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\Extra\\css\\admin.css",
+      "PackagePath": "staticwebassets\\Extra\\css\\admin.css"
+    },
+    {
+      "Id": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\Extra\\css\\voting_styles.css",
+      "PackagePath": "staticwebassets\\Extra\\css\\voting_styles.css"
+    },
+    {
+      "Id": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\HSLogo.png",
+      "PackagePath": "staticwebassets\\HSLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\IndianHillsLogo.png",
+      "PackagePath": "staticwebassets\\IndianHillsLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
-    },
-    {
-      "Id": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
-    },
-    {
-      "Id": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {

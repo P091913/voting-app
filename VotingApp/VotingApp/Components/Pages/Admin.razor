@@ -1,5 +1,220 @@
-﻿<h3>Admin</h3>
+@page "/Admin"
+@using System.Text
+@using VotingApp.Components.Models
+@rendermode InteractiveServer
+
+<PageTitle>Byte Jam Admin</PageTitle>
+<link href="Extra/css/admin.css" rel="stylesheet">
+
+@if (ShowLogin)
+{
+    <div>
+        <h1>Byte Jam Admin Login</h1>
+        <EditForm Model="_admin" OnValidSubmit="HandleValidLogin">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-3">
+                <label for="email" form="form-label">Email:</label>
+                <InputText type="email" id="email" class="form-control" @bind-Value="_admin.AdminEmail" />
+            </div>
+
+            <div class="mb-3">
+                <label for="password" form="form-label">Password:</label>
+                <InputText type="password" id="password" class="form-control" @bind-Value="_admin.AdminPass" />
+            </div>
+            
+            <button type="submit" class="btn btn-primary mb-3">Login</button>
+        </EditForm>
+    </div>
+}
+
+@if (ShowPage)
+{
+    <h1>Admin</h1>
+    <div class="mainContainer">
+        <div class="teamSection">
+            <h3>Add Team</h3>
+            <EditForm Model="_team" OnValidSubmit="HandleValidTeam">
+                <div class="mb-3">
+                    <label>Team Level:</label>
+                    <div>
+                        <InputRadioGroup @bind-Value="_team.TeamLevel">
+                            <div>
+                                <InputRadio id="College" Value="@("College")" /> <label for="College">College</label>
+                                <InputRadio id="Bytes" Value="@("Bytes")" /> <label for="Bytes">Bytes</label>
+                                <InputRadio id="Bits" Value="@("Bits")" /> <label for="Bits">Bits</label>
+                            </div>
+                        </InputRadioGroup>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="teamName">Team Name:</label>
+                    <InputText id="teamName" class="form-control" @bind-Value="_team.TeamName" />
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Create Team</button>
+            </EditForm>
+            
+            <div>
+                <h4 class="teamName">College Teams</h4>
+                <table class="votesTable">
+                    <tr>
+                        <th class="teamHead">Team Name</th>
+                        <th class="voteHead">Votes Received</th>
+                        <th class="voteHead">Votes Averages</th>
+                        <th> Remove Team</th>
+                    </tr>
+                    @_dynamicFragment
+                </table>
+            </div>
+
+            <div>
+                <h4>Bytes</h4>
+                <table class="votesTable">
+                    <tr>
+                        <th class="teamHead">Team Name</th>
+                        <th class="voteHead">Votes Received</th>
+                        <th class="voteHead">Votes Averages</th>
+                        <th> Remove Team</th>
+                    </tr>
+                    @_dynamicFragment
+                </table>
+            </div>
+
+            <div>
+                <h4>Bits</h4>
+                <table class="votesTable">
+                    <tr>
+                        <th class="teamHead">Team Name</th>
+                        <th class="voteHead">Votes Received</th>
+                        <th class="voteHead">Votes Averages</th>
+                        <th> Remove Team</th>
+                    </tr>
+                    @_dynamicFragment
+                </table>
+            </div>
+        </div>
+
+        <div class="businessSection">
+            <h3>Register Business</h3>
+            <EditForm Model="_business" OnValidSubmit="HandleValidBusiness">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="mb-3">
+                    <label for="businessName" class="form-label">Business Name:</label>
+                    <InputText id="businessName" class="form-control" @bind-Value="_business.BusinessName" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="numPeople" class="form-label">Number of People Attending:</label>
+                    <InputNumber id="numPeople" class="form-control" @bind-Value="_business.NumPeople" />
+                </div>
+
+                <button type="submit" class="btn btn-primary mb-3">Register</button>
+            </EditForm>
+            
+            <div class="mb-3">
+                <h4>Businesses</h4>
+                <table class="businessTable">
+                    <tr>
+                        <th>Business</th>
+                        <th>Attendees</th>
+                        <th>Password(s)</th>
+                    </tr>
+                </table>
+            </div>
+
+            <button type="button" @onclick="@RenderComponent">
+                Trigger rendering
+            </button>
+            
+        </div>
+    </div>
+}
 
 @code {
+    // Start of Test Data & Code
+    private TeamInfo Team1 = new TeamInfo();
+    private TeamInfo Team2 = new TeamInfo();
+    private TeamInfo Team3 = new TeamInfo();
+    
+    // End of Test Data & Code
+    private RenderFragment _dynamicFragment = null!;
+    
+    private RenderFragment DisplayTeamTables() => builder =>
+    {
+        
+        builder.OpenElement(1, "tr");
+        
+            builder.OpenElement(2, "td");
+                builder.AddContent(3, "Team Name");
+            builder.CloseElement();
+            
+            builder.OpenElement(4, "td");
+                builder.AddContent(5, "Votes Summary");
+            builder.CloseElement();
+            
+            builder.OpenElement(6, "td");
+                builder.OpenElement(7,"button");
+                    builder.AddContent(8, "Show Votes Averages");
+                builder.CloseElement();
+            builder.CloseElement();
+            
+            builder.OpenElement(9, "td");
+                builder.OpenElement(10,"button");
+                    builder.AddContent(11, "Remove");
+                builder.CloseElement();
+            builder.CloseElement();
+            
+        builder.CloseElement();
+        
+    };
+    
+    private void RenderComponent()
+    {
+        _dynamicFragment = DisplayTeamTables();
+    }
 
+    private void OnPageLoad()
+    {
+        if (_isLoggedIn && ShowPage)
+        {
+            RenderComponent();
+        }
+    }
+    
+    private readonly AdminInfo _admin = new AdminInfo();
+    private readonly TeamInfo _team = new TeamInfo();
+    private readonly BusinessInfo _business = new BusinessInfo();
+    
+    private bool ShowLogin { get; set; } = true;
+    private bool ShowPage { get; set; } = true;
+
+    private int CollegeTeams { get; set; } = 0;
+    private int BytesTeams { get; set; } = 0;
+    private int BitsTeams { get; set; } = 0;
+    
+    private bool _isLoggedIn = false;
+
+    private void HandleValidLogin()
+    {
+        if (_isLoggedIn)
+        {
+            ShowLogin = false;
+            ShowPage = true;
+        }
+        
+        _isLoggedIn = true;
+    }
+    
+    private void HandleValidTeam()
+    {
+        
+    }
+
+    private void HandleValidBusiness()
+    {
+        
+    }
 }
