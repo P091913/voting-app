@@ -1,5 +1,5 @@
 // using BlazorBootstrap;
-using Microsoft.EntityFrameworkCore;
+
 using VotingApp.Components;
 using VotingApp.Data;
 using Microsoft.EntityFrameworkCore;
