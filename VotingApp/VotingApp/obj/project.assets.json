@@ -9458,27 +9458,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LegoM\\.nuget\\packages\\": {}
+    "C:\\Users\\Owner\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
+      "projectUniqueName": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
       "projectName": "VotingApp",
-      "projectPath": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
-      "packagesPath": "C:\\Users\\LegoM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LegoM\\OneDrive\\Documents\\GitHub\\voting-app\\VotingApp\\VotingApp\\obj\\",
+      "projectPath": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
+      "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\LegoM\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\MicroFocus.VisualStudio.Offline.config",
+        "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Micro Focus\\Visual COBOL\\NuGetPackages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -9492,6 +9495,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -9552,11 +9560,17 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1608",
       "level": "Warning",
