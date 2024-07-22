@@ -6,9 +6,10 @@ namespace VotingApp.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        static readonly string connectionString = "server=10.12.182.86;database=voting_app;user=developer;password=FPDev154;";
+        //static readonly string connectionString = "server=10.12.182.86;database=voting_app;user=developer;password=FPDev154;";
+        static readonly string connectionString = "server=localhost;database=test;user=root;password=1111;";
 
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 		}
@@ -23,6 +24,10 @@ namespace VotingApp.Data
         public DbSet<BusinessLogin> BusinessLogins { get; set; }
         public DbSet<General> Voters { get; set; }
         public DbSet<Teams> Teams { get; set; }
+        public DbSet<FinalTeamScores> FinalTeamScores { get; set; }
+        public DbSet<StaffCoach> StaffCoaches { get; set; }
+        public DbSet<TeamData> TeamDatas { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
