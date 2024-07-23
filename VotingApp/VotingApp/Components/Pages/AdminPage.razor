@@ -1,6 +1,5 @@
 @page "/Admin"
-@using System.Text
-@using VotingApp.Components.Models
+@using VotingApp.Models
 @rendermode InteractiveServer
 
 <PageTitle>Byte Jam Admin</PageTitle>
@@ -16,12 +15,12 @@
 
             <div class="mb-3">
                 <label for="email" form="form-label">Email:</label>
-                <InputText type="email" id="email" class="form-control" @bind-Value="_admin.AdminEmail" />
+                <InputText type="email" id="email" class="form-control" @bind-Value="_admin.Email" />
             </div>
 
             <div class="mb-3">
                 <label for="password" form="form-label">Password:</label>
-                <InputText type="password" id="password" class="form-control" @bind-Value="_admin.AdminPass" />
+                <InputText type="password" id="password" class="form-control" @bind-Value="_admin.Email" />
             </div>
             
             <button type="submit" class="btn btn-primary mb-3">Login</button>
@@ -39,7 +38,7 @@
                 <div class="mb-3">
                     <label>Team Level:</label>
                     <div>
-                        <InputRadioGroup @bind-Value="_team.TeamLevel">
+                        <InputRadioGroup @bind-Value="_team.CompeteLevel">
                             <div>
                                 <InputRadio id="College" Value="@("College")" /> <label for="College">College</label>
                                 <InputRadio id="Bytes" Value="@("Bytes")" /> <label for="Bytes">Bytes</label>
@@ -108,7 +107,7 @@
 
                 <div class="mb-3">
                     <label for="numPeople" class="form-label">Number of People Attending:</label>
-                    <InputNumber id="numPeople" class="form-control" @bind-Value="_business.NumPeople" />
+                    <InputNumber id="numPeople" class="form-control" @bind-Value="_business.NumberOfPeople" />
                 </div>
 
                 <button type="submit" class="btn btn-primary mb-3">Register</button>
@@ -135,9 +134,9 @@
 
 @code {
     // Start of Test Data & Code
-    private TeamInfo Team1 = new TeamInfo();
-    private TeamInfo Team2 = new TeamInfo();
-    private TeamInfo Team3 = new TeamInfo();
+    private Teams Team1 = new Teams();
+    private Teams Team2 = new Teams();
+    private Teams Team3 = new Teams();
     
     // End of Test Data & Code
     private RenderFragment _dynamicFragment = null!;
@@ -184,9 +183,9 @@
         }
     }
     
-    private readonly AdminInfo _admin = new AdminInfo();
-    private readonly TeamInfo _team = new TeamInfo();
-    private readonly BusinessInfo _business = new BusinessInfo();
+    private readonly Admin _admin = new Admin();
+    private readonly Teams _team = new Teams();
+    private readonly Business _business = new Business();
     
     private bool ShowLogin { get; set; } = true;
     private bool ShowPage { get; set; } = true;
