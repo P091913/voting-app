@@ -1,6 +1,6 @@
 @page "/Admin"
 @using System.Text
-@using VotingApp.Components.Models
+@using VotingApp.Models
 @rendermode InteractiveServer
 
 <PageTitle>Byte Jam Admin</PageTitle>
@@ -16,12 +16,12 @@
 
             <div class="mb-3">
                 <label for="email" form="form-label">Email:</label>
-                <InputText type="email" id="email" class="form-control" @bind-Value="_admin.AdminEmail" />
+                <InputText type="email" id="email" class="form-control" @bind-Value="_admin.Email" />
             </div>
 
             <div class="mb-3">
                 <label for="password" form="form-label">Password:</label>
-                <InputText type="password" id="password" class="form-control" @bind-Value="_admin.AdminPass" />
+                <InputText type="password" id="password" class="form-control" @bind-Value="_admin.Password" />
             </div>
             
             <button type="submit" class="btn btn-primary mb-3">Login</button>
@@ -106,10 +106,10 @@
                     <InputText id="businessName" class="form-control" @bind-Value="_business.BusinessName" />
                 </div>
 
-                <div class="mb-3">
+                <!--<div class="mb-3">
                     <label for="numPeople" class="form-label">Number of People Attending:</label>
                     <InputNumber id="numPeople" class="form-control" @bind-Value="_business.NumPeople" />
-                </div>
+                </div>--->
 
                 <button type="submit" class="btn btn-primary mb-3">Register</button>
             </EditForm>
@@ -134,43 +134,44 @@
 }
 
 @code {
-    // Start of Test Data & Code
-    private TeamInfo Team1 = new TeamInfo();
-    private TeamInfo Team2 = new TeamInfo();
-    private TeamInfo Team3 = new TeamInfo();
     
+    // Start of Test Data & Code
+    private Teams Team1 = new Teams();
+    private Teams Team2 = new Teams();
+    private Teams Team3 = new Teams();
+
     // End of Test Data & Code
     private RenderFragment _dynamicFragment = null!;
-    
+
     private RenderFragment DisplayTeamTables() => builder =>
     {
-        
+
         builder.OpenElement(1, "tr");
-        
-            builder.OpenElement(2, "td");
-                builder.AddContent(3, "Team Name");
-            builder.CloseElement();
-            
-            builder.OpenElement(4, "td");
-                builder.AddContent(5, "Votes Summary");
-            builder.CloseElement();
-            
-            builder.OpenElement(6, "td");
-                builder.OpenElement(7,"button");
-                    builder.AddContent(8, "Show Votes Averages");
-                builder.CloseElement();
-            builder.CloseElement();
-            
-            builder.OpenElement(9, "td");
-                builder.OpenElement(10,"button");
-                    builder.AddContent(11, "Remove");
-                builder.CloseElement();
-            builder.CloseElement();
-            
+
+        builder.OpenElement(2, "td");
+        builder.AddContent(3, "Team Name");
         builder.CloseElement();
-        
+
+        builder.OpenElement(4, "td");
+        builder.AddContent(5, "Votes Summary");
+        builder.CloseElement();
+
+        builder.OpenElement(6, "td");
+        builder.OpenElement(7,"button");
+        builder.AddContent(8, "Show Votes Averages");
+        builder.CloseElement();
+        builder.CloseElement();
+
+        builder.OpenElement(9, "td");
+        builder.OpenElement(10,"button");
+        builder.AddContent(11, "Remove");
+        builder.CloseElement();
+        builder.CloseElement();
+
+        builder.CloseElement();
+
     };
-    
+
     private void RenderComponent()
     {
         _dynamicFragment = DisplayTeamTables();
@@ -183,10 +184,10 @@
             RenderComponent();
         }
     }
-    
-    private readonly AdminInfo _admin = new AdminInfo();
-    private readonly TeamInfo _team = new TeamInfo();
-    private readonly BusinessInfo _business = new BusinessInfo();
+
+    public Models.Admin _admin { get; set; }
+    private readonly Teams _team = new Teams();
+    private readonly Business _business = new Business();
     
     private bool ShowLogin { get; set; } = true;
     private bool ShowPage { get; set; } = true;
