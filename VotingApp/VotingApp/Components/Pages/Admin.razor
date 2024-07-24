@@ -1,4 +1,4 @@
-@page "/Admin"
+@page "/admin"
 @using System.Text
 @using VotingApp.Models
 @rendermode InteractiveServer
@@ -15,12 +15,12 @@
             <ValidationSummary />
 
             <div class="mb-3">
-                <label for="email" form="form-label">Email:</label>
+                <label for="email" class="form-label">Email:</label>
                 <InputText type="email" id="email" class="form-control" @bind-Value="_admin.Email" />
             </div>
 
             <div class="mb-3">
-                <label for="password" form="form-label">Password:</label>
+                <label for="password" class="form-label">Password:</label>
                 <InputText type="password" id="password" class="form-control" @bind-Value="_admin.Password" />
             </div>
             
@@ -36,6 +36,9 @@
         <div class="teamSection">
             <h3>Add Team</h3>
             <EditForm Model="_team" OnValidSubmit="HandleValidTeam">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
                 <div class="mb-3">
                     <label>Team Level:</label>
                     <div>
@@ -106,10 +109,10 @@
                     <InputText id="businessName" class="form-control" @bind-Value="_business.BusinessName" />
                 </div>
 
-                <!--<div class="mb-3">
+                <div class="mb-3">
                     <label for="numPeople" class="form-label">Number of People Attending:</label>
-                    <InputNumber id="numPeople" class="form-control" @bind-Value="_business.NumPeople" />
-                </div>--->
+                    <InputNumber id="numPeople" class="form-control" @bind-Value="_business.NumberOfPeople" />
+                </div>
 
                 <button type="submit" class="btn btn-primary mb-3">Register</button>
             </EditForm>
@@ -134,7 +137,7 @@
 }
 
 @code {
-    
+
     // Start of Test Data & Code
     private Teams Team1 = new Teams();
     private Teams Team2 = new Teams();
@@ -185,9 +188,9 @@
         }
     }
 
-    public Models.Admin _admin { get; set; }
-    private readonly Teams _team = new Teams();
-    private readonly Business _business = new Business();
+    public Models.Admin? _admin = new Models.Admin();
+    private Teams _team = new Teams();
+    private Business _business = new Business();
     
     private bool ShowLogin { get; set; } = true;
     private bool ShowPage { get; set; } = true;
