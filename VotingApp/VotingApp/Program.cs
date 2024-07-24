@@ -40,9 +40,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-app.UseRouting();
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 

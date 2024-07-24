@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|c:\\users\\wasan\\onedrive\\documents\\github\\back-end\\votingapp\\votingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|solutionrelative:votingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|c:\\users\\wasan\\onedrive\\documents\\github\\back-end\\votingapp\\votingapp\\components\\pages\\admin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|solutionrelative:votingapp\\components\\pages\\admin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -35,10 +39,6 @@
       "RelativeMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|solutionrelative:votingapp\\services\\teamsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|c:\\users\\wasan\\onedrive\\documents\\github\\back-end\\votingapp\\votingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|solutionrelative:votingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|c:\\users\\wasan\\onedrive\\documents\\github\\back-end\\votingapp\\votingapp\\models\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{639DA3D9-8731-4012-9165-DC2574AA8C51}|VotingApp\\VotingApp.csproj|solutionrelative:votingapp\\models\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "College_Modal.razor",
               "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Components\\Modals\\College_Modal.razor",
               "RelativeDocumentMoniker": "VotingApp\\Components\\Modals\\College_Modal.razor",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Voting.razor",
               "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Components\\Pages\\Voting.razor",
               "RelativeDocumentMoniker": "VotingApp\\Components\\Pages\\Voting.razor",
@@ -86,25 +86,24 @@
               "RelativeToolTip": "VotingApp\\Components\\Pages\\Voting.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-23T15:51:13.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-23T15:51:13.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Admin.razor",
               "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Components\\Pages\\Admin.razor",
               "RelativeDocumentMoniker": "VotingApp\\Components\\Pages\\Admin.razor",
               "ToolTip": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Components\\Pages\\Admin.razor",
               "RelativeToolTip": "VotingApp\\Components\\Pages\\Admin.razor",
-              "ViewState": "AQIAAKgAAAAAAAAAAAAAALsAAAAsAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACkAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-23T15:50:59.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\appsettings.json",
               "RelativeDocumentMoniker": "VotingApp\\appsettings.json",
@@ -112,24 +111,24 @@
               "RelativeToolTip": "VotingApp\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-18T16:35:37.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T16:35:37.837Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Program.cs",
               "RelativeDocumentMoniker": "VotingApp\\Program.cs",
               "ToolTip": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Program.cs",
               "RelativeToolTip": "VotingApp\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA+AAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAACkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T16:35:34.62Z"
+              "WhenOpened": "2024-06-18T16:35:34.62Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TeamsService.cs",
               "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Services\\TeamsService.cs",
               "RelativeDocumentMoniker": "VotingApp\\Services\\TeamsService.cs",
@@ -141,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ApplicationDBContext.cs",
               "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Data\\ApplicationDBContext.cs",
               "RelativeDocumentMoniker": "VotingApp\\Data\\ApplicationDBContext.cs",
@@ -153,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Admin.cs",
               "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Models\\Admin.cs",
               "RelativeDocumentMoniker": "VotingApp\\Models\\Admin.cs",
@@ -161,8 +160,7 @@
               "RelativeToolTip": "VotingApp\\Models\\Admin.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T15:23:55.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T15:23:55.199Z"
             },
             {
               "$type": "Document",
@@ -202,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Teams.cs",
               "DocumentMoniker": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\Models\\Teams.cs",
               "RelativeDocumentMoniker": "VotingApp\\Models\\Teams.cs",
@@ -210,8 +208,7 @@
               "RelativeToolTip": "VotingApp\\Models\\Teams.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T15:23:43.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T15:23:43.11Z"
             }
           ]
         }
