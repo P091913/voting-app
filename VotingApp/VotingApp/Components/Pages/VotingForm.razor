@@ -1,0 +1,88 @@
+@page "/voting"
+@using VotingApp.Components.Modals
+<h3>Now Voting For</h3>
+
+@code {
+    
+}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @* <link href="Extra/css/voting_styles.css" rel="stylesheet">  <!-- TODO: Change CSS stylesheet --> *@
+    <title>Voting Form</title>
+</head>
+<body>
+<h1>Team1</h1>  <!-- TODO: Change Team names based on button selected -->
+<form>
+    <div class="question">
+        <div class="title">
+            <div class="description">
+                <h3>Ad Appeal</h3> 
+                <p>How well did the team's advertisement bring you in?</p>
+            </div>
+            <div class="image">
+                <img src="lol" alt="">  <!-- TODO: Add image -->
+            </div>
+        </div>
+        <input type="range" min="0" max="5" list="steplist">    <!-- TODO: Figure out range CSS ticks -->
+        <datalist id="steplist">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </datalist>
+    </div>
+    
+    <div class="question">
+        <div class="title">
+            <div class="description">
+                <h3>Amazement</h3> 
+                <p>Did the team's project amaze you?</p>
+            </div>
+            <div class="image">
+                <img src="lol" alt="">  <!-- TODO: Add image -->
+            </div>
+        </div>
+        <input type="range" min="0" max="5" list="steplist">    <!-- TODO: CSS ticks -->
+    </div>
+    
+    <div class="question">
+        <div class="title">
+            <div class="description">
+                <h3>Theme</h3> 
+                <p>How well was the <span>Time Travel</span> theme represented?</p> <!-- TODO: Make span bold, changeable -->
+            </div>
+            <div class="image">
+                <img src="lol" alt="">  <!-- TODO: Add image + changeable -->
+            </div>
+        </div>
+        <input type="range" min="0" max="5" list="steplist">    <!-- TODO: CSS ticks -->
+    </div>
+    
+    <div class="question">
+        <div class="title">
+            <div class="description">
+                <h3>Performance</h3> 
+                <p>Did the project work as intended?</p>
+            </div>
+            <div class="image">
+                <img src="lol" alt="">  <!-- TODO: Add image -->
+            </div>
+        </div>
+        <input type="range" min="0" max="5" list="steplist">    <!-- TODO: CSS ticks -->
+    </div>
+    
+    <div class="buttons">   <!-- TODO: Return  -->
+        <Button Color="ButtonColor.Primary" @onclick="">Cast Hills Vote</Button>    <!-- TODO: Add modal check -->
+        <button>Return to Teams</button>
+    </div>
+</form>
+</body>
+</html>
+
+@code {
+    
+}
