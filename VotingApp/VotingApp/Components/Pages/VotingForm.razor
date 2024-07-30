@@ -1,0 +1,139 @@
+﻿@page "/voting/TeamVote"
+<h3>Now Voting For</h3>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Extra/css/votingform_styles.css" rel="stylesheet">
+    <title>Cast Your Vote</title>
+</head>
+<body>
+<div class="title">
+    <div class="line"></div>
+    <h1>Team 1</h1> <!-- TODO: Change name depending on Team button selected from Voting.razor -->
+</div>
+<div class="container">
+    <form>
+        <div class="question">
+            <div class="heading">
+                <div class="description">
+                    <h3>Ad Appeal</h3>
+                    <p>How well did the team's advertisement bring you in?</p>
+                </div>
+                <div class="image">
+                    <img src="Extra/images/adAppealIcon.png" alt="Ad Appeal">
+                </div>
+            </div>
+            <input class="slider" type="range" min="1" max="5" list="adAppealRating">
+            <datalist id="adAppealRating">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5"></option>
+            </datalist>
+            <div class="ticks">
+                <span class="ratingNum">1</span>
+                <span class="ratingNum">2</span>
+                <span class="ratingNum">3</span>
+                <span class="ratingNum">4</span>
+                <span class="ratingNum">5</span>
+            </div>
+        </div>
+        
+        <div class="question">
+            <div class="heading">
+                <div class="description">
+                    <h3>Amazement</h3>
+                    <p>Did the team's project amaze you?</p>
+                </div>
+                <div class="image">
+                    <img src="Extra/images/amazementIcon.png" alt="Amazement Sparkles">
+                </div>
+            </div>
+            <input class="slider" type="range" min="1" max="5" list="amazementRating">
+            <datalist id="amazementRating">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5"></option>
+            </datalist>
+            <div class="ticks">
+                <span class="ratingNum">1</span>
+                <span class="ratingNum">2</span>
+                <span class="ratingNum">3</span>
+                <span class="ratingNum">4</span>
+                <span class="ratingNum">5</span>
+            </div>
+        </div>
+        
+        <div class="question">
+            <div class="heading">
+                <div class="description">
+                    <h3>Theme</h3>
+                    <p>How well was the <span>Time Travel</span> theme represented?</p>
+                </div>
+                <div class="image">
+                    <img src="favicon.png" alt="Theme Icon">
+                </div>
+            </div>
+            <input class="slider" type="range" min="1" max="5" list="themeRating">
+            <datalist id="themeRating">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5"></option>
+            </datalist>
+            <div class="ticks">
+                <span class="ratingNum">1</span>
+                <span class="ratingNum">2</span>
+                <span class="ratingNum">3</span>
+                <span class="ratingNum">4</span>
+                <span class="ratingNum">5</span>
+            </div>
+        </div>
+        
+        <div class="question">
+            <div class="heading">
+                <div class="description">
+                    <h3>Performance</h3>
+                    <p>Did the project work as intended? Were there any issues?</p>
+                </div>
+                <div class="image">
+                    <img src="Extra/images/performanceIcon.png" alt="Performance Icon">
+                </div>
+            </div>
+            <input class="slider" type="range" min="1" max="5" list="performanceRating">
+            <datalist id="performanceRating">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5"></option>
+            </datalist>
+            <div class="ticks">
+                <span class="ratingNum">1</span>
+                <span class="ratingNum">2</span>
+                <span class="ratingNum">3</span>
+                <span class="ratingNum">4</span>
+                <span class="ratingNum">5</span>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <a class="btn btn-secondary" href="Voting" role="button">Return to Teams</a>
+            <button class="btn btn-primary" type="submit">Cast Vote</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+
+@code {
+    
+}
+
