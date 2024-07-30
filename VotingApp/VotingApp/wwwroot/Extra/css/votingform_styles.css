@@ -3,6 +3,14 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 600;
+}
+
 .title {
     display: flex;
     flex-direction: column;
@@ -15,6 +23,7 @@ body {
 }
 
 form img {
+    margin-left: 20px;
     width: 80px;
 }
 
@@ -55,11 +64,14 @@ form {
 
 .description span {
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .slider {
     width: 83%;
     margin: auto;
+    flex: 1;
+    align-content: center;
     cursor: grab;
 }
 
@@ -71,4 +83,13 @@ form {
 .ratingNum {
     flex: 1;
     align-content: center;
+}
+
+@media (max-width: 850px) {
+    .slider {
+        width: 86%;
+    }
+    .description p {
+        font-size: .9em;
+    }
 }
