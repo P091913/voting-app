@@ -1,5 +1,6 @@
 @page "/admin"
 @using System.Text
+@using Microsoft.IdentityModel.Tokens
 @using VotingApp.Models
 @rendermode InteractiveServer
 
@@ -67,7 +68,18 @@
                         <th class="voteHead">Votes Averages</th>
                         <th> Remove Team</th>
                     </tr>
-                    @_dynamicFragment
+                    @if (_teams.Count >= 1)
+                    {
+                        foreach (var t in _teams)
+                        {
+                        <tr>
+                            <td>@t.TeamName</td>
+                            <td>[TEMP-DATA]</td>
+                            <td>[TEMP-AVERAGE]</td>
+                            <td><button>Remove</button></td>
+                        </tr>
+                        }
+                    }
                 </table>
             </div>
 
@@ -80,7 +92,18 @@
                         <th class="voteHead">Votes Averages</th>
                         <th> Remove Team</th>
                     </tr>
-                    @_dynamicFragment
+                    @if (_teams.Count >= 1)
+                    {
+                        foreach (var t in _teams)
+                        {
+                        <tr>
+                            <td>@t.TeamName</td>
+                            <td>@t.TeamData</td>
+                            <td>[TEMP-AVERAGE]</td>
+                            <td><button>Remove</button></td>
+                        </tr>
+                        }
+                    }
                 </table>
             </div>
 
@@ -91,9 +114,20 @@
                         <th class="teamHead">Team Name</th>
                         <th class="voteHead">Votes Received</th>
                         <th class="voteHead">Votes Averages</th>
-                        <th> Remove Team</th>
+                        <th>Remove Team</th>
                     </tr>
-                    @_dynamicFragment
+                    @if (_teams.Count >= 1)
+                    {
+                        foreach (var t in _teams)
+                        {
+                            <tr>
+                                <td>@t.TeamName</td>
+                                <td>@t.TeamData</td>
+                                <td>[TEMP-AVERAGE]</td>
+                                <td><button>Remove</button></td>
+                            </tr>
+                        }
+                    }
                 </table>
             </div>
         </div>
@@ -125,79 +159,33 @@
                         <th>Attendees</th>
                         <th>Password(s)</th>
                     </tr>
+                    @if (_businesses.Count >= 1)
+                    {
+                        foreach (var b in _businesses)
+                        {
+                            <tr>
+                                <td>@b.BusinessName</td>
+                                <td>@b.NumberOfPeople</td>
+                                <td><button>Passwords</button></td>
+                            </tr>
+                        }  
+                    }
                 </table>
             </div>
-
-            <button type="button" @onclick="@RenderComponent">
-                Trigger rendering
-            </button>
-            
         </div>
     </div>
 }
 
 @code {
-
-    // Start of Test Data & Code
-    private Teams Team1 = new Teams();
-    private Teams Team2 = new Teams();
-    private Teams Team3 = new Teams();
-
-    // End of Test Data & Code
-    private RenderFragment _dynamicFragment = null!;
-
-    private RenderFragment DisplayTeamTables() => builder =>
-    {
-
-        builder.OpenElement(1, "tr");
-
-        builder.OpenElement(2, "td");
-        builder.AddContent(3, "Team Name");
-        builder.CloseElement();
-
-        builder.OpenElement(4, "td");
-        builder.AddContent(5, "Votes Summary");
-        builder.CloseElement();
-
-        builder.OpenElement(6, "td");
-        builder.OpenElement(7,"button");
-        builder.AddContent(8, "Show Votes Averages");
-        builder.CloseElement();
-        builder.CloseElement();
-
-        builder.OpenElement(9, "td");
-        builder.OpenElement(10,"button");
-        builder.AddContent(11, "Remove");
-        builder.CloseElement();
-        builder.CloseElement();
-
-        builder.CloseElement();
-
-    };
-
-    private void RenderComponent()
-    {
-        _dynamicFragment = DisplayTeamTables();
-    }
-
-    private void OnPageLoad()
-    {
-        if (_isLoggedIn && ShowPage)
-        {
-            RenderComponent();
-        }
-    }
-
-    public Models.Admin? _admin = new Models.Admin();
-    private Teams _team = new Teams();
-    private Business _business = new Business();
+    public Models.Admin? _admin = new();
+    private Teams _team = new();
+    private Business _business = new();
+    
+    private readonly List<Business> _businesses = [];
+    private readonly List<Teams> _teams = [];
     
     private bool ShowLogin { get; set; } = true;
     private bool ShowPage { get; set; } = true;
-
-    private int CollegeTeams { get; set; } = 0;
-    private int BytesTeams { get; set; } = 0;
-    private int BitsTeams { get; set; } = 0;
     
     private bool _isLoggedIn = false;
 
@@ -214,11 +202,20 @@
     
     private void HandleValidTeam()
     {
-        
+        if (!_team.CompeteLevel.IsNullOrEmpty() &&
+            !_team.TeamName.IsNullOrEmpty() &&
+            _team.MemberCount > 0
+            )
+        {
+            _teams.Add(_team);
+        }
     }
 
     private void HandleValidBusiness()
     {
-        
+        if (!_business.BusinessName.IsNullOrEmpty() && _business.NumberOfPeople > 0)
+        {
+            _businesses.Add(_business);
+        }
     }
 }
