@@ -46,5 +46,12 @@ public class AdminService
             await _context.SaveChangesAsync();
         }
     }
+
+    public async Task<Admin?> ValidateCredentials(string email, string username, string password)
+    {
+        return await _context.Admins.FirstOrDefaultAsync(a =>
+            a.Email == email && a.Username == username && a.Password == password);
+
+    }
 }
 
