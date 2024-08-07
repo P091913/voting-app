@@ -1,57 +1,257 @@
-@page "/Admin"
+@page "/admin"
+@using System.Text
+@using Microsoft.IdentityModel.Tokens
+@using VotingApp.Models
+@using VotingApp.Services
+@inject TeamsService TeamsService
+@inject BusinessService BusinessService
+<!-- add business login service --> 
+@rendermode InteractiveServer
+
 <PageTitle>Byte Jam Admin</PageTitle>
+<link href="Extra/css/admin.css" rel="stylesheet">
 
 @if (ShowLogin)
 {
     <div>
         <h1>Byte Jam Admin Login</h1>
-        <form>
-            <label for="email">Email:</label><br>
-            <input type="text" id="email" name="email"><br>
-            <label for="password">Password:</label><br>
-            <input type="text" id="password" name="password">
-            <input type="submit" value="Submit">
-        </form>
+        <EditForm Model="_admin" OnValidSubmit="HandleValidLogin">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <InputText type="email" id="email" class="form-control" @bind-Value="_admin.Email" />
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <InputText type="password" id="password" class="form-control" @bind-Value="_admin.Password" />
+            </div>
+            
+            <button type="submit" class="btn btn-primary mb-3">Login</button>
+        </EditForm>
     </div>
 }
 
 @if (ShowPage)
 {
-    <div>
-        <h1>Admin</h1>
-        <div>
-            <h4 class="teamName">College Teams</h4>
-            <table class="votesTable">
-                <tr>
-                    <th class="teamHead">Team Name</th>
-                    <th class="voteHead">Votes Received</th>
-                </tr>
-            </table>
+    <h1>Admin</h1>
+    <div class="mainContainer">
+        <div class="teamSection">
+            <h3>Add Team</h3>
+            <EditForm Model="_team" OnValidSubmit="HandleValidTeam">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="mb-3">
+                    <label>Team Level:</label>
+                    <div>
+                        <InputRadioGroup @bind-Value="_team.CompeteLevel">
+                            <div>
+                                <InputRadio id="College" Value="@("College")" /> <label for="College">College</label>
+                                <InputRadio id="Bytes" Value="@("Bytes")" /> <label for="Bytes">Bytes</label>
+                                <InputRadio id="Bits" Value="@("Bits")" /> <label for="Bits">Bits</label>
+                            </div>
+                        </InputRadioGroup>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="teamName">Team Name:</label>
+                    <InputText id="teamName" class="form-control" @bind-Value="_team.TeamName" />
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Create Team</button>
+            </EditForm>
+            
+            <div>
+                <h4 class="teamName">College Teams</h4>
+                <table class="votesTable">
+                    <tr>
+                        <th class="teamHead">Team Name</th>
+                        <th class="voteHead">Votes Received</th>
+                        <th class="voteHead">Votes Averages</th>
+                        <th> Remove Team</th>
+                    </tr>
+                    @if (_teams.Count >= 1)
+                    {
+                        foreach (var t in _teams)
+                        {
+                            if (@t.CompeteLevel.Equals("College")) 
+                            {
+                                <tr>
+                                    <td>@t.TeamName</td>
+                                    <td>@t.TeamData</td>
+                                    <td>Average will go here</td>
+                                    <td>
+                                        <button @onclick="@(() => RemoveTeam(t.Id))">Remove</button>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    }
+                </table>
+            </div>
+
+            <div>
+                <h4>Bytes</h4>
+                <table class="votesTable">
+                    <tr>
+                        <th class="teamHead">Team Name</th>
+                        <th class="voteHead">Votes Received</th>
+                        <th class="voteHead">Votes Averages</th>
+                        <th> Remove Team</th>
+                    </tr>
+                    @if (_teams.Count >= 1)
+                    {
+                        foreach (var t in _teams)
+                        {
+                            if (@t.CompeteLevel.Equals("Bytes")) 
+                            {
+                                <tr>
+                                    <td>@t.TeamName</td>
+                                    <td>@t.TeamData</td>
+                                    <td>Average will go here</td>
+                                    <td><button>Remove</button></td>
+                                </tr>
+                            }
+                        }
+                    }
+                </table>
+            </div>
+
+            <div>
+                <h4>Bits</h4>
+                <table class="votesTable">
+                    <tr>
+                        <th class="teamHead">Team Name</th>
+                        <th class="voteHead">Votes Received</th>
+                        <th class="voteHead">Votes Averages</th>
+                        <th>Remove Team</th>
+                    </tr>
+                    @if (_teams.Count >= 1)
+                    {
+                        foreach (var t in _teams)
+                        {
+                            if (@t.CompeteLevel.Equals("Bits")) 
+                            {
+                                <tr>
+                                    <td>@t.TeamName</td>
+                                    <td>@t.TeamData</td>
+                                    <td>Average will go here</td>
+                                    <td><button>Remove</button></td>
+                                </tr>
+                            }
+                        }
+                    }
+                </table>
+            </div>
         </div>
-        
-        <div>
-            <h4>Bytes</h4>
-            <table class="votesTable">
-                <tr>
-                    <th class="teamHead">Team Name</th>
-                    <th class="voteHead">Votes Received</th>
-                </tr>
-            </table>
-        </div>
-        
-        <div>
-            <h4>Bits</h4>
-            <table class="votesTable">
-                <tr>
-                    <th class="teamHead">Team Name</th>
-                    <th class="voteHead">Votes Received</th>
-                </tr>
-            </table>
+
+        <div class="businessSection">
+            <h3>Register Business</h3>
+            <EditForm Model="_business" OnValidSubmit="HandleValidBusiness">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="mb-3">
+                    <label for="businessName" class="form-label">Business Name:</label>
+                    <InputText id="businessName" class="form-control" @bind-Value="_business.BusinessName" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="numPeople" class="form-label">Number of People Attending:</label>
+                    <InputNumber id="numPeople" class="form-control" @bind-Value="_business.NumberOfPeople" />
+                </div>
+
+                <button type="submit" class="btn btn-primary mb-3">Register</button>
+            </EditForm>
+            
+            <div class="mb-3">
+                <h4>Businesses</h4>
+                <table class="businessTable">
+                    <tr>
+                        <th>Business</th>
+                        <th>Attendees</th>
+                        <th>Password(s)</th>
+                    </tr>
+                    @if (_businesses.Count >= 1)
+                    {
+                        foreach (var b in _businesses)
+                        {
+                            <tr>
+                                <td>@b.BusinessName</td>
+                                <td>@b.NumberOfPeople</td>
+                                <td><button>Passwords</button></td>
+                            </tr>
+                        }  
+                    }
+                </table>
+            </div>
         </div>
     </div>
 }
+
 @code {
-    bool ShowLogin { get; set; } = true;
-    bool ShowPage { get; set; } = true;
+    public Models.Admin? _admin = new();
+    private Teams _team = new();
+    private Business _business = new();
+    // private login business
     
+    
+    private List<Teams> _teams = new();
+    private List<Business> _businesses = new();
+
+    // create login business instance 
+    
+    private bool ShowLogin { get; set; } = true;
+    private bool ShowPage { get; set; } = true;
+    
+    private bool _isLoggedIn = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _teams = await TeamsService.GetTeams();
+        _businesses = await BusinessService.GetBusinesses();
+    }
+
+    private void HandleValidLogin()
+    {
+        if (_isLoggedIn)
+        {
+            ShowLogin = false;
+            ShowPage = true;
+        }
+        
+        _isLoggedIn = true;
+    }
+
+    private async Task HandleValidTeam()
+    {
+        if (!string.IsNullOrEmpty(_team.CompeteLevel) &&
+            !string.IsNullOrEmpty(_team.TeamName))
+        {
+            await TeamsService.AddTeam(_team);
+            _teams = await TeamsService.GetTeams(); 
+            _team = new Teams(); 
+        }
+    }
+
+
+    private async Task HandleValidBusiness()
+    {
+        if (!_business.BusinessName.IsNullOrEmpty() && _business.NumberOfPeople > 0)
+        {
+            // call another method to generate passwords for as many peope that are coming
+            // create the business logins/add to the table
+            await BusinessService.AddBusiness(_business);
+            _businesses = await BusinessService.GetBusinesses();
+            _business = new Business();
+        }
+    }
+
+    private async Task RemoveTeam(int id)
+    {
+        await TeamsService.DeleteTeam(id);
+        _teams = await TeamsService.GetTeams();
+    }
 }

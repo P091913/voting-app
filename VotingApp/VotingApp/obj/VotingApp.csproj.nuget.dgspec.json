@@ -1,29 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {}
+    "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/VotingApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {
+    "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/VotingApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
+        "projectUniqueName": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/VotingApp.csproj",
         "projectName": "VotingApp",
-        "projectPath": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
-        "packagesPath": "C:\\Users\\Noted\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Noted\\Documents\\Education\\Classes\\2024SUM\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\",
+        "projectPath": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/VotingApp.csproj",
+        "packagesPath": "/Users/jarrettplate/.nuget/packages/",
+        "outputPath": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Noted\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\MicroFocus.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/jarrettplate/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Micro Focus\\Visual COBOL\\NuGetPackages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -36,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -45,6 +46,36 @@
             "Blazor.Bootstrap": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
             }
           },
           "imports": [
@@ -66,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

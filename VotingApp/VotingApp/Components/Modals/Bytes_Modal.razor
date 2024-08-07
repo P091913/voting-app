@@ -1,0 +1,29 @@
+﻿<Modal @ref="modal" Title="Voting For [TEAM_NAME]">
+    <BodyTemplate>
+        Are you sure you want to vote for [TEAM_NAME]?
+    </BodyTemplate>
+    <FooterTemplate>
+        <Button Color="ButtonColor.Danger" @onclick="OnHideModalClick">Cancel</Button>
+        <Button Color="ButtonColor.Primary" @onclick="OnSubmitVote">Submit Vote</Button>
+    </FooterTemplate>
+</Modal>
+
+@code {
+    private Modal modal = default!;
+
+    public async Task OnShowModalClick()
+    {
+        await modal.ShowAsync();
+    }
+
+    public async Task OnHideModalClick()
+    {
+        await modal.HideAsync();
+    }
+
+    public async Task OnSubmitVote()
+    {
+    // Grab vote from selection and submit vote
+    // Block user from voting twice for whichever vote type it was (HS or IHCC)
+    }
+}

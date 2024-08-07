@@ -1,35 +1,63 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\VotingApp.bundle.scp.css",
-      "PackagePath": "staticwebassets\\VotingApp.bundle.scp.css"
+      "Id": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/obj/Debug/net8.0/scopedcss/projectbundle/VotingApp.bundle.scp.css",
+      "PackagePath": "staticwebassets/VotingApp.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\Extra\\css\\voting_styles.css",
-      "PackagePath": "staticwebassets\\Extra\\css\\voting_styles.css"
+      "Id": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/wwwroot/Extra/css/admin.css",
+      "PackagePath": "staticwebassets/Extra/css/admin.css"
     },
     {
-      "Id": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\app.css",
-      "PackagePath": "staticwebassets\\app.css"
+      "Id": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/wwwroot/Extra/css/voting_styles.css",
+      "PackagePath": "staticwebassets/Extra/css/voting_styles.css"
     },
     {
-      "Id": "C:\\Users\\Owner\\Documents\\IHCC\\Summer 2024\\Field Projects\\voting-app\\VotingApp\\VotingApp\\wwwroot\\favicon.png",
-      "PackagePath": "staticwebassets\\favicon.png"
+      "Id": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/wwwroot/Extra/css/votingform_styles.css",
+      "PackagePath": "staticwebassets/Extra/css/votingform_styles.css"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.VotingApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/wwwroot/Extra/images/adAppealIcon.png",
+      "PackagePath": "staticwebassets/Extra/images/adAppealIcon.png"
+    },
+    {
+      "Id": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/wwwroot/Extra/images/amazementIcon.png",
+      "PackagePath": "staticwebassets/Extra/images/amazementIcon.png"
+    },
+    {
+      "Id": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/wwwroot/Extra/images/performanceIcon.png",
+      "PackagePath": "staticwebassets/Extra/images/performanceIcon.png"
+    },
+    {
+      "Id": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/wwwroot/HSLogo.png",
+      "PackagePath": "staticwebassets/HSLogo.png"
+    },
+    {
+      "Id": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/wwwroot/HillsIndianLogo.png",
+      "PackagePath": "staticwebassets/HillsIndianLogo.png"
+    },
+    {
+      "Id": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.VotingApp.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.VotingApp.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.VotingApp.props",
       "PackagePath": "build\\VotingApp.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.VotingApp.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.VotingApp.props",
       "PackagePath": "buildMultiTargeting\\VotingApp.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.VotingApp.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.VotingApp.props",
       "PackagePath": "buildTransitive\\VotingApp.props"
     }
   ],
