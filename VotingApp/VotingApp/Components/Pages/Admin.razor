@@ -5,6 +5,7 @@
 @using VotingApp.Services
 @inject TeamsService TeamsService
 @inject BusinessService BusinessService
+<!-- add business login service --> 
 @rendermode InteractiveServer
 
 <PageTitle>Byte Jam Admin</PageTitle>
@@ -75,12 +76,15 @@
                     {
                         foreach (var t in _teams)
                         {
-                        <tr>
-                            <td>@t.TeamName</td>
-                            <td>[TEMP-DATA]</td>
-                            <td>[TEMP-AVERAGE]</td>
-                            <td><button>Remove</button></td>
-                        </tr>
+                            if (@t.CompeteLevel.Equals("College Teams")) 
+                            {
+                                <tr>
+                                    <td>@t.TeamName</td>
+                                    <td>@t.TeamData</td>
+                                    <td>Average will go here</td>
+                                    <td><button>Remove</button></td>
+                                </tr>
+                            }
                         }
                     }
                 </table>
@@ -99,12 +103,15 @@
                     {
                         foreach (var t in _teams)
                         {
-                        <tr>
-                            <td>@t.TeamName</td>
-                            <td>@t.TeamData</td>
-                            <td>[TEMP-AVERAGE]</td>
-                            <td><button>Remove</button></td>
-                        </tr>
+                            if (@t.CompeteLevel.Equals("Bytes")) 
+                            {
+                                <tr>
+                                    <td>@t.TeamName</td>
+                                    <td>@t.TeamData</td>
+                                    <td>Average will go here</td>
+                                    <td><button>Remove</button></td>
+                                </tr>
+                            }
                         }
                     }
                 </table>
@@ -123,12 +130,15 @@
                     {
                         foreach (var t in _teams)
                         {
-                            <tr>
-                                <td>@t.TeamName</td>
-                                <td>@t.TeamData</td>
-                                <td>Average will go here</td>
-                                <td><button>Remove</button></td>
-                            </tr>
+                            if (@t.CompeteLevel.Equals("Bits")) 
+                            {
+                                <tr>
+                                    <td>@t.TeamName</td>
+                                    <td>@t.TeamData</td>
+                                    <td>Average will go here</td>
+                                    <td><button>Remove</button></td>
+                                </tr>
+                            }
                         }
                     }
                 </table>
@@ -183,10 +193,13 @@
     public Models.Admin? _admin = new();
     private Teams _team = new();
     private Business _business = new();
+    // private login business
     
     
     private List<Teams> _teams = new();
     private List<Business> _businesses = new();
+
+    // create login business instance 
     
     private bool ShowLogin { get; set; } = true;
     private bool ShowPage { get; set; } = true;
@@ -226,6 +239,8 @@
     {
         if (!_business.BusinessName.IsNullOrEmpty() && _business.NumberOfPeople > 0)
         {
+            // call another method to generate passwords for as many peope that are coming
+            // create the business logins/add to the table
             await BusinessService.AddBusiness(_business);
             _businesses = await BusinessService.GetBusinesses();
             _business = new Business();
