@@ -2,6 +2,9 @@
 @using System.Text
 @using Microsoft.IdentityModel.Tokens
 @using VotingApp.Models
+@using VotingApp.Services
+@inject TeamsService TeamsService
+@inject BusinessService BusinessService
 @rendermode InteractiveServer
 
 <PageTitle>Byte Jam Admin</PageTitle>
@@ -123,7 +126,7 @@
                             <tr>
                                 <td>@t.TeamName</td>
                                 <td>@t.TeamData</td>
-                                <td>[TEMP-AVERAGE]</td>
+                                <td>Average will go here</td>
                                 <td><button>Remove</button></td>
                             </tr>
                         }
@@ -181,13 +184,20 @@
     private Teams _team = new();
     private Business _business = new();
     
-    private readonly List<Business> _businesses = [];
-    private readonly List<Teams> _teams = [];
+    
+    private List<Teams> _teams = new();
+    private List<Business> _businesses = new();
     
     private bool ShowLogin { get; set; } = true;
     private bool ShowPage { get; set; } = true;
     
     private bool _isLoggedIn = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _teams = await TeamsService.GetTeams();
+        _businesses = await BusinessService.GetBusinesses();
+    }
 
     private void HandleValidLogin()
     {
@@ -199,23 +209,26 @@
         
         _isLoggedIn = true;
     }
-    
-    private void HandleValidTeam()
+
+    private async Task HandleValidTeam()
     {
-        if (!_team.CompeteLevel.IsNullOrEmpty() &&
-            !_team.TeamName.IsNullOrEmpty() &&
-            _team.MemberCount > 0
-            )
+        if (!string.IsNullOrEmpty(_team.CompeteLevel) &&
+            !string.IsNullOrEmpty(_team.TeamName))
         {
-            _teams.Add(_team);
+            await TeamsService.AddTeam(_team);
+            _teams = await TeamsService.GetTeams(); 
+            _team = new Teams(); 
         }
     }
 
-    private void HandleValidBusiness()
+
+    private async Task HandleValidBusiness()
     {
         if (!_business.BusinessName.IsNullOrEmpty() && _business.NumberOfPeople > 0)
         {
-            _businesses.Add(_business);
+            await BusinessService.AddBusiness(_business);
+            _businesses = await BusinessService.GetBusinesses();
+            _business = new Business();
         }
     }
 }

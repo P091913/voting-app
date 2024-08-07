@@ -4,6 +4,8 @@ using VotingApp.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+namespace VotingApp.Services {
+
 public class AdminService
 {
     private readonly ApplicationDbContext _context;
@@ -53,5 +55,6 @@ public class AdminService
             a.Email == email && a.Username == username && a.Password == password);
 
     }
+}
 }
 

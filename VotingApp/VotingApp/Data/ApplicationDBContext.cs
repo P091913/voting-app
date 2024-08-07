@@ -7,7 +7,7 @@ namespace VotingApp.Data
     public class ApplicationDbContext : DbContext
     {
         //static readonly string connectionString = "server=10.12.182.86;database=voting_app;user=developer;password=FPDev154;";
-        static readonly string connectionString = "server=localhost;database=test;user=root;password=1111;";
+        static readonly string connectionString = "server=localhost;database=fieldproject;user=root;password=password;";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{

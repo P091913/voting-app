@@ -1,28 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\VotingApp.csproj": {}
+    "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/VotingApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\VotingApp.csproj": {
+    "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/VotingApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\VotingApp.csproj",
+        "projectUniqueName": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/VotingApp.csproj",
         "projectName": "VotingApp",
-        "projectPath": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\VotingApp.csproj",
-        "packagesPath": "C:\\Users\\wasan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wasan\\OneDrive\\Documents\\GitHub\\back-end\\VotingApp\\VotingApp\\obj\\",
+        "projectPath": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/VotingApp.csproj",
+        "packagesPath": "/Users/jarrettplate/.nuget/packages/",
+        "outputPath": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\wasan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/jarrettplate/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,25 +49,25 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.0-preview.6.24327.4, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0-preview.6.24327.4, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[9.0.0-preview.6.24327.4, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.0-preview.6.24327.4, )"
+              "version": "[8.0.7, )"
             },
             "MySql.Data": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.4.0, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
@@ -100,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

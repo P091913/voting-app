@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\buildMultiTargeting\VotingApp.props" />
+  <Import Project="../buildMultiTargeting/VotingApp.props" />
 </Project>

@@ -4,6 +4,7 @@ using VotingApp.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+namespace VotingApp.Services {
 public class BusinessService
 {
     private readonly ApplicationDbContext _context;
@@ -47,4 +48,4 @@ public class BusinessService
         }
     }
 }
-
+}

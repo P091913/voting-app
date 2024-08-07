@@ -4,6 +4,7 @@ using VotingApp.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+namespace VotingApp.Services {
 public class BusinessLoginService
 {
     private readonly ApplicationDbContext _context;
@@ -46,5 +47,6 @@ public class BusinessLoginService
             await _context.SaveChangesAsync();
         }
     }
+}
 }
 

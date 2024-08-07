@@ -1,15 +1,14 @@
-// using BlazorBootstrap;
-
 using VotingApp.Components;
 using VotingApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using VotingApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("VotingDatabase")));
-
+    options.UseMySql(builder.Configuration.GetConnectionString("VotingDatabase"), 
+        new MySqlServerVersion(new Version(8, 0, 21))));
 
 builder.Services.AddBlazorBootstrap();
 
