@@ -76,13 +76,15 @@
                     {
                         foreach (var t in _teams)
                         {
-                            if (@t.CompeteLevel.Equals("College Teams")) 
+                            if (@t.CompeteLevel.Equals("College")) 
                             {
                                 <tr>
                                     <td>@t.TeamName</td>
                                     <td>@t.TeamData</td>
                                     <td>Average will go here</td>
-                                    <td><button>Remove</button></td>
+                                    <td>
+                                        <button @onclick="@(() => RemoveTeam(t.Id))">Remove</button>
+                                    </td>
                                 </tr>
                             }
                         }
@@ -245,5 +247,11 @@
             _businesses = await BusinessService.GetBusinesses();
             _business = new Business();
         }
+    }
+
+    private async Task RemoveTeam(int id)
+    {
+        await TeamsService.DeleteTeam(id);
+        _teams = await TeamsService.GetTeams();
     }
 }
