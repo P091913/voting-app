@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brent\\Documents\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {}
+    "C:\\Net\\BackendAPI\\BackendAPI\\BackendAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brent\\Documents\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj": {
+    "C:\\Net\\BackendAPI\\BackendAPI\\BackendAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brent\\Documents\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
-        "projectName": "VotingApp",
-        "projectPath": "C:\\Users\\brent\\Documents\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
+        "projectUniqueName": "C:\\Net\\BackendAPI\\BackendAPI\\BackendAPI.csproj",
+        "projectName": "BackendAPI",
+        "projectPath": "C:\\Net\\BackendAPI\\BackendAPI\\BackendAPI.csproj",
         "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brent\\Documents\\voting-app\\VotingApp\\VotingApp\\obj\\",
+        "outputPath": "C:\\Net\\BackendAPI\\BackendAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -47,39 +47,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Blazor.Bootstrap": {
+            "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[8.0.10, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[8.0.7, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.7, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[8.0.7, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.7, )"
-            },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[8.4.0, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql.Design": {
-              "target": "Package",
-              "version": "[1.1.2, )"
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
