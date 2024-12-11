@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Net\\BackendAPI\\BackendAPI\\BackendAPI.csproj": {}
+    "C:\\Users\\brent\\Documents\\voting-app\\BackendAPI\\BackendAPI\\BackendAPI.csproj": {}
   },
   "projects": {
-    "C:\\Net\\BackendAPI\\BackendAPI\\BackendAPI.csproj": {
+    "C:\\Users\\brent\\Documents\\voting-app\\BackendAPI\\BackendAPI\\BackendAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Net\\BackendAPI\\BackendAPI\\BackendAPI.csproj",
+        "projectUniqueName": "C:\\Users\\brent\\Documents\\voting-app\\BackendAPI\\BackendAPI\\BackendAPI.csproj",
         "projectName": "BackendAPI",
-        "projectPath": "C:\\Net\\BackendAPI\\BackendAPI\\BackendAPI.csproj",
+        "projectPath": "C:\\Users\\brent\\Documents\\voting-app\\BackendAPI\\BackendAPI\\BackendAPI.csproj",
         "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
-        "outputPath": "C:\\Net\\BackendAPI\\BackendAPI\\obj\\",
+        "outputPath": "C:\\Users\\brent\\Documents\\voting-app\\BackendAPI\\BackendAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

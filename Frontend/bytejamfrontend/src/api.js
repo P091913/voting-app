@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = 'http://localhost:5171';
+const API_BASE_URL = 'http://localhost:5276';
 
 
 export const getWeather = async () => {
