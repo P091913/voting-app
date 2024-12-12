@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using BackendAPI.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<BackendAPIContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("BackendAPIContext") ?? throw new InvalidOperationException("Connection string 'BackendAPIContext' not found.")));
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -11,7 +16,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp", policy =>
         policy.WithOrigins("http://localhost:3000") // React app's URL
             .AllowAnyHeader()
-            .AllowAnyMethod());
+            .AllowAnyMethod()
+            .AllowCredentials());
 });
 
 var app = builder.Build();

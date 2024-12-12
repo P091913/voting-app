@@ -12,3 +12,4 @@ export const getWeather = async () => {
         throw error;
     }
 };
+
