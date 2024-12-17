@@ -1,6 +1,0 @@
-@BytejamApi_HostAddress = http://localhost:5171
-
-GET {{BytejamApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
