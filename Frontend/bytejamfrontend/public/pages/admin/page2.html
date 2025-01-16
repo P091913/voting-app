@@ -1,12 +1,23 @@
+// React import statement: Enables the use of JSX (JavaScript XML) and React's functionality
 import React from "react";
 
+// Functional Component: A reusable, self-contained piece of UI in React
 const Navigation = () => {
   return (
     <div>
-      {/* Navbar */}
+      {/* React JSX: Uses HTML-like syntax but with JavaScript behind the scenes */}
+
+      {/* Navbar Container */}
       <div className="bg-[#5C1D29] text-white">
-        <h1 className="text-2xl font-bold p-4">Admin Page</h1>
+        {/* Header (Dynamic HTML inside JSX) */}
+        <h1 className="text-2xl font-bold p-4">
+          {/* Displays the title for the admin page */}
+          Admin Page
+        </h1>
+
+        {/* Navigation Links: Generated dynamically as JSX elements */}
         <nav className="flex flex-wrap justify-start">
+          {/* Each link is a JSX element using the `className` attribute */}
           <a href="#" className="px-4 py-2 hover:bg-gray-300 hover:text-black">
             Sign Up
           </a>
@@ -36,63 +47,9 @@ const Navigation = () => {
           </a>
         </nav>
       </div>
-
-      {/* Main Content */}
-      <div className="p-4">
-        <h1 className="text-3xl font-bold">Test</h1>
-        <p className="mt-2">Test</p>
-      </div>
-
-      {/* Form */}
-      <form
-        action="/login"
-        method="POST"
-        className="bg-gray-100 p-4 rounded shadow-md max-w-sm mx-auto mt-8"
-      >
-        <div className="mb-4">
-          <label htmlFor="username" className="block text-sm font-bold mb-1">
-            Username:
-          </label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            required
-            className="w-full p-2 border rounded"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="password" className="block text-sm font-bold mb-1">
-            Password:
-          </label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            required
-            className="w-full p-2 border rounded"
-          />
-        </div>
-
-        <div className="flex gap-4">
-          <button
-            type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-          >
-            Log In
-          </button>
-          <button
-            type="button"
-            onClick={() => (window.location.href = "/signup")}
-            className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-          >
-            Sign Up
-          </button>
-        </div>
-      </form>
     </div>
   );
 };
 
+// React export statement: Allows this component to be imported and used in other files
 export default Navigation;
