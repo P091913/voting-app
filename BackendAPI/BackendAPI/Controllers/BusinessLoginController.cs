@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BackendAPI.Data;
 using VotingApp.Models;
+using VotingApp.Models.Services;
 
 namespace BackendAPI.Controllers
 {
@@ -15,10 +16,12 @@ namespace BackendAPI.Controllers
     public class BusinessLoginController : ControllerBase
     {
         private readonly BackendAPIContext _context;
+        private readonly PinService _pinService;
 
-        public BusinessLoginController(BackendAPIContext context)
+        public BusinessLoginController(BackendAPIContext context, PinService pinService)
         {
             _context = context;
+            _pinService = pinService;
         }
 
         // GET: api/BusinessLogin
@@ -78,6 +81,8 @@ namespace BackendAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<BusinessLogin>> PostBusinessLogin(BusinessLogin businessLogin)
         {
+            businessLogin.Password = _pinService.GeneratePin();
+            
             _context.BusinessLogin.Add(businessLogin);
             await _context.SaveChangesAsync();
 

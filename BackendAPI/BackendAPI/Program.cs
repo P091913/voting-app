@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using BackendAPI.Data;
+using VotingApp.Models.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BackendAPIContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("BackendAPIContext") ?? throw new InvalidOperationException("Connection string 'BackendAPIContext' not found.")));
@@ -10,6 +12,7 @@ builder.Services.AddDbContext<BackendAPIContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+builder.Services.AddSingleton<PinService>();
 
 // Add CORS policy
 builder.Services.AddCors(options =>

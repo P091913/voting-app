@@ -53,38 +53,20 @@
         <a href="page9.html">Settings</a>
     </div>
 
-    <div class="form-container">
-        <h2>Team Management (Bits)</h2>
-
-        <form action="/add-team" method="POST">
-            <label for="team-name">Team Name:</label>
-            <input type="text" id="team-name" name="team-name" required>
-
-            <label for="school-name">School Name:</label>
-            <input type="text" id="school-name" name="school-name" required>
-
-            <button type="submit">Add Team</button>
-        </form>
-
-        <div class="team-list">
-            <h3>Current Teams</h3>
-            <div class="team-item">
-                <span>Team A - School A</span>
-                <div>
-                    <button onclick="alert('Edit functionality pending')">Edit</button>
-                    <button class="delete-button" onclick="alert('Delete functionality pending')">Delete</button>
-                </div>
-            </div>
-            <div class="team-item">
-                <span>Team B - School B</span>
-                <div>
-                    <button onclick="alert('Edit functionality pending')">Edit</button>
-                    <button class="delete-button" onclick="alert('Delete functionality pending')">Delete</button>
-                </div>
-            </div>
-        </div>
-
+    <div>
+        <h1>Test</h1>
+        <p>Test</p>
     </div>
+    
+    <form action="/login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Log In</button>
+        <button class="signup-button" onclick="window.location.href='/signup'">Sign Up</button>
+    </form>
 </body>
 </html>
