@@ -1,3 +1,4 @@
+import React from "react";
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,34 +7,18 @@
     <title>Navigation</title>
     <style>
         body {
-            margin: 0;
+            @apply m-0;
             font-family: Arial, sans-serif;
         }
-
         .navbar {
-            background-color: #5C1D29;
-            overflow: hidden;
+            @apply bg-[#5C1D29] overflow-hidden;
         }
-
         .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
+            @apply float-left block text-[white] text-center no-underline px-5 py-3.5 hover:bg-[#ddd] hover:text-[black];
         }
-
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
         @media screen and (max-width: 600px) {
             .navbar a {
-                float: none;
-                width: 100%;
-                text-align: left;
+                @apply float-none w-full text-left;
             }
         }
     </style>
