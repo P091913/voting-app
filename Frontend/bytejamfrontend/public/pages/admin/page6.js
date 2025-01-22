@@ -1,47 +1,34 @@
+import React from "react";
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation</title>
+    <script></script>
     <style>
+        /* TailwindCSS CSS for page 6 */
         body {
-            margin: 0;
+            @apply m-0;
             font-family: Arial, sans-serif;
         }
-
         .navbar {
-            background-color: #5C1D29;
-            overflow: hidden;
+            @apply bg-[#5C1D29] overflow-hidden;
         }
-
         .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
+            @apply float-left block text-[white] text-center no-underline px-5 py-3.5 hover:bg-[#ddd] hover:text-[black];
         }
-
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
         @media screen and (max-width: 600px) {
             .navbar a {
-                float: none;
-                width: 100%;
-                text-align: left;
+            @apply float-none w-full text-left;
             }
         }
     </style>
 </head>
 <body>
-
+ 
     <div class="navbar">
-        <H1>Admin Page</H1>
+        <h1 class="text-white text-3xl font-bold p-3">Admin Page</h1>
         <a href="page1.html">Sign Up</a>
         <a href="page2.html">Login</a>
         <a href="page3.html">Bits</a>
@@ -52,15 +39,18 @@
         <a href="page8.html">Results</a>
         <a href="page9.html">Settings</a>
     </div>
-
-    <h3>Company Pins</h3>
-    <div class="Company-pins">
-        <span>Company 1 - Pin1</span>
-        <div>
-            <button onclick="alert('Edit functionality pending')">Edit</button>
-            <button class="delete-button" onclick="alert('Delete functionality pending')">Delete</button>
-            <button class="export-button" onclick="alert('Export functionality Pending')">Export</button>
+ 
+    <section class="p-5">
+        <h3 class="text-xl font-semibold mb-4">Company Pins</h3>
+        <div class="Company-pins bg-gray-100 p-4 rounded-lg shadow-md">
+            <span class="block text-lg">Company 1 - Pin1</span>
+            <div class="mt-3">
+                <button onclick="alert('Edit functionality pending')" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 mr-2">Edit</button>
+                <button class="delete-button bg-red-500 text-white py-2 px-4 rounded hover:bg-red-700 mr-2" onclick="alert('Delete functionality pending')">Delete</button>
+                <button class="export-button bg-green-500 text-white py-2 px-4 rounded hover:bg-green-700" onclick="alert('Export functionality Pending')">Export</button>
+            </div>
         </div>
-    </div>
+    </section>
 </body>
 </html>
+ 
