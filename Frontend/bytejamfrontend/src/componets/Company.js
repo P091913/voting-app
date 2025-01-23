@@ -5,10 +5,47 @@ import React from "react";
 {/*Jerica Still Needs To Finish Her Page*/}
 
 const CompanyPage = () => {
+    
     return (
-        <div>\
+        <div>
 
-            
+<div>
+      
+
+      {/* Page Content */}
+      <div className="form-container">
+        <h2>Current Company</h2>
+        <form action="/add-team" method="POST">
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label htmlFor="numberneeded">Number Needed: </label>
+          <input type="text" id="name" name="name"
+            required />
+          <button type="submit">Add Company</button>
+        </form>
+    
+        <div className="companyitem">
+          <h3>Current Company</h3>
+          <div className="companyitem">
+            <span>Name</span>
+            <div>
+              <button onClick={()=> alert('Edit functionalitypending')}>Edit</button>
+              <button className="delete-button" onClick={()=>
+                alert('Delete functionality pending')}>Delete</button>
+            </div>
+          </div>
+    
+          <div className="companyitem">
+            <span>Pin</span>
+            <div>
+              <button onClick={()=> alert('Edit functionalitypending')}>Edit</button>
+              <button className="delete-button" onClick={()=>
+                alert('Delete functionality pending')}>Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
             {/*Look At HTML below*/}
             {/*TO_DO Link To Figma Design: https://www.figma.com/design/1KBtOMoOeuQ8uqH429KYcI/Untitled?node-id=0-1&p=f&t=EXLxoC9YmXLyaX1W-0*/}
       
@@ -24,29 +61,3 @@ const CompanyPage = () => {
     };
 
 export default CompanyPage;
-/* 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation</title>
-    <script></script>
-    
-</head>
-<body>
-
-    <section class="p-5">
-        <h3 class="text-xl font-semibold mb-4">Company Pins</h3>
-        <div class="Company-pins bg-gray-100 p-4 rounded-lg shadow-md">
-            <span class="block text-lg">Company 1 - Pin1</span>
-            <div class="mt-3">
-                <button onclick="alert('Edit functionality pending')" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 mr-2">Edit</button>
-                <button class="delete-button bg-red-500 text-white py-2 px-4 rounded hover:bg-red-700 mr-2" onclick="alert('Delete functionality pending')">Delete</button>
-                <button class="export-button bg-green-500 text-white py-2 px-4 rounded hover:bg-green-700" onclick="alert('Export functionality Pending')">Export</button>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
-  */
