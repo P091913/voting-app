@@ -47,6 +47,10 @@ const Navbar = () => {
           </li>
 
           <li>
+            <a href="/results">All Results</a>
+          </li>
+
+          <li>
             <a href="/settings">Settings</a>
           </li>
         </ul>

@@ -42,7 +42,7 @@ const SignUpFormPage = () => {
 
   return (
     <div>
-      <Navbar />  {}
+
 
       <div className="form-container">
     
