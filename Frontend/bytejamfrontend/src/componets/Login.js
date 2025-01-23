@@ -2,24 +2,83 @@ import React from "react";
 
 
 {/*Page: 2*/}
-{/*Meghan Still Needs To Finish Page*/}
+
 
 
 // Functional Component: A reusable, self-contained piece of UI in React
 const LoginPage = () => {
+  const SignUpFormPage = () => {
+    const [formData, setFormData] = useState({
+      username: '',
+      email: '',
+      password: '',
+    });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://localhost:5276/api/admin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Admin information submitted successfully!');
+      } else {
+        alert('Submission failed.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
   return (
     <div>
-      {/* React JSX: Uses HTML-like syntax but with JavaScript behind the scenes */}
-
-
-      {/*TO_DO Link To Figma Design: https://www.figma.com/design/1KBtOMoOeuQ8uqH429KYcI/Untitled?node-id=0-1&p=f&t=EXLxoC9YmXLyaX1W-0*/}
-      
-      {/*Text That Says Welcome! Please Login */}
-
-      {/*Add 2 Text Forms For Username And Password*/}
+      <div className="form-container">
     
-      {/*Button With Text That Says New Here? Sign Up! */}
+    <form onSubmit={handleSubmit}>
 
+        <label>Username:</label>
+            <input
+                type="text"
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+                required
+            />
+
+        <label>Password:</label>
+            <input
+                type="text"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+            />
+
+        
+
+        <button type="submit">Sign Up</button>
+
+    </form>
+  </div>
+      
+      
+      
+      
+      
+      
+      
+     
 
 
     </div>
