@@ -1,6 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 
-const NavigationPage = () => {
+
+{/*Page: 3*/}
+
+
+const BitsPage = () => {
     const [teams, setTeams] = useState([
         { name: 'Team A', school: 'School A' },
         { name: 'Team B', school: 'School B' },
@@ -27,19 +31,6 @@ const NavigationPage = () => {
 
     return (
         <div>
-            <nav className="navbar">
-                <h1>Admin Page</h1>
-                <a href="/page1.html">Sign Up</a>
-                <a href="/page2.html">Login</a>
-                <a href="/page3.html">Bits</a>
-                <a href="/page4.html">Bytes</a>
-                <a href="/page5.html">Pins</a>
-                <a href="/page6.html">Companies</a>
-                <a href="/page7.html">School Rep</a>
-                <a href="/page8.html">Results</a>
-                <a href="/page9.html">Settings</a>
-            </nav>
-
             <div className="form-container">
                 <h2>Team Management (Bits)</h2>
 
@@ -91,4 +82,4 @@ const NavigationPage = () => {
     );
 };
 
-export default NavigationPage;
+export default BitsPage;

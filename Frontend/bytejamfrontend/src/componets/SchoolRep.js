@@ -1,4 +1,31 @@
 import React from "react";
+
+
+{/*Page: 7*/}
+{/*Claire Jaeger Still Needs To Finish Page*/}
+
+const SchoolRepPage = () => {
+    return (
+        <div>
+            
+
+            {/*Look At HTML below*/}
+            {/*TO_DO Link To Figma Design: https://www.figma.com/design/1KBtOMoOeuQ8uqH429KYcI/Untitled?node-id=0-1&p=f&t=EXLxoC9YmXLyaX1W-0*/}
+      
+            {/*Div With Text That Says Current School Rep, Name:, and Pin: To Display All Pins*/}
+            {/*Under Div Buttons For Drop All, Export, and Print*/}
+            
+            {/*Text That Says Add School Rep and # of People */}
+            {/*Text Input Fields For Name and Number of People and Education Division*/}
+
+
+        </div>
+        );
+    };
+    
+export default SchoolRepPage;
+
+/* 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,4 +75,4 @@ import React from "react";
         </div>
     </div>
 </body>
-</html>
+</html> */

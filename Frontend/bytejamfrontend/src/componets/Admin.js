@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 
 
-
-
-
-function AdminForm() {
+function SignUpPage() {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -59,7 +56,6 @@ function AdminForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Admin Information</h2>
       <label>
         Username:
         <input
@@ -136,4 +132,4 @@ function AdminForm() {
   );
 }
 
-export default AdminForm;
+export default SignUpPage;

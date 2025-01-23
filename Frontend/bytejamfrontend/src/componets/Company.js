@@ -1,4 +1,30 @@
 import React from "react";
+
+
+{/*Page: 6*/}
+{/*Jerica Still Needs To Finish Her Page*/}
+
+const CompanyPage = () => {
+    return (
+        <div>\
+
+            
+            {/*Look At HTML below*/}
+            {/*TO_DO Link To Figma Design: https://www.figma.com/design/1KBtOMoOeuQ8uqH429KYcI/Untitled?node-id=0-1&p=f&t=EXLxoC9YmXLyaX1W-0*/}
+      
+            {/*Div With Text That Says Current Companies, Name:, and Pin: To Display All Pins*/}
+            {/*Under Div Buttons For Drop All, Export, and Print*/}
+            
+            {/*Text That Says Add Company and # of People */}
+            {/*Text Input Fields For Compant Name and Number of People*/}
+
+
+        </div>
+        );
+    };
+
+export default CompanyPage;
+/* 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,40 +32,10 @@ import React from "react";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation</title>
     <script></script>
-    <style>
-        /* TailwindCSS CSS for page 6 */
-        body {
-            @apply m-0;
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            @apply bg-[#5C1D29] overflow-hidden;
-        }
-        .navbar a {
-            @apply float-left block text-[white] text-center no-underline px-5 py-3.5 hover:bg-[#ddd] hover:text-[black];
-        }
-        @media screen and (max-width: 600px) {
-            .navbar a {
-            @apply float-none w-full text-left;
-            }
-        }
-    </style>
+    
 </head>
 <body>
- 
-    <div class="navbar">
-        <h1 class="text-white text-3xl font-bold p-3">Admin Page</h1>
-        <a href="page1.html">Sign Up</a>
-        <a href="page2.html">Login</a>
-        <a href="page3.html">Bits</a>
-        <a href="page4.html">Bytes</a>
-        <a href="page5.html">Pins</a>
-        <a href="page6.html">Companies</a>
-        <a href="page7.html">School Rep</a>
-        <a href="page8.html">Results</a>
-        <a href="page9.html">Settings</a>
-    </div>
- 
+
     <section class="p-5">
         <h3 class="text-xl font-semibold mb-4">Company Pins</h3>
         <div class="Company-pins bg-gray-100 p-4 rounded-lg shadow-md">
@@ -53,4 +49,4 @@ import React from "react";
     </section>
 </body>
 </html>
- 
+  */
