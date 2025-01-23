@@ -7,8 +7,6 @@ import React from "react";
 const SchoolRepPage = () => {
     return (
         <div>
-            
-
             {/*Look At HTML below*/}
             {/*TO_DO Link To Figma Design: https://www.figma.com/design/1KBtOMoOeuQ8uqH429KYcI/Untitled?node-id=0-1&p=f&t=EXLxoC9YmXLyaX1W-0*/}
       
@@ -18,8 +16,39 @@ const SchoolRepPage = () => {
             {/*Text That Says Add School Rep and # of People */}
             {/*Text Input Fields For Name and Number of People and Education Division*/}
 
-
+ 
+    <div className="rep-list">
+      <h3>Current School Reps</h3>
+      <div className="team-item">
+        <span>Name</span>
+        <div>
+          <button onClick={()=> alert('Edit functionalitypending')}>Edit</button>
+          <button className="delete-button" onClick={()=>
+            alert('Delete functionality pending')}>Delete</button>
         </div>
+      </div>
+      <div className="companyitem">
+            <span>Pin</span>
+            <div>
+              <button onClick={()=> alert('Edit functionalitypending')}>Edit</button>
+              <button className="delete-button" onClick={()=>
+                alert('Delete functionality pending')}>Delete</button>
+            </div>
+      </div>
+      <div className="form-container">
+    <h2>Add School Rep and # of People</h2>
+    <form action="/add-team" method="POST">
+      <label htmlFor="rep-name">Name:</label>
+      <input type="text" id="rep-name" name="rep-name" required />
+      <label htmlFor="rep-pin">Pin:</label>
+      <input type="text" id="rep-pin" name="rep-pin" required />  
+      <label htmlFor="edu-division">Education Division:</label>
+      <input type="text" id="edu-division" name="edu-division" required />
+      <button type="submit">Next</button>
+    </form>
+      </div>
+      </div>
+      </div>
         );
     };
     
