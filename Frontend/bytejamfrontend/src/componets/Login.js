@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 {/*Page: 2*/}
@@ -7,10 +7,8 @@ import React from "react";
 
 // Functional Component: A reusable, self-contained piece of UI in React
 const LoginPage = () => {
-  const SignUpFormPage = () => {
     const [formData, setFormData] = useState({
       username: '',
-      email: '',
       password: '',
     });
   const handleChange = (e) => {
@@ -71,15 +69,6 @@ const LoginPage = () => {
 
     </form>
   </div>
-      
-      
-      
-      
-      
-      
-      
-     
-
 
     </div>
   );
