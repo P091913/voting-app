@@ -10,8 +10,8 @@ const App = () => {
 
     return (
     <View>
-      <Text>Welcome To Byte Jam!</Text>
-      <Text>This is the voting app for Byte Jam for 2025!</Text>
+      <Text style={styles.Text1}>Welcome To Byte Jam!</Text>
+      <Text style={styles.Text2}>This is the voting app for Byte Jam for 2025!</Text>
       <TouchableOpacity onPress={handleNext}>
         <Text style={styles.Button}>Next</Text>
       </TouchableOpacity>
@@ -20,10 +20,18 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
+  Text1: {
+    fontSize: 10,
+    fontWeight: 'bold', 
+  },
+  Text2: {
+    fontSize: 10,
+    fontWeight: 'bold', 
+  },
   Button: {
     fontSize: 10,
     color: 'Red',
-},
+  },
 });
 
 export default App;
