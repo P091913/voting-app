@@ -1,7 +1,7 @@
 // React Mobile Page 1
 
 import React from 'react';
-import { View, Text, StyleSheet, onPress } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const App = () => {
     const handleNext = () => {
@@ -12,15 +12,18 @@ const App = () => {
     <View>
       <Text>Welcome To Byte Jam!</Text>
       <Text>This is the voting app for Byte Jam for 2025!</Text>
-      <Text onPress={handleNext}>
-        Next
-      </Text>
+      <TouchableOpacity onPress={handleNext}>
+        <Text style={styles.Button}>Next</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  
+  Button: {
+    fontSize: 10,
+    color: 'Red',
+},
 });
 
 export default App;
