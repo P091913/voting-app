@@ -21,15 +21,15 @@ const App = () => {
 
 const styles = StyleSheet.create({
   Text1: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: 'bold', 
   },
   Text2: {
-    fontSize: 10,
+    fontSize: 15,
     fontWeight: 'bold', 
   },
   Button: {
-    fontSize: 10,
+    fontSize: 15,
     color: 'Red',
   },
 });

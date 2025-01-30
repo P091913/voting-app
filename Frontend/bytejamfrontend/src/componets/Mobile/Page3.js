@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div>
       <h2>Team Voting</h2>
-      <h1>Company & School Rep</h1>
+      <h1>Company & School Representative</h1>
       <input 
         type="text" 
         value={inputValue} 
