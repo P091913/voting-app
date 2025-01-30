@@ -8,8 +8,7 @@ namespace VotingApp.Models;
         [Key]
         public int Id { get; set; }
         public string Username { get; set; }
-        public string Email { get; set; }
+        public StaffCoachType StaffCoachType { get; set; }
         public string? Password { get; set; }
-        [ForeignKey("General")]
-        public int General_id { get; set; }
+        public General General { get;set; }
     }

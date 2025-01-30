@@ -2,6 +2,7 @@
 using BackendAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackendAPI.Migrations
 {
     [DbContext(typeof(BackendAPIContext))]
-    partial class BackendAPIContextModelSnapshot : ModelSnapshot
+    [Migration("20250130105100_UpdateTeamModels1")]
+    partial class UpdateTeamModels1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.11");
@@ -102,10 +105,12 @@ namespace BackendAPI.Migrations
                     b.Property<int>("Rank")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Teams_id")
+                    b.Property<int>("TeamsId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TeamsId");
 
                     b.ToTable("FinalTeamScores");
                 });
@@ -193,7 +198,7 @@ namespace BackendAPI.Migrations
                     b.Property<float>("ProjectDesign")
                         .HasColumnType("REAL");
 
-                    b.Property<int>("Teams_id")
+                    b.Property<int>("TeamsId")
                         .HasColumnType("INTEGER");
 
                     b.Property<float>("Theme")
@@ -203,6 +208,8 @@ namespace BackendAPI.Migrations
                         .HasColumnType("REAL");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TeamsId");
 
                     b.ToTable("TeamData");
                 });
@@ -217,27 +224,23 @@ namespace BackendAPI.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("FinalTeamScoresId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("MemberCount")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("TeamDataId")
+                    b.Property<int>("TeamData_id")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("TeamName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("Team_Id")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("VotesReceived")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FinalTeamScoresId");
-
-                    b.HasIndex("TeamDataId");
 
                     b.ToTable("Teams");
                 });
@@ -272,6 +275,17 @@ namespace BackendAPI.Migrations
                     b.Navigation("General");
                 });
 
+            modelBuilder.Entity("VotingApp.Models.FinalTeamScores", b =>
+                {
+                    b.HasOne("VotingApp.Models.Teams", "Teams")
+                        .WithMany()
+                        .HasForeignKey("TeamsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Teams");
+                });
+
             modelBuilder.Entity("VotingApp.Models.StaffCoach", b =>
                 {
                     b.HasOne("VotingApp.Models.General", "General")
@@ -283,23 +297,15 @@ namespace BackendAPI.Migrations
                     b.Navigation("General");
                 });
 
-            modelBuilder.Entity("VotingApp.Models.Teams", b =>
+            modelBuilder.Entity("VotingApp.Models.TeamData", b =>
                 {
-                    b.HasOne("VotingApp.Models.FinalTeamScores", "FinalTeamScores")
+                    b.HasOne("VotingApp.Models.Teams", "Teams")
                         .WithMany()
-                        .HasForeignKey("FinalTeamScoresId")
+                        .HasForeignKey("TeamsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("VotingApp.Models.TeamData", "TeamData")
-                        .WithMany()
-                        .HasForeignKey("TeamDataId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("FinalTeamScores");
-
-                    b.Navigation("TeamData");
+                    b.Navigation("Teams");
                 });
 #pragma warning restore 612, 618
         }

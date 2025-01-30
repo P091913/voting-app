@@ -1,107 +1,174 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 
 {/*Page: 7*/}
-{/*Claire Jaeger Still Needs To Finish Page*/}
 
 const SchoolRepPage = () => {
-    return (
-        <div>
-            {/*Look At HTML below*/}
-            {/*TO_DO Link To Figma Design: https://www.figma.com/design/1KBtOMoOeuQ8uqH429KYcI/Untitled?node-id=0-1&p=f&t=EXLxoC9YmXLyaX1W-0*/}
+    
+    const [formData, setFormData] = useState({
+        username: '',
+        staffCoachType: null,
+        password: '',
+        general:
+        {
+          name:''
+        }
+        });
+    
+        const [staffCoach, setStaffCoach] = useState([]); 
+        const [loading, setLoading] = useState(true); 
       
-            {/*Div With Text That Says Current School Rep, Name:, and Pin: To Display All Pins*/}
-            {/*Under Div Buttons For Drop All, Export, and Print*/}
+        const handleChange = (e) => {
+            const { name, value } = e.target;
+            // If it's the staffCoachType dropdown, ensure the value is converted to a number
+            const updatedValue = name === 'staffCoachType' ? Number(value) : value;
+            setFormData({
+              ...formData,
+              [name]: updatedValue,
+            });
+          };
+        
+       // create a new StaffCoach
+        const handleSubmit = async (e) => {
+          e.preventDefault();
+      
+          try {
+            const response = await fetch('http://localhost:5276/api/StaffCoach', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(formData),
+            });
+      
+            if (response.ok) {
+              alert('Staff Coach information submitted successfully!');
+            } else {
+              alert('Submission failed.');
+            }
+          } catch (error) {
+            console.error('Error submitting form:', error);
+          }
+        };
+    
+    
+        const handleDelete = async (id) => 
+          {
             
-            {/*Text That Says Add School Rep and # of People */}
-            {/*Text Input Fields For Name and Number of People and Education Division*/}
+            try {
+              const response = await fetch(`http://localhost:5276/api/StaffCoach/${id}`, {
+                method: 'DELETE',
+              });
+        
+              if (response.ok) {
+                //remove admin
+                setStaffCoach(staffCoach.filter((staffCoach) => staffCoach.id !== id));
+                alert('StaffCoach deleted successfully');
+              } else {
+                alert('Failed to delete business');
+              }
+            } catch (error) {
+              console.error('Error deleting StaffCoach:', error);
+              alert('Error deleting admin');
+            }
+          };
+    
+          const fetchStaffCoach = async () => {
+            try {
+              const response = await fetch("http://localhost:5276/api/StaffCoach"); 
+                
+                
+              if (response.ok) {
+                const data = await response.json();
 
- 
-    <div className="rep-list">
-      <h3>Current School Reps</h3>
-      <div className="team-item">
-        <span>Name</span>
-        <div>
-          <button onClick={()=> alert('Edit functionalitypending')}>Edit</button>
-          <button className="delete-button" onClick={()=>
-            alert('Delete functionality pending')}>Delete</button>
+                if (Array.isArray(data)) {
+                    setStaffCoach(data);
+                  } else {
+                    alert("Unexpected response format.");
+                  }
+                setLoading(false);
+              } else {
+                alert("Failed to fetch StaffCoach.");
+                setLoading(false);
+              }
+            } catch (error) {
+              console.error("Error fetching StaffCoaches:", error);
+              setLoading(false);
+            }
+          };
+      
+        // Fetch StaffCoach
+        useEffect(() => {
+          fetchStaffCoach();
+        }, []);
+    
+    return (
+    <div>
+        <div className="form-container">
+            
+            <h2>Add School Rep</h2>
+
+            <form onSubmit={handleSubmit}>
+                <label >Name:</label>
+                <input 
+                    type="text"
+                    name="username" 
+                    value={formData.username}
+                    onChange={handleChange}
+                    required 
+              />
+
+                <label>Education Division:</label>
+                    <select 
+                        name="staffCoachType" 
+                        value={formData.staffCoachType} 
+                        onChange={handleChange}
+                        required
+                    >
+                        <option value="" disabled selected>Select an option</option>
+                        <option value={1}>IHCC</option>
+                        <option value={2}>Bits</option>
+                        <option value={3}>Bytes</option>
+                    </select>
+            <button type="submit">Add StaffCoach</button>
+        </form>
+      </div>
+
+    
+        <div >
+            <h1>All StaffCoaches</h1>
+            {loading ? (
+                <p>Loading StaffCoaches...</p>
+            ) : (
+                <div>
+                    {staffCoach.length > 0 ? (
+                        <ul>
+                            <h4>Name</h4>
+                            {staffCoach.map((coach) => (
+                                <li key={coach.id}>
+                                    <strong>{coach.username}</strong>
+                                    {
+                                        coach.staffCoachType === 1 ? ' (IHCC)' : 
+                                        coach.staffCoachType === 2 ? ' (Bits)' : 
+                                        coach.staffCoachType === 3 ? ' (Bytes)' : ' (Unknown)'
+                                    }
+                                </li>
+                            ))}
+
+                            <h4>Pins</h4>
+                            {staffCoach.map((coach) => (
+                                <li key={coach.id}>
+                                    <strong>{coach.password}</strong>
+                                    <button onClick={() => handleDelete(coach.id)}>Delete</button>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p>No Staff Coaches Found</p>
+                    )}
+                </div>
+            )}
         </div>
-      </div>
-      <div className="companyitem">
-            <span>Pin</span>
-            <div>
-              <button onClick={()=> alert('Edit functionalitypending')}>Edit</button>
-              <button className="delete-button" onClick={()=>
-                alert('Delete functionality pending')}>Delete</button>
-            </div>
-      </div>
-      <div className="form-container">
-    <h2>Add School Rep and # of People</h2>
-    <form action="/add-team" method="POST">
-      <label htmlFor="rep-name">Name:</label>
-      <input type="text" id="rep-name" name="rep-name" required />
-      <label htmlFor="rep-pin">Pin:</label>
-      <input type="text" id="rep-pin" name="rep-pin" required />  
-      <label htmlFor="edu-division">Education Division:</label>
-      <input type="text" id="edu-division" name="edu-division" required />
-      <button type="submit">Next</button>
-    </form>
-      </div>
-      </div>
-      </div>
+    </div>
         );
     };
     
 export default SchoolRepPage;
-
-/* 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation</title>
-    <style>
-        body {
-            @apply m-0;
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            @apply bg-[#5C1D29] overflow-hidden;
-        }
-        .navbar a {
-            @apply float-left block text-[white] text-center no-underline px-5 py-3.5 hover:bg-[#ddd] hover:text-[black];
-        }
-        @media screen and (max-width: 600px) {
-            .navbar a {
-                @apply float-none w-full text-left;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="navbar">
-        <H1>Admin Page</H1>
-        <a href="page1.html">Sign Up</a>
-        <a href="page2.html">Login</a>
-        <a href="page3.html">Bits</a>
-        <a href="page4.html">Bytes</a>
-        <a href="page5.html">Pins</a>
-        <a href="page6.html">Companies</a>
-        <a href="page7.html">School Rep</a>
-        <a href="page8.html">Results</a>
-        <a href="page9.html">Settings</a>
-    </div>
-
-    <h3>School Pins</h3>
-    <div class="school-pins">
-        <span>School 1 - Pin1</span>
-        <div>
-            <button onclick="alert('Edit functionality pending')">Edit</button>
-            <button class="delete-button" onclick="alert('Delete functionality pending')">Delete</button>
-            <button class="export-button" onclick="alert('Export functionality Pending')">Export</button>
-        </div>
-    </div>
-</body>
-</html> */

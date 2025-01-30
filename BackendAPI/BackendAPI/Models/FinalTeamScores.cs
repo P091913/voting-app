@@ -9,6 +9,7 @@ namespace VotingApp.Models;
         public int Id { get; set; }
         public float AverageScore { get; set; }
         public int Rank { get; set; }
+        
         [ForeignKey("Teams")]
         public int Teams_id { get; set; }
     }

@@ -2,6 +2,7 @@
 using BackendAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackendAPI.Migrations
 {
     [DbContext(typeof(BackendAPIContext))]
-    partial class BackendAPIContextModelSnapshot : ModelSnapshot
+    [Migration("20250130070656_UpdateStaffCoachEnum")]
+    partial class UpdateStaffCoachEnum
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.11");
@@ -193,7 +196,7 @@ namespace BackendAPI.Migrations
                     b.Property<float>("ProjectDesign")
                         .HasColumnType("REAL");
 
-                    b.Property<int>("Teams_id")
+                    b.Property<int>("Team_id")
                         .HasColumnType("INTEGER");
 
                     b.Property<float>("Theme")
@@ -217,27 +220,23 @@ namespace BackendAPI.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("FinalTeamScoresId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("MemberCount")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("TeamDataId")
+                    b.Property<int>("TeamData_id")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("TeamName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("Team_Id")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("VotesReceived")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FinalTeamScoresId");
-
-                    b.HasIndex("TeamDataId");
 
                     b.ToTable("Teams");
                 });
@@ -281,25 +280,6 @@ namespace BackendAPI.Migrations
                         .IsRequired();
 
                     b.Navigation("General");
-                });
-
-            modelBuilder.Entity("VotingApp.Models.Teams", b =>
-                {
-                    b.HasOne("VotingApp.Models.FinalTeamScores", "FinalTeamScores")
-                        .WithMany()
-                        .HasForeignKey("FinalTeamScoresId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("VotingApp.Models.TeamData", "TeamData")
-                        .WithMany()
-                        .HasForeignKey("TeamDataId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("FinalTeamScores");
-
-                    b.Navigation("TeamData");
                 });
 #pragma warning restore 612, 618
         }

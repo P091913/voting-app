@@ -74,12 +74,18 @@ namespace BackendAPI.Controllers
         }
 
         // POST: api/Teams
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Teams>> PostTeams(Teams teams)
         {
+            var teamData = new TeamData();
+            var finalTeamScore = new FinalTeamScores();
+            
+            teams.TeamData = teamData;
+            teams.FinalTeamScores = finalTeamScore;
+            
             _context.Teams.Add(teams);
             await _context.SaveChangesAsync();
+            ;
 
             return CreatedAtAction("GetTeams", new { id = teams.Id }, teams);
         }

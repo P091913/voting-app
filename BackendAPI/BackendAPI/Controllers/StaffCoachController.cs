@@ -77,15 +77,33 @@ namespace BackendAPI.Controllers
         }
 
         // POST: api/StaffCoach
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<StaffCoach>> PostStaffCoach(StaffCoach staffCoach)
         {
+            //Create The General
+            var general = new General
+            {
+                Name = staffCoach.Username
+            };
+            
+            //Save
+            _context.General.Add(general);
+            await _context.SaveChangesAsync();
+            
+            
+            //generate pin 
             staffCoach.Password = _pinService.GeneratePin();
             
             _context.StaffCoach.Add(staffCoach);
             await _context.SaveChangesAsync();
-
+            
+            // Set the Voter and StaffCoach id's and save them.
+            general.Voter_Id = general.Id;
+            general.StaffCoach_id = staffCoach.Id;
+            _context.General.Update(general);
+            await _context.SaveChangesAsync();
+            
+            // return
             return CreatedAtAction("GetStaffCoach", new { id = staffCoach.Id }, staffCoach);
         }
 
@@ -93,12 +111,22 @@ namespace BackendAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStaffCoach(int id)
         {
-            var staffCoach = await _context.StaffCoach.FindAsync(id);
+
+
+            var staffCoach = await _context.StaffCoach
+                .Include(s => s.General)
+                .FirstOrDefaultAsync(s => s.Id == id);
             if (staffCoach == null)
             {
                 return NotFound();
             }
-
+            
+            var general = staffCoach.General;
+            if (general != null)
+            {
+                _context.General.Remove(general);
+            }
+            
             _context.StaffCoach.Remove(staffCoach);
             await _context.SaveChangesAsync();
 

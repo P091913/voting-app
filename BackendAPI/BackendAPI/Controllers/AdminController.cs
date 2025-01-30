@@ -76,16 +76,35 @@ namespace BackendAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/Admin
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // POST: api/Admin (Done?) ---------------------------------------
         [HttpPost]
-        public async Task<ActionResult<Admin>> PostAdmin(Admin admin)
+        public async Task<ActionResult<Admin>> CreateAdmin(Admin admin)
         {
-            admin.Password = _pinService.GeneratePin();
+            // Create The New General
+            var general = new General
+            {
+                // Set The Name Var To The Admin Username
+                Name = admin.Username
+            };
+            // Save General
+            _context.General.Add(general);
+            await _context.SaveChangesAsync();
             
+           
+            //Create The Admins Extra Stuff
+            admin.Password = _pinService.GeneratePin(); // Generate Pin (Must Remove)
+            
+            // Save Admin
             _context.Admin.Add(admin);
             await _context.SaveChangesAsync();
 
+            // Set the Voter and Admin id's and save them.
+            general.Admin_id = admin.Id;
+            general.Voter_Id = general.Id;
+            _context.General.Update(general);
+            await _context.SaveChangesAsync();
+
+            // And Return :)
             return CreatedAtAction("GetAdmin", new { id = admin.Id }, admin);
         }
 
@@ -93,15 +112,25 @@ namespace BackendAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAdmin(int id)
         {
-            var admin = await _context.Admin.FindAsync(id);
+            // Get the admin and make sure it exist with general
+            var admin = await _context.Admin
+                .Include(a => a.General)
+                .FirstOrDefaultAsync(a => a.Id == id);
             if (admin == null)
             {
                 return NotFound();
             }
-
+            
+            // Same thing with the linked General
+            var general = admin.General;
+            if (general != null)
+            {
+                _context.General.Remove(general);
+            }
+            
+            // Delete
             _context.Admin.Remove(admin);
             await _context.SaveChangesAsync();
-
             return NoContent();
         }
 

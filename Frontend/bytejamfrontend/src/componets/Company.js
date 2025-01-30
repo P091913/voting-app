@@ -1,62 +1,169 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 
 {/*Page: 6*/}
-{/*Jerica Still Needs To Finish Her Page*/}
 
 const CompanyPage = () => {
+
+  const [formData, setFormData] = useState({
+      businessname: '',
+      numberofpeople: '',
+      businessLogin:
+      {
+        username: '',
+        password: ''
+      },
+      general:
+      {
+        name: ''
+      }
+    });
+
+    const [business, setBusinesses] = useState([]);
+    const [loading, setLoading] = useState([]); 
+   
+  
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    };
+    
+   // create a new company
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+  
+      try {
+        const response = await fetch('http://localhost:5276/api/Business', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+  
+        if (response.ok) {
+          alert('Admin information submitted successfully!');
+        } else {
+          alert('Submission failed.');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+      }
+    };
+
+
+    const handleDelete = async (id) => 
+      {
+        try {
+          const response = await fetch(`http://localhost:5276/api/Business/${id}`, {
+            method: 'DELETE',
+          });
+    
+          if (response.ok) {
+            //remove admin
+            setBusinesses(business.filter((business) => business.businessId !== id));
+            alert('Admin deleted successfully');
+          } else {
+            alert('Failed to delete business');
+          }
+        } catch (error) {
+          console.error('Error deleting business:', error);
+          alert('Error deleting admin');
+        }
+      };
+
+      const fetchBusinesses = async () => {
+        try {
+          const response = await fetch("http://localhost:5276/api/Business"); 
+      
+          if (response.ok) {
+            const data = await response.json();
+            
+            // Check if the response is an array of businesses
+            if (Array.isArray(data)) {
+              setBusinesses(data);
+            } else {
+              alert("Unexpected response format.");
+            }
+            
+            setLoading(false);
+          } else {
+            alert("Failed to fetch businesses.");
+            setLoading(false);
+          }
+        } catch (error) {
+          console.error("Error fetching businesses:", error);
+          setLoading(false);
+        }
+      };
+  
+    // Fetch businesses
+    useEffect(() => {
+      fetchBusinesses();
+    }, []);
     
     return (
         <div>
+          <div className="form-container">
+            <h2>Add Company</h2>
 
-<div>
-      
+            <form onSubmit={handleSubmit}>
+                <label >Name:</label>
+                <input 
+                  type="text"
+                  name="businessname" 
+                  value={formData.businessname}
+                  onChange={handleChange}
+                  required 
+              />
 
-      {/* Page Content */}
-      <div className="form-container">
-        <h2>Current Company</h2>
-        <form action="/add-team" method="POST">
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-          <label htmlFor="numberneeded">Number Needed: </label>
-          <input type="text" id="name" name="name"
-            required />
-          <button type="submit">Add Company</button>
-        </form>
-    
-        <div className="companyitem">
-          <h3>Current Company</h3>
-          <div className="companyitem">
-            <span>Name</span>
-            <div>
-              <button onClick={()=> alert('Edit functionalitypending')}>Edit</button>
-              <button className="delete-button" onClick={()=>
-                alert('Delete functionality pending')}>Delete</button>
-            </div>
+
+              <label >Number Needed:</label>
+              <input 
+                type="text" 
+                name="numberofpeople"
+                value={formData.numberofpeople}
+                onChange={handleChange}
+                required 
+              />
+              
+              
+              <button type="submit">Add Company</button>
+            </form>
           </div>
-    
-          <div className="companyitem">
-            <span>Pin</span>
-            <div>
-              <button onClick={()=> alert('Edit functionalitypending')}>Edit</button>
-              <button className="delete-button" onClick={()=>
-                alert('Delete functionality pending')}>Delete</button>
-            </div>
-          </div>
+
+          <div>
+      <h1>All Businesses</h1>
+      {loading ? (
+        <p>Loading businesses...</p> // Show loading message while fetching
+      ) : (
+        <div>
+          {business.length > 0 ? (
+            <ul>
+              <h4>Name</h4>
+              {business.map((business) => (
+                <li key={business.businessId}>
+                  <strong>{business.businessName}</strong>
+                </li>
+              ))}
+              <h4>Pins</h4>
+              {business.map((business) => (
+                <li key={business.businessId}>
+                  <strong>{business.businessLogin.password}</strong>
+                  <button onClick={() => handleDelete(business.businessId)}>Delete</button>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>No businesses found.</p>
+          )}
         </div>
-      </div>
-    </div> 
-            {/*Look At HTML below*/}
-            {/*TO_DO Link To Figma Design: https://www.figma.com/design/1KBtOMoOeuQ8uqH429KYcI/Untitled?node-id=0-1&p=f&t=EXLxoC9YmXLyaX1W-0*/}
-      
-            {/*Div With Text That Says Current Companies, Name:, and Pin: To Display All Pins*/}
-            {/*Under Div Buttons For Drop All, Export, and Print*/}
-            
-            {/*Text That Says Add Company and # of People */}
-            {/*Text Input Fields For Compant Name and Number of People*/}
+      )}
+    </div>
 
 
-        </div>
+        </div> 
         );
     };
 

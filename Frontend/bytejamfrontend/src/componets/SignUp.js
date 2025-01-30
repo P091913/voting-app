@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar'; 
 
 
@@ -10,6 +10,10 @@ const SignUpFormPage = () => {
     username: '',
     email: '',
     password: '',
+    general:
+    {
+      name:''
+    }
   });
 
   const handleChange = (e) => {
@@ -19,7 +23,7 @@ const SignUpFormPage = () => {
       [name]: value,
     });
   };
-
+ // create a new admin
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -43,9 +47,9 @@ const SignUpFormPage = () => {
   return (
     <div>
 
-
       <div className="form-container">
     
+      <h1>Create Admin Account Form</h1>
         <form onSubmit={handleSubmit}>
 
             <label>Username:</label>
@@ -53,15 +57,6 @@ const SignUpFormPage = () => {
                     type="text"
                     name="username"
                     value={formData.username}
-                    onChange={handleChange}
-                    required
-                />
-
-            <label>Password:</label>
-                <input
-                    type="text"
-                    name="password"
-                    value={formData.password}
                     onChange={handleChange}
                     required
                 />
@@ -79,6 +74,8 @@ const SignUpFormPage = () => {
 
         </form>
       </div>
+
+
     </div>
   );
 };
