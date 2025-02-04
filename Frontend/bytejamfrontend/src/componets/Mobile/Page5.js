@@ -26,10 +26,10 @@ const App = () => {
         onValueChange={(itemValue) => setSelectedTeam(itemValue)}
         style={styles.picker}
       >
-        <Picker.Item label="1" value="" />
-        <Picker.Item label="2" value="" />
-        <Picker.Item label="3" value="" />
-        <Picker.Item label="4" value="" />
+        <Picker.Item label="Team 1" value="Team 1" />
+        <Picker.Item label="Team 2" value="Team 2" />
+        <Picker.Item label="Team 3" value="Team 3" />
+        <Picker.Item label="Team 4" value="Team 4" />
       </Picker>
 
       <Text style={styles.Text1}>Please rate the following aspects (1-5):</Text>
