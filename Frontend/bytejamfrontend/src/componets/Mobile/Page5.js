@@ -34,7 +34,7 @@ const App = () => {
 
       <Text style={styles.Text1}>Please rate the following aspects (1-5):</Text>
 
-      {/* Question 1 - Appealing */}
+      {/*  Appealing */}
       <Text style={styles.questionText}>1. How appealing is the project?</Text>
       <TextInput
         style={styles.input}
@@ -44,7 +44,7 @@ const App = () => {
         placeholder="Rate 1 to 5"
       />
 
-      {/* Question 2 - Amazement */}
+      {/* Amazement */}
       <Text style={styles.questionText}>2. How amazing is the project?</Text>
       <TextInput
         style={styles.input}
@@ -54,7 +54,7 @@ const App = () => {
         placeholder="Rate 1 to 5"
       />
 
-      {/* Question 3 - Theme */}
+      {/* Theme */}
       <Text style={styles.questionText}>3. How well does the project align with the theme?</Text>
       <TextInput
         style={styles.input}
@@ -64,7 +64,7 @@ const App = () => {
         placeholder="Rate 1 to 5"
       />
 
-      {/* Question 4 - Performance */}
+      {/* Performance */}
       <Text style={styles.questionText}>4. How would you rate the performance of the project?</Text>
       <TextInput
         style={styles.input}
