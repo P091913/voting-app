@@ -10,7 +10,7 @@ const App = () => {
 
     return (
     <View>
-      <Text style={styles.Text1}>Thank you for voting!</Text>
+      <Text style={styles.Text1}>Thank you for voting and your input!</Text>
       <Text style={styles.Text2}>We will start the event soon!</Text>
       <Text style={styles.Text3}>Thank you to all the staff and employees for making this possible!</Text>
     <TouchableOpacity onPress={handleNext}>
