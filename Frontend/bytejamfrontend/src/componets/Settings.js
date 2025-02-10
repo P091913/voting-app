@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Switch, Button, Alert, StyleSheet } from "react-native";
+import { View, Text, TextInput, Switch, Button, Alert } from "react-native";
 import DatePicker from "react-native-datepicker";
-
+import Navbar from "./Navbar";
 
 export default function VotingDateControl() {
   const [startDate, setStartDate] = useState("");
@@ -10,19 +10,19 @@ export default function VotingDateControl() {
 
   const handleSave = async () => {
     try {
-    
+      // Handle save 
     } catch (error) {
-     
+      // Handle error
     }
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Voting Date Control</Text>
+    <View className="flex-1 p-5 bg-gray-100">
+      <Text className="text-xl font-bold mb-5 text-center">Voting Date Control</Text>
       
-      <Text style={styles.label}>Start Date</Text>
+      <Text className="text-lg mb-2">Start Date</Text>
       <DatePicker
-        style={styles.datePicker}
+        className="w-full mb-4"
         date={startDate}
         mode="date"
         placeholder="Select start date"
@@ -33,9 +33,9 @@ export default function VotingDateControl() {
         disabled={trackingDisabled}
       />
 
-      <Text style={styles.label}>End Date</Text>
+      <Text className="text-lg mb-2">End Date</Text>
       <DatePicker
-        style={styles.datePicker}
+        className="w-full mb-4"
         date={endDate}
         mode="date"
         placeholder="Select end date"
@@ -46,43 +46,12 @@ export default function VotingDateControl() {
         disabled={trackingDisabled}
       />
 
-      <View style={styles.switchContainer}>
+      <View className="flex-row items-center justify-between mb-5">
         <Text>{trackingDisabled ? "Tracking Disabled" : "Tracking Enabled"}</Text>
-        <Switch
-          value={trackingDisabled}
-          onValueChange={setTrackingDisabled}
-        />
+        <Switch value={trackingDisabled} onValueChange={setTrackingDisabled} />
       </View>
 
       <Button title="Save Settings" onPress={handleSave} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: "#f8f9fa",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-    marginBottom: 20,
-    textAlign: "center",
-  },
-  label: {
-    fontSize: 16,
-    marginBottom: 5,
-  },
-  datePicker: {
-    width: "100%",
-    marginBottom: 15,
-  },
-  switchContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginBottom: 20,
-  },
-});
