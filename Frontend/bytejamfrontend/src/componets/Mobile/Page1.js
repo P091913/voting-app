@@ -27,10 +27,7 @@ const styles = {
   },
   Button: {
     fontSize: '15px',
-    color: 'red',
-    backgroundColor: 'white',
-    border: 'none',
-    cursor: 'pointer',
+    border: 'bold',
   },
 };
 
