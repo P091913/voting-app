@@ -1,49 +1,47 @@
-// React Mobile Page 4
-
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
 
 const App = () => {
   const [selectedValue, setSelectedValue] = useState('option1');
 
   const options = {
-    option1: "Team 1",
-    option2: "Team 1",
-    option3: "Team 3",
-    option4: "Team 3",
-    option5: "Team 3",
-    option6: "Team 3",
-    option7: "Team 3"
+    option1: "High School",
+    option2: "Colleges",
+    option3: "Company",
+    option4: "School Representative",
+    option5: "Other (Visitor)",
+  };
+
+  const handleSelectChange = (event) => {
+    setSelectedValue(event.target.value);
+    console.log("Selected value:", event.target.value);
   };
 
   return (
-    <View>
-    <Text style={styles.WelcomeText}>Thank you for voting!</Text>
-      <Text>Pick Team and Vote</Text>
-      <Picker
-              selectedValue={selectedValue}
-              onValueChange={(itemValue) => setSelectedValue(itemValue)}
-            >
-              <Picker.Item label="Team 1" value="option1" />
-              <Picker.Item label="Team 1" value="option2" />
-              <Picker.Item label="Team 3" value="option3" />
-              <Picker.Item label="Team 3" value="option4" />
-              <Picker.Item label="Team 3" value="option5" />
-              <Picker.Item label="Team 3" value="option6" />
-              <Picker.Item label="Team 3" value="option7" />
-            </Picker>
+    <div>
+      <p style={styles.WelcomeText}>Welcome to the Byte Jam voting app</p>
       
-            <Text>You selected: {options[selectedValue]}</Text>
-    </View>        
-  );
-}
+      <p>Select which team you are on:</p>
+      
+      <label htmlFor="educationLevel">Select an option:</label>
+      
+      <select id="educationLevel" name="educationLevel" onChange={handleSelectChange}>
+        <option value="option1">High School</option>
+        <option value="option2">College (Any College or Indian Hills Community College)</option>
+        <option value="option3">Company</option>
+        <option value="option4">School Representative</option>
+        <option value="option5">Other (Visitor)</option>
+      </select>
 
-const styles = StyleSheet.create({
-    WelcomeText: {
-      fontSize: 15,
-      fontWeight: 'bold', 
-    },
-  });
+      <p>You selected: {options[selectedValue]}</p>
+    </div>
+  );
+};
+
+const styles = {
+  WelcomeText: {
+    fontSize: '15px',
+    fontWeight: 'bold',
+  },
+};
 
 export default App;

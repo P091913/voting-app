@@ -15,44 +15,44 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a href="/">Sign Up</a>
+            <a href="/admin/">Sign Up</a>
           </li>
 
           <li>
-            <a href="/login">Login</a>
+            <a href="/admin/login">Login</a>
           </li>
 
           <li>
-            <a href="/bits">Bits</a>
+            <a href="/admin/bits">Bits</a>
           </li>
 
           <li>
-            <a href="/bytes">Bytes</a>
+            <a href="/admin/bytes">Bytes</a>
           </li>
 
           <li>
-            <a href="/company">Companies</a>
+            <a href="/admin/company">Companies</a>
           </li>
 
           <li>
-            <a href="/schoolrep">School Rep</a>
+            <a href="/admin/schoolrep">School Rep</a>
           </li>
 
           <li>
-            <a href="/pins">Pins</a>
+            <a href="/admin/pins">Pins</a>
           </li>
 
           <li>
-            <a href="/results">Results</a>
+            <a href="/admin/results">Results</a>
           </li>
 
           <li>
-            <a href="/results">All Results</a>
+            <a href="/admin/allResults">All Results</a>
           </li>
 
-          <li>
-            <a href="/settings">Settings</a>
-          </li>
+        
+
+          
         </ul>
 
       </div>
