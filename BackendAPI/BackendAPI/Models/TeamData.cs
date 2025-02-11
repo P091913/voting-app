@@ -7,18 +7,19 @@ namespace VotingApp.Models;
     {
         [Key]
         public int Id { get; set; }
-        // V No Idea...
-        public float AdAppealBusiness {  get; set; }
-        public float ProjectDesign {  get; set; }
-        public float ThemeIntegration { get; set; }
+        // Used in with Teachers, Companies, and Advisors
         public float Creativity { get; set; }
-        public float ProfCom { get; set; }
-        public float PerfFunc { get; set; }
-        // Voting Ranking
-        public float AdAppeal {  get; set; }
+        public float Communication { get; set; }
+        public float Professionalism { get; set; }
+        public float VisualDesign { get; set; }
+        
+        // Used with Students
         public float Amazement { get; set; }
         public float Theme { get; set; }
+        
+        // Used In All
         public float Performance { get; set; }
+        
         [ForeignKey("Teams")]
         public int Teams_id { get; set; }
         
