@@ -16,22 +16,28 @@ const App = () => {
   };
 
   return (
-    <View>
-      <Text style={styles.WelcomeText}>Welcome to the Byte Jam voting app</Text>
-      <Text>Select an which team you are on:</Text>
-      <Picker
-        selectedValue={selectedValue}
-        onValueChange={(itemValue) => setSelectedValue(itemValue)}
-      >
-        <Picker.Item label="High School" value="option1" />
-        <Picker.Item label="College (Any College or Indian Hills Community College)" value="option2" />
-        <Picker.Item label="Company" value="option3" />
-        <Picker.Item label="School Representative" value="option4" />
-        <Picker.Item label="Other (Visitor)" value="option5" />
-      </Picker>
+    <div>
+      <p style={styles.WelcomeText}>Welcome to the Byte Jam voting app</p>
+      <p>Select an which team you are on:</p>
+      <label for="educationLevel">Select an option:</label>
+<select id="educationLevel" name="educationLevel" onchange="handleSelectChange(event)">
+  <option value="option1">High School</option>
+  <option value="option2">College (Any College or Indian Hills Community College)</option>
+  <option value="option3">Company</option>
+  <option value="option4">School Representative</option>
+  <option value="option5">Other (Visitor)</option>
+</select>
 
-      <Text>You selected: {options[selectedValue]}</Text>
-    </View>
+<script>
+  function handleSelectChange(event) {
+    console.log("Selected value:", event.target.value);
+    
+  }
+</script>
+
+
+      <p>You selected: {options[selectedValue]}</p>
+    </div>
   );
 };
 
