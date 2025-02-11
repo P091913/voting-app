@@ -7,13 +7,10 @@ const BitsPage = () => {
         memberCount: 0,
         votesReceived: 0,
         teamData: {
-            adAppealBusiness: 0,
-            projectDesign:0,
-            themeIntegration: 0,
             creativity: 0,
-            profCom: 0,
-            perfFunc: 0,
-            adAppeal: 0,
+            communication: 0,
+            professionalism: 0,
+            visualDesign: 0 ,
             amazement: 0,
             theme: 0,
             performance: 0

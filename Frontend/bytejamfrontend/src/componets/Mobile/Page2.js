@@ -1,8 +1,6 @@
 // React Mobile Page 2
 
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
 
 const App = () => {
   const [selectedValue, setSelectedValue] = useState('option1');
@@ -15,25 +13,28 @@ const App = () => {
     option5: "Other (Visitor)",
   };
 
+  const handleSelectChange = (event) => {
+    setSelectedValue(event.target.value);
+    console.log("Selected value:", event.target.value);
+  }
+
   return (
     <div>
       <p style={styles.WelcomeText}>Welcome to the Byte Jam voting app</p>
-      <p>Select an which team you are on:</p>
-      <label for="educationLevel">Select an option:</label>
-<select id="educationLevel" name="educationLevel" onchange="handleSelectChange(event)">
-  <option value="option1">High School</option>
-  <option value="option2">College (Any College or Indian Hills Community College)</option>
-  <option value="option3">Company</option>
-  <option value="option4">School Representative</option>
-  <option value="option5">Other (Visitor)</option>
-</select>
 
-<script>
-  function handleSelectChange(event) {
-    console.log("Selected value:", event.target.value);
-    
-  }
-</script>
+      <p>Select an which team you are on:</p>
+      
+      <label htmlFor="educationLevel">Select an option:</label>
+
+      <select id="educationLevel" name="educationLevel" onchange={handleSelectChange(event)}>
+        <option value="option1">High School</option>
+        <option value="option2">College (Any College or Indian Hills Community College)</option>
+        <option value="option3">Company</option>
+        <option value="option4">School Representative</option>
+        <option value="option5">Other (Visitor)</option>
+      </select>
+
+
 
 
       <p>You selected: {options[selectedValue]}</p>
@@ -41,12 +42,12 @@ const App = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = {
   WelcomeText: {
     fontSize: 15,
     fontWeight: 'bold', 
   },
-});
+};
 
 export default App;
 

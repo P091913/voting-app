@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Switch, Button, Alert } from "react-native";
 import DatePicker from "react-native-datepicker";
-import Navbar from "./Navbar";
 
 export default function VotingDateControl() {
   const [startDate, setStartDate] = useState("");
