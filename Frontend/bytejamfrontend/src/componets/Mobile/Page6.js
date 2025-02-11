@@ -1,7 +1,7 @@
 // React Mobile Page 6
 
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const App = () => {
     const handleNext = () => {
@@ -10,13 +10,13 @@ const App = () => {
 
     // Arrow going back to signify you go back a page
     return (
-    <View>
-      <Text style={styles.Text1}>Would you like to vote again?</Text>
-      <TouchableOpacity onPress={handleNext}>
-        <Text style={styles.Button}>Go Back</Text>
-        <Text style={styles.Button2}>Submit</Text>
-      </TouchableOpacity>
-    </View>
+    <div>
+      <p style={styles.Text1}>Would you like to vote again?</p>
+      <button onPress={handleNext}>
+        <p style={styles.Button}>Go Back</p>
+        <p style={styles.Button2}>Submit</p>
+      </button>
+    </div>
   );
 };
 
