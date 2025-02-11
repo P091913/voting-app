@@ -1,7 +1,7 @@
 // React Mobile Page 6
 
 import React from 'react';
-import { StyleSheet } from 'react-native';
+
 
 const App = () => {
     const handleNext = () => {
@@ -20,7 +20,7 @@ const App = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = {
   Text1: {
     fontSize: 15,
     fontWeight: 'bold', 
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: 'Red',
   },
-});
+};
 
 export default App;
 

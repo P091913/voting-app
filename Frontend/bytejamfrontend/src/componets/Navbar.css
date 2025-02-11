@@ -3,6 +3,14 @@
     Basic Css For Navbar Layout
     (I know we are not useing css but I dont know tailwind)
 */
+input{
+  background-color:#dfdfdf;
+}
+
+button
+{
+  background-color: #b7b7b7;
+}
 
 .navbar {
    

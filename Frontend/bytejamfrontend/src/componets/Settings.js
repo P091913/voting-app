@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import Navbar from "./Navbar";
+
 
 export default function VotingDateControl() {
   const [startDate, setStartDate] = useState(null);
@@ -19,7 +19,7 @@ export default function VotingDateControl() {
 
   return (
     <div className="p-5 bg-gray-100 min-h-screen">
-      <Navbar />
+    
       <h1 className="text-xl font-bold mb-5 text-center">Voting Date Control</h1>
       
       <label className="text-lg mb-2 block">Start Date</label>

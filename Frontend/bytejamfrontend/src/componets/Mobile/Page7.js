@@ -1,6 +1,7 @@
 // React Mobile Page 7
 
 import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const App = () => {
     const handleNext = () => {
@@ -8,16 +9,18 @@ const App = () => {
     };
 
     return (
-    <div>
-      <h1 style={styles.Text1}>Thank you for voting and your input!</h1>
-      <p style={styles.Text2}>We will start the event soon!</p>
-      <p style={styles.Text3}>Thank you to all the staff and employees for making this possible!</p>
-    <button onClick={handleNext} style={styles.Button}>Submit</button>
-    </div>
+    <View>
+      <Text style={styles.Text1}>Thank you for voting and your input!</Text>
+      <Text style={styles.Text2}>We will start the event soon!</Text>
+      <Text style={styles.Text3}>Thank you to all the staff and employees for making this possible!</Text>
+    <TouchableOpacity onPress={handleNext}>
+        <Text style={styles.Button}>Submit</Text>
+    </TouchableOpacity>
+    </View>
   );
 };
 
-const styles = {
+const styles = StyleSheet.create({
   Text1: {
     fontSize: 20,
     fontWeight: 'bold', 

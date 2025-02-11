@@ -1,7 +1,4 @@
-// React Mobile Page 5
-
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, Picker } from 'react-native';
 
 const App = () => {
   const [answers, setAnswers] = useState({
@@ -13,98 +10,113 @@ const App = () => {
 
   const [selectedTeam, setSelectedTeam] = useState('');
 
-  const handleInputChange = (value, question) => {
-    setAnswers({
-      ...answers,
-      [question]: value
-    });
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setAnswers((prevAnswers) => ({
+      ...prevAnswers,
+      [name]: value
+    }));
   };
 
   return (
-    <View>
-      <Text style={styles.Text1}>Select a Team</Text>
-      <Picker
-        selectedValue={selectedTeam}
-        onValueChange={(itemValue) => setSelectedTeam(itemValue)}
+    <div style={styles.container}>
+      <p style={styles.Text1}>Select a Team</p>
+      <select
+        value={selectedTeam}
+        onChange={(event) => setSelectedTeam(event.target.value)}
         style={styles.picker}
       >
-        <Picker.Item label="Team 1" value="Team 1" />
-        <Picker.Item label="Team 2" value="Team 2" />
-        <Picker.Item label="Team 3" value="Team 3" />
-        <Picker.Item label="Team 4" value="Team 4" />
-      </Picker>
+        <option value="">Select a team</option>
+        <option value="Team 1">Team 1</option>
+        <option value="Team 2">Team 2</option>
+        <option value="Team 3">Team 3</option>
+        <option value="Team 4">Team 4</option>
+      </select>
 
-      <Text style={styles.Text1}>Please rate the following aspects (1-5):</Text>
+      <p style={styles.Text1}>Please rate the following aspects (1-5):</p>
 
-      {/*  Appealing */}
-      <Text style={styles.questionText}>1. How appealing is the project?</Text>
-      <TextInput
-        style={styles.input}
+      {/* Appealing */}
+      <p style={styles.questionText}>1. How appealing is the project?</p>
+      <input
+        type="number"
+        name="appealing"
         value={answers.appealing}
-        onChangeText={(value) => handleInputChange(value, 'appealing')}
-        keyboardType="numeric"
+        onChange={handleInputChange}
+        style={styles.input}
         placeholder="Rate 1 to 5"
+        min="1"
+        max="5"
       />
 
       {/* Amazement */}
-      <Text style={styles.questionText}>2. How amazing is the project?</Text>
-      <TextInput
-        style={styles.input}
+      <p style={styles.questionText}>2. How amazing is the project?</p>
+      <input
+        type="number"
+        name="amazement"
         value={answers.amazement}
-        onChangeText={(value) => handleInputChange(value, 'amazement')}
-        keyboardType="numeric"
+        onChange={handleInputChange}
+        style={styles.input}
         placeholder="Rate 1 to 5"
+        min="1"
+        max="5"
       />
 
       {/* Theme */}
-      <Text style={styles.questionText}>3. How well does the project align with the theme?</Text>
-      <TextInput
-        style={styles.input}
+      <p style={styles.questionText}>3. How well does the project align with the theme?</p>
+      <input
+        type="number"
+        name="theme"
         value={answers.theme}
-        onChangeText={(value) => handleInputChange(value, 'theme')}
-        keyboardType="numeric"
+        onChange={handleInputChange}
+        style={styles.input}
         placeholder="Rate 1 to 5"
+        min="1"
+        max="5"
       />
 
       {/* Performance */}
-      <Text style={styles.questionText}>4. How would you rate the performance of the project?</Text>
-      <TextInput
-        style={styles.input}
+      <p style={styles.questionText}>4. How would you rate the performance of the project?</p>
+      <input
+        type="number"
+        name="performance"
         value={answers.performance}
-        onChangeText={(value) => handleInputChange(value, 'performance')}
-        keyboardType="numeric"
+        onChange={handleInputChange}
+        style={styles.input}
         placeholder="Rate 1 to 5"
+        min="1"
+        max="5"
       />
-    </View>
+    </div>
   );
 };
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
-    padding: 10,
+    padding: '10px',
   },
   Text1: {
-    fontSize: 10,
+    fontSize: '14px',
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: '10px',
   },
   questionText: {
-    fontSize: 10,
-    marginVertical: 10,
+    fontSize: '12px',
+    margin: '10px 0',
   },
   input: {
-    height: 30,
+    height: '30px',
     borderColor: 'gray',
-    borderWidth: 1,
-    borderRadius: 5,
-    marginBottom: 15,
-    paddingLeft: 10,
+    borderWidth: '1px',
+    borderRadius: '5px',
+    marginBottom: '15px',
+    paddingLeft: '10px',
+    width: '100%',
   },
   picker: {
-    height: 30,
+    height: '35px',
     width: '100%',
-    marginBottom: 20,
+    marginBottom: '20px',
   },
-});
+};
 
 export default App;
