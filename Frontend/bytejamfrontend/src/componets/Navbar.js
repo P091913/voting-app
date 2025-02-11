@@ -15,7 +15,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a href="/admin/">Sign Up</a>
+            <a href="/">Sign Up</a>
           </li>
 
           <li>
@@ -48,6 +48,10 @@ const Navbar = () => {
 
           <li>
             <a href="/admin/allResults">All Results</a>
+          </li>
+
+          <li>
+            <a href="/admin/settings">Settings</a>
           </li>
 
         
