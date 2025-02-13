@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "PrHXfJ/h47EVqqy+7fm9dWtEBbb/wOY5sDwtJlOisPc=",
+  "Hash": "I/bhNJV+gA1eiWFdduN7zoMK4qqti9oeHUTARV6sKOo=",
   "Source": "BackendAPI",
   "BasePath": "_content/BackendAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

@@ -1,10 +1,16 @@
 // React Mobile Page 1
 
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
+
 
 const App = () => {
+
+    const navigate = useNavigate();
+
     const handleNext = () => {
-        console.log('button clicked');
+      navigate("/mobile2");
+        
     };
 
     return (

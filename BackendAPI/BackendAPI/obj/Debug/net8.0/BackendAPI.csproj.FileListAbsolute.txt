@@ -570,3 +570,6 @@ C:\Users\brent\Documents\voting-app\BackendAPI\BackendAPI\obj\Debug\net8.0\refin
 C:\Users\brent\Documents\voting-app\BackendAPI\BackendAPI\obj\Debug\net8.0\BackendAPI.pdb
 C:\Users\brent\Documents\voting-app\BackendAPI\BackendAPI\obj\Debug\net8.0\BackendAPI.genruntimeconfig.cache
 C:\Users\brent\Documents\voting-app\BackendAPI\BackendAPI\obj\Debug\net8.0\ref\BackendAPI.dll
+C:\Users\brent\Documents\voting-app\BackendAPI\BackendAPI\bin\Debug\net8.0\BackendAPI.staticwebassets.endpoints.json
+C:\Users\brent\Documents\voting-app\BackendAPI\BackendAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\brent\Documents\voting-app\BackendAPI\BackendAPI\obj\Debug\net8.0\staticwebassets\msbuild.BackendAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

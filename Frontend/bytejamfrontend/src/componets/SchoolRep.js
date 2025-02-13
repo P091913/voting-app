@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 
 {/*Page: 7*/}
@@ -99,6 +101,30 @@ const SchoolRepPage = () => {
         useEffect(() => {
           fetchStaffCoach();
         }, []);
+
+
+    const pageRef = useRef();
+    const handleExport = async () => {
+      
+
+      const input = pageRef.current;
+
+      const canvas = await html2canvas(input, { scale: 3 });
+      const imgData = canvas.toDataURL("image/png");
+
+
+      // jsPDF(x,x,x)
+      // Orienatation: p(Portrait) or l(Landscape)
+      // Unit of Measurement: mm, cm, in, px, pt
+      // Page Size: a4, letter, a3, a5, ect
+      const pdf = new jsPDF("p", "mm", "a4");
+      const imgWidth = 210;
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+      pdf.save("page-exportschoolRep.pdf");
+    
+    };
     
     return (
     <div>
@@ -133,40 +159,58 @@ const SchoolRepPage = () => {
       </div>
 
     
-        <div >
-            <h1>All StaffCoaches</h1>
-            {loading ? (
-                <p>Loading StaffCoaches...</p>
-            ) : (
-                <div>
-                    {staffCoach.length > 0 ? (
-                        <ul>
-                            <h4>Name</h4>
-                            {staffCoach.map((coach) => (
-                                <li key={coach.id}>
-                                    <strong>{coach.username}</strong>
-                                    {
-                                        coach.staffCoachType === 1 ? ' (IHCC)' : 
-                                        coach.staffCoachType === 2 ? ' (Bits)' : 
-                                        coach.staffCoachType === 3 ? ' (Bytes)' : ' (Unknown)'
-                                    }
-                                </li>
-                            ))}
+      <div ref={pageRef} className="p-5 border-8 border-[#5C1D29] rounded-lg">
+      <h1 className="text-xl font-bold mb-4">All StaffCoaches</h1>
+      
+      {loading ? (
+        <p>Loading StaffCoaches...</p>
+      ) : (
+        <div>
+          {staffCoach.length > 0 ? (
+            <div className="grid grid-cols-2 w-full max-w-2xl gap-4">
 
-                            <h4>Pins</h4>
-                            {staffCoach.map((coach) => (
-                                <li key={coach.id}>
-                                    <strong>{coach.password}</strong>
-                                    <button onClick={() => handleDelete(coach.id)}>Delete</button>
-                                </li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <p>No Staff Coaches Found</p>
-                    )}
-                </div>
-            )}
+              {/* Column for Names */}
+              <div>
+                <h4 className="text-lg font-semibold border-b-2 mb-2">Name</h4>
+                {staffCoach.map((coach) => (
+                  <p key={coach.id} className="py-1">
+                    {coach.username} 
+                    {
+                      coach.staffCoachType === 1 ? ' (IHCC)' : 
+                      coach.staffCoachType === 2 ? ' (Bits)' : 
+                      coach.staffCoachType === 3 ? ' (Bytes)' : ' (Unknown)'
+                    }
+                  </p>
+                ))}
+              </div>
+
+              {/* Column for Pins */}
+              <div>
+                <h4 className="text-lg font-semibold border-b-2 mb-2">Pins</h4>
+                {staffCoach.map((coach) => (
+                  <div key={coach.id} className="flex items-center gap-2 py-1">
+                    <span>{coach.password}</span>
+                    <button 
+                      onClick={() => handleDelete(coach.id)} 
+                      className="bg-red-500 text-white rounded hover:bg-red-700"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          ) : (
+            <p>No Staff Coaches Found</p>
+          )}
         </div>
+      )}
+      <button onClick={handleExport} className="bg-red-500 text-white py-1 rounded hover:bg-red-700">Export Page To PDF</button>
+      <br></br>
+      <br></br>
+      <button className="bg-red-500 text-white py-1 rounded hover:bg-red-700">Delete All (NO WORK YET)</button>
+    </div>
     </div>
         );
     };

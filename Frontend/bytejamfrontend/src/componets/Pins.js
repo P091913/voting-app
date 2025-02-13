@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const PinsPage = () => {
   // Company States Data
@@ -107,10 +109,33 @@ const PinsPage = () => {
     fetchBusinesses();
   }, []);
 
+  const pageRef = useRef();
+    const handleExport = async () => {
+      
+
+      const input = pageRef.current;
+
+      const canvas = await html2canvas(input, { scale: 3 });
+      const imgData = canvas.toDataURL("image/png");
+
+
+      // jsPDF(x,x,x)
+      // Orienatation: p(Portrait) or l(Landscape)
+      // Unit of Measurement: mm, cm, in, px, pt
+      // Page Size: a4, letter, a3, a5, ect
+      const pdf = new jsPDF("p", "mm", "a4");
+      const imgWidth = 210;
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+      pdf.save("page-exportAllPins.pdf");
+    
+    };
+
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Content */}
-      <div className="p-6">
+      <div className="p-6" ref={pageRef} style={{padding: "20px"}}>
         {/* Pins Section */}
         <div className="mb-8">
           <h3 className="text-xl font-semibold mb-4">Company Pins</h3>
@@ -175,6 +200,7 @@ const PinsPage = () => {
           </div>
         </div>
       </div>
+      <button onClick={handleExport}>Export Page To PDF</button>
     </div>
   );
 };

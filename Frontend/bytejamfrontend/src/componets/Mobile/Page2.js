@@ -1,7 +1,24 @@
 import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 
-function DropdownComponent() {
+
+const MobilePage2 = () => {
+
   const [selectedValue, setSelectedValue] = useState("");
+
+  const navigate = useNavigate();
+  
+  const handleNext = () => 
+    {
+
+      if(selectedValue != "option1"){
+          navigate("/mobile3");
+        } else 
+        {
+          navigate("/mobile4");
+        }
+    };
+  
 
   return (
     <div>
@@ -13,15 +30,13 @@ function DropdownComponent() {
         onChange={(e) => setSelectedValue(e.target.value)}
       >
         <option value="">Select an option</option>
-        <option value="option1">High School</option>
-        <option value="option2">College (Any College or Indian Hills Community College)</option>
-        <option value="option3">Company</option>
-        <option value="option4">School Representative</option>
-        <option value="option5">Other (Visitor)</option>
+        <option value="option1">High School/College Student</option>
+        <option value="option2">Company</option>
+        <option value="option3">School Representative</option>
       </select>
-      <p>Selected: {selectedValue}</p>
+      <button onClick={handleNext} >Next</button>
     </div>
   );
 }
 
-export default DropdownComponent;
+export default MobilePage2;

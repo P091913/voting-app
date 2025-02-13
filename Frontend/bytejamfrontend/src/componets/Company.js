@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 
 {/*Page: 6*/}
@@ -102,6 +104,31 @@ const CompanyPage = () => {
     useEffect(() => {
       fetchBusinesses();
     }, []);
+
+
+    const pageRef = useRef();
+    const handleExport = async () => {
+      
+
+      const input = pageRef.current;
+
+      const canvas = await html2canvas(input, { scale: 3 });
+      const imgData = canvas.toDataURL("image/png");
+
+      // jsPDF(x,x,x)
+      // Orienatation: p(Portrait) or l(Landscape)
+      // Unit of Measurement: mm, cm, in, px, pt
+      // Page Size: a4, letter, a3, a5, ect
+      const pdf = new jsPDF("p", "mm", "a4");
+      const imgWidth = 210;
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+      pdf.save("page-export-company.pdf");
+    
+    };
+
+    
     
     return (
         <div>
@@ -133,36 +160,49 @@ const CompanyPage = () => {
             </form>
           </div>
 
-          <div>
-      <h1>All Businesses</h1>
-      {loading ? (
-        <p>Loading businesses...</p> // Show loading message while fetching
-      ) : (
-        <div>
-          {business.length > 0 ? (
-            <ul>
-              <h4>Name</h4>
-              {business.map((business) => (
-                <li key={business.businessId}>
-                  <strong>{business.businessName}</strong>
-                </li>
-              ))}
-              <h4>Pins</h4>
-              {business.map((business) => (
-                <li key={business.businessId}>
-                  <strong>{business.businessLogin.password}</strong>
-                  <button onClick={() => handleDelete(business.businessId)}>Delete</button>
-                </li>
-              ))}
-            </ul>
+
+          <div ref={pageRef} className="p-5 border-8 border-[#5C1D29] rounded-lg">
+          <h1 className="text-xl font-bold mb-4">All Companies</h1>
+
+          {loading ? (
+            <p>Loading businesses...</p>
           ) : (
-            <p>No businesses found.</p>
+            <div>
+              {business.length > 0 ? (
+                <div className="grid grid-cols-2 w-full max-w-2xl">
+                  
+                  <div>
+                    <h4 className="text-lg font-semibold border-b-2 mb-2">Name</h4>
+                    {business.map((business) => (
+                      <p key={business.businessId} className="py-1">{business.businessName}</p>
+                    ))}
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold border-b-2 mb-2">Pins</h4>
+                    {business.map((business) => (
+                      <div key={business.businessId} className="flex items-center gap-2 py-1">
+                        <span>{business.businessLogin.password}</span>
+                        <button 
+                          onClick={() => handleDelete(business.businessId)}
+                          className="bg-red-500 text-white rounded hover:bg-red-700"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <p>No businesses found.</p>
+              )}
+            </div>
           )}
+          <button onClick={handleExport} className="bg-red-500 text-white py-1 rounded hover:bg-red-700">Export Page To PDF</button>
+          <br></br>
+          <br></br>
+          <button className="bg-red-500 text-white py-1 rounded hover:bg-red-700">Delete All (NO WORK YET)</button>
         </div>
-      )}
-    </div>
-
-
         </div> 
         );
     };
