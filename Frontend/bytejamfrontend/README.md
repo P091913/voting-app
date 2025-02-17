@@ -1,80 +1,97 @@
-# Voteing Web App For ByteJam
+# 🗳️ Voting Web App for ByteJam
 
-A voting web application for managing and voting for teams, companies, and representatives. This app allows admins to create teams, companies, and representatives, while users can vote for teams and see the results. The system displays winners after voting.
+A voting web application for managing and voting on teams, companies, and representatives. This app allows admins to create and manage entities while users can vote and view results. The system displays winners once voting concludes.
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Current Features](#current-features)
-- [Tech Stack](#tech-stack)
+## 🛠️ Installation
 
+Clone the Repository
 
-## Installation
+```bash
+git clone https://github.com/P091913/voting-app.git
+```
 
-1. Clone Repositiory 
-    - [https://github.com/P091913/voting-app](https://github.com/P091913/voting-app)
-    
-    ```bash
-    git clone `https://github.com/P091913/voting-app.git`
-    ```    
-2. Navigate to the project directory in your files
-    - Open the folder voteing-app in Rider 
-    - In termanal enter `git checkout Neon-MVC-.NET`
-    - Then you can open `/voteing-app/Frontend/bytejamFrontend` in VScode to get the Frontend
-    - Then you can open `/voteing-app/BackendAPI` in Rider to get the Backend 
-    
-3. Install Dependencies
-    - In VScode termanal enter `npm install` to get all dependencies
+-Navigate to the Project Directory
 
+-Open the voting-app folder in Rider
 
-## Usage
+-Run the following command to switch to the correct branch:
+```bash
+git checkout Neon-MVC-.NET
+```
+-Open **/voting-app/Frontend/bytejamFrontend** in **VSCode** for the frontend.
 
-In the project directory `voting-app/Frontend/bytejamFrontend`, you can run:
+-Open **/voting-app/BackendAPI** in  **Rider** for the backend.
 
-## `npm start` to start the project
+### 🔧 Install Dependencies
 
-    # Links in the app
-    Runs the app in the development mode.
-    Open [http://localhost:3000](http://localhost:3000) to view the admin page in your browser.
-    Open [http://localhost:3000/vote](http://localhost:3000/vote) to view the voteing page in your browser
+-In the VSCode terminal, navigate to the Frontend/bytejamFrontend folder and run:
+```bash
+npm install
+```
+## 🚀 Usage
 
+Start the FrontendIn the voting-app/Frontend/bytejamFrontend directory, run:
+```bash
+npm start
+```
+### 💻 Access the Application
 
-## Tech Stack
+-Admin Page: http://localhost:3000
 
-Frontend: React.js, Tailwind CSS, React Router, html2canvas, jsPDF 
+-Voting Page: http://localhost:3000/vote
+
+## 🧰 Tech Stack
+
+Frontend: React.js, Tailwind CSS, React Router, html2canvas, jsPDF
+
 Backend: .NET (C#), ASP.NET Core
+
 Database: SQLite
 
+## ✅ Current Features
 
-## Current Features
+Admin Panel
 
-Admin Panel: Diffrent Pages to do diffrent things: create teams, companies, and school reps; and display teams, companies, and school reps.
+Manage teams, companies, and school representatives.
 
-Exporting PNGs of Pins: Click the Export button to download the HTML of the page in a PNG file (TODO: On the Company page make it Export each group of people)
-    Currently it Exports all of them, we need it to only do like Google1 - Google 4 then LeanTC1 - LeanTC4 so each Company get only their pins.
+View and display existing records on separate pages.
 
+Export PNGs of Pins
 
+Download a PNG of the page via the "Export" button.
 
+TODO: Modify the export function on the company page to export pins for each group separately (e.g., "Google1 - Google4", "LeanTC1 - LeanTC4").
 
-# Features to add in app overall
+## 🔨 Upcoming Features
 
-Voteing: Voteing side need to be finish "http://localhost:3000/vote" to go to the current voteing page
+#### Voting System
 
-Design: Finish the Tailwind to get the project to look like the mock-up
-[https://www.figma.com/design/1KBtOMoOeuQ8uqH429KYcI/Untitled?node-id=0-1&t=HgNrU3pxxbYJznDu-0](https://www.figma.com/design/1KBtOMoOeuQ8uqH429KYcI/Untitled?node-id=0-1&t=HgNrU3pxxbYJznDu-0)
-To View the Mock-up 
+  -Complete and enhance the voting page at /vote.
 
-Small Features on Admin Page: 
-    - Delete All on Companies, SchoolReps, Teams
-    - Updateing Results Page
+  -Implement vote calculation logic on the backend.
 
-Large Features on Admin Page:
-    - Getting the voting time to "Start" a vote in the settings page
-    - Setup to host Frontend
+#### Admin Panel Improvements
 
-Large Features on Backend:
-    - Docker Setup for non-localhost
-    - Calculations for voteing
-        -
+  -Small Features:
+
+    -Add a "Delete All" button for companies, school representatives, and teams.
+
+    -Update the results display page.
+
+  -Large Features:
+
+    -Implement a "Start Voting" function to begin voting from the settings page.
+  
+    -Prepare and deploy the frontend for hosting.
+
+#### Backend Enhancements
+
+  -Docker setup for deployment outside of localhost.
+
+  -Finalize and implement voting calculation logic.
+
+#### Design Improvements
+
+  -Complete the Tailwind styling to match the Figma Mockup.
 
 
