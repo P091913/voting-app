@@ -76,7 +76,8 @@ namespace BackendAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/Admin (Done?) ---------------------------------------
+        // POST: api/Admin 
+        // TODO Make the admin create its own password (Currently it auto sets)
         [HttpPost]
         public async Task<ActionResult<Admin>> CreateAdmin(Admin admin)
         {

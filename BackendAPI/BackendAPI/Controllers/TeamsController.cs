@@ -77,12 +77,15 @@ namespace BackendAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Teams>> PostTeams(Teams teams)
         {
+            // When Creating a team create a TeamData and FinalTeamScore
             var teamData = new TeamData();
             var finalTeamScore = new FinalTeamScores();
             
+            // Set them to the team to easy calling
             teams.TeamData = teamData;
             teams.FinalTeamScores = finalTeamScore;
             
+            // Update and save
             _context.Teams.Add(teams);
             await _context.SaveChangesAsync();
             ;
@@ -94,6 +97,9 @@ namespace BackendAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTeams(int id)
         {
+            
+            // TODO Finish Delete To Delete the TeamData and FinalTeamScore
+            // Look at BusinessController, StaffCoachController, or AdminController for examples
             var teams = await _context.Teams.FindAsync(id);
             if (teams == null)
             {

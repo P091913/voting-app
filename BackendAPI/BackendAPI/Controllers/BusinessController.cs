@@ -98,10 +98,6 @@ namespace BackendAPI.Controllers
                             Password = _pinService.GeneratePin() 
                         };
                         
-                    
-
-                    
-
                     // Create General for each loop
                     var general = new General
                     {
@@ -118,6 +114,7 @@ namespace BackendAPI.Controllers
                     general.Voter_Id = general.Id;
                     _context.General.Update(general);
                     
+                    // Auto Update the Business with data
                     var newBusiness = new Business
                     {
                         BusinessName = businesslogin.Username,
@@ -130,7 +127,7 @@ namespace BackendAPI.Controllers
                     createdBusinesses.Add(newBusiness);
                 }
 
-                // 2 extra businesses 
+                // 2 extra businesses (Per Luke and Susan request)
                 for (var i = 1; i <= 2; i++)
                 {
                     var extraBusinessName = $"{business.BusinessName} Account Extra {i}";
@@ -147,7 +144,7 @@ namespace BackendAPI.Controllers
                     
                     _context.BusinessLogin.Add(businesslogin);
                     _context.General.Add(general);
-                    //Save
+                    // Save
                     await _context.SaveChangesAsync();
 
                     // Set the Voter Id 
@@ -189,11 +186,13 @@ namespace BackendAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBusiness(int id)
         {
+            // Get Business with id
             var business = await _context.Business
                 .Include(b => b.BusinessLogin) 
                 .Include(b => b.General)
                 .FirstOrDefaultAsync(b => b.BusinessId == id);
 
+            // Make sure Exist
             if (business == null)
             {
                 return NotFound();

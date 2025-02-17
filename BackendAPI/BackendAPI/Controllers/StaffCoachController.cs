@@ -80,18 +80,20 @@ namespace BackendAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<StaffCoach>> PostStaffCoach(StaffCoach staffCoach)
         {
-            //Create The General
+            
+            // Create The General
             var general = new General
             {
+                // auto set the username in the General
                 Name = staffCoach.Username
             };
             
-            //Save
+            // Save
             _context.General.Add(general);
             await _context.SaveChangesAsync();
             
             
-            //generate pin 
+            // generate pin
             staffCoach.Password = _pinService.GeneratePin();
             
             _context.StaffCoach.Add(staffCoach);
@@ -112,10 +114,12 @@ namespace BackendAPI.Controllers
         public async Task<IActionResult> DeleteStaffCoach(int id)
         {
 
-
+            // Get the StaffCoach with the id
             var staffCoach = await _context.StaffCoach
                 .Include(s => s.General)
                 .FirstOrDefaultAsync(s => s.Id == id);
+            
+            // Make Sure they both exist 
             if (staffCoach == null)
             {
                 return NotFound();
@@ -127,6 +131,7 @@ namespace BackendAPI.Controllers
                 _context.General.Remove(general);
             }
             
+            // Remove and Save
             _context.StaffCoach.Remove(staffCoach);
             await _context.SaveChangesAsync();
 
