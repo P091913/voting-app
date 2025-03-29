@@ -9032,24 +9032,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/jarrettplate/.nuget/packages/": {}
+    "C:\\Users\\brent\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/VotingApp.csproj",
+      "projectUniqueName": "C:\\Users\\brent\\Documents\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
       "projectName": "VotingApp",
-      "projectPath": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/VotingApp.csproj",
-      "packagesPath": "/Users/jarrettplate/.nuget/packages/",
-      "outputPath": "/Users/jarrettplate/Documents/repo/voting-app/VotingApp/VotingApp/obj/",
+      "projectPath": "C:\\Users\\brent\\Documents\\voting-app\\VotingApp\\VotingApp\\VotingApp.csproj",
+      "packagesPath": "C:\\Users\\brent\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\brent\\Documents\\voting-app\\VotingApp\\VotingApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/jarrettplate/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\brent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\MicroFocus.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Micro Focus\\Visual COBOL\\NuGetPackages": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9062,11 +9072,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -9127,7 +9132,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

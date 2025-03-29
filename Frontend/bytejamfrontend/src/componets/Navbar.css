@@ -1,0 +1,41 @@
+
+/*
+    Basic Css For Navbar Layout
+    (I know we are not useing css but I dont know tailwind)
+*/
+input{
+  background-color:#dfdfdf;
+}
+
+button
+{
+  background-color: #b7b7b7;
+}
+
+.navbar {
+   
+    align-items: center;
+    color: #080808;
+    padding: 1rem;
+  }
+
+  
+  .navbar-center .nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+  
+  .navbar-center .nav-links a {
+    color: #4e84d6;
+
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  

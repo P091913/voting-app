@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# 🗳️ Voting Web App for ByteJam
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A voting web application for managing and voting on teams, companies, and representatives. This app allows admins to create and manage entities while users can vote and view results. The system displays winners once voting concludes.
 
-## Available Scripts
+## 🛠️ Installation
 
-In the project directory, you can run:
+Clone the Repository
 
-### `npm start`
+```bash
+git clone https://github.com/P091913/voting-app.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-Navigate to the Project Directory
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-Open the voting-app folder in Rider
 
-### `npm test`
+-Run the following command to switch to the correct branch:
+```bash
+git checkout Neon-MVC-.NET
+```
+-Open **/voting-app/Frontend/bytejamFrontend** in **VSCode** for the frontend.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-Open **/voting-app/BackendAPI** in  **Rider** for the backend.
 
-### `npm run build`
+### 🔧 Install Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-In the VSCode terminal, navigate to the Frontend/bytejamFrontend folder and run:
+```bash
+npm install
+```
+## 🚀 Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the FrontendIn the voting-app/Frontend/bytejamFrontend directory, run:
+```bash
+npm start
+```
+### 💻 Access the Application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-Admin Page: http://localhost:3000
 
-### `npm run eject`
+-Voting Page: http://localhost:3000/vote
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧰 Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Frontend: React.js, Tailwind CSS, React Router, html2canvas, jsPDF
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Backend: .NET (C#), ASP.NET Core
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Database: SQLite
 
-## Learn More
+## ✅ Current Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Admin Panel
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Manage teams, companies, and school representatives.
 
-### Code Splitting
+View and display existing records on separate pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Export PNGs of Pins
 
-### Analyzing the Bundle Size
+Download a PNG of the page via the "Export" button.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+TODO: Modify the export function on the company page to export pins for each group separately (e.g., "Google1 - Google4", "LeanTC1 - LeanTC4").
 
-### Making a Progressive Web App
+## 🔨 Upcoming Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Voting System
 
-### Advanced Configuration
+  -Complete and enhance the voting page at /vote.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  -Implement vote calculation logic on the backend.
 
-### Deployment
+#### Admin Panel Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  -Small Features:
 
-### `npm run build` fails to minify
+    -Add a "Delete All" button for companies, school representatives, and teams.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    -Update the results display page.
+
+  -Large Features:
+
+    -Implement a "Start Voting" function to begin voting from the settings page.
+  
+    -Prepare and deploy the frontend for hosting.
+
+#### Backend Enhancements
+
+  -Docker setup for deployment outside of localhost.
+
+  -Finalize and implement voting calculation logic.
+
+#### Design Improvements
+
+  -Complete the Tailwind styling to match the Figma Mockup.
+
+
